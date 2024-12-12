@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Community Resources on Wildland Fire Data Library</title>
+    <link>http://localhost:1313/tags/community-resources/</link>
+    <description>Recent content in Community Resources on Wildland Fire Data Library</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 11 Dec 2024 20:29:48 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/community-resources/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fire Adapted Communities</title>
+      <link>http://localhost:1313/posts/fire-adapted-communities/</link>
+      <pubDate>Wed, 11 Dec 2024 20:29:48 -0800</pubDate>
+      <guid>http://localhost:1313/posts/fire-adapted-communities/</guid>
+      <description>&lt;p&gt;The following data library offers a range of resources for wildfire risk mitigation practitioners and researchers&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Visit the Fire Adapted Communities&amp;rsquo; data libray here!&lt;/strong&gt; (&lt;a href=&#34;https://fireadapted.org/cwpp-database/&#34;&gt;https://fireadapted.org/cwpp-database/&lt;/a&gt;)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Database on Wildland Fire Data Library</title>
+    <link>http://localhost:1313/tags/database/</link>
+    <description>Recent content in Database on Wildland Fire Data Library</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 11 Dec 2024 20:29:48 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/database/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Climate Resilience Fund Database</title>
+      <link>http://localhost:1313/posts/climate-resilience-fund-database/</link>
+      <pubDate>Wed, 11 Dec 2024 20:29:48 -0800</pubDate>
+      <guid>http://localhost:1313/posts/climate-resilience-fund-database/</guid>
+      <description>&lt;p&gt;The Climate Resilience Fund is an organization that promotes sustainablility for communities&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Visit the Climate Resilience Fund&amp;rsquo;s Database here!&lt;/strong&gt; (&lt;a href=&#34;https://www.climateresiliencefund.org/planning-resources/&#34;&gt;https://www.climateresiliencefund.org/planning-resources/&lt;/a&gt;)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Joint Fire Science Exchange Database</title>
+      <link>http://localhost:1313/posts/jfse-database/</link>
+      <pubDate>Wed, 11 Dec 2024 20:29:48 -0800</pubDate>
+      <guid>http://localhost:1313/posts/jfse-database/</guid>
+      <description>&lt;p&gt;The Joint Fire Science Exchange database.&lt;/p&gt;&#xA;&lt;p&gt;Helpful for finding global wildland fire research.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Visit the JSFE Database website here!&lt;/strong&gt; (&lt;a href=&#34;https://firescience.gov/ords/prd/jf_jfsp/jf_jfsp/r/jfspublic/research-search?session=2765587292715&#34;&gt;https://firescience.gov/ords/prd/jf_jfsp/jf_jfsp/r/jfspublic/research-search?session=2765587292715&lt;/a&gt;)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Northwest Fire Science Consortium Database</title>
+      <link>http://localhost:1313/posts/nwfsc-database/</link>
+      <pubDate>Wed, 11 Dec 2024 20:29:48 -0800</pubDate>
+      <guid>http://localhost:1313/posts/nwfsc-database/</guid>
+      <description>&lt;p&gt;Northwest Fire Science Consortium research database&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Visit the NWFSC research database website here!&lt;/strong&gt; (&lt;a href=&#34;https://nwfirescience.org/research-database&#34;&gt;https://nwfirescience.org/research-database&lt;/a&gt;)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

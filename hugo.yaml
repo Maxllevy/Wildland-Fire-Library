@@ -1,0 +1,24 @@
+---
+baseURL: "https://example.org/"
+languageCode: "en-us"
+title: "Wildland Fire Data Library"
+theme: "fluency"
+
+# Taxonomies
+taxonomies:
+  tag: "tags"
+  category: "categories"
+
+# Main menu
+menu:
+  main:
+    - name: Tags
+      url: "tags/"
+      weight: 1
+
+# Fluency theme specific settings
+params:
+  description: "Your site description here"
+  author: "Your Name"
+  tools: []  # Add empty tools array to prevent the iteration error
+--- 

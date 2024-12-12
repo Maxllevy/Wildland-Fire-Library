@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tool on Wildland Fire Data Library</title>
+    <link>http://localhost:1313/tags/tool/</link>
+    <description>Recent content in Tool on Wildland Fire Data Library</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 11 Dec 2024 20:29:48 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/tool/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Community Wildfire Protection Plan Portal and Data Library</title>
+      <link>http://localhost:1313/posts/pasteme/</link>
+      <pubDate>Wed, 11 Dec 2024 20:29:48 -0800</pubDate>
+      <guid>http://localhost:1313/posts/pasteme/</guid>
+      <description>&lt;p&gt;The CWPP Portal and Data Library offers a range of resources for wildfire risk mitigation practitioners and researchers.&#xA;Data encompass 20,000+ records of individuals’ participation in 1,000+ CWPPs in 11 states of the fire-prone US West, attributes of individuals and plans, and the plan documents themselves.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Visit the CWPP Data Library website here!&lt;/strong&gt; (&lt;a href=&#34;https://fireadapted.org/cwpp-database/&#34;&gt;https://fireadapted.org/cwpp-database/&lt;/a&gt;)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

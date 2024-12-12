@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Wildland Fire Data Library</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on Wildland Fire Data Library</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 11 Dec 2024 20:29:48 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Academic</title>
+      <link>http://localhost:1313/tags/academic/</link>
+      <pubDate>Wed, 11 Dec 2024 20:29:48 -0800</pubDate>
+      <guid>http://localhost:1313/tags/academic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Community Resources</title>
+      <link>http://localhost:1313/tags/community-resources/</link>
+      <pubDate>Wed, 11 Dec 2024 20:29:48 -0800</pubDate>
+      <guid>http://localhost:1313/tags/community-resources/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Database</title>
+      <link>http://localhost:1313/tags/database/</link>
+      <pubDate>Wed, 11 Dec 2024 20:29:48 -0800</pubDate>
+      <guid>http://localhost:1313/tags/database/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jobs</title>
+      <link>http://localhost:1313/tags/jobs/</link>
+      <pubDate>Wed, 11 Dec 2024 20:29:48 -0800</pubDate>
+      <guid>http://localhost:1313/tags/jobs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mentoring</title>
+      <link>http://localhost:1313/tags/mentoring/</link>
+      <pubDate>Wed, 11 Dec 2024 20:29:48 -0800</pubDate>
+      <guid>http://localhost:1313/tags/mentoring/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Research</title>
+      <link>http://localhost:1313/tags/research/</link>
+      <pubDate>Wed, 11 Dec 2024 20:29:48 -0800</pubDate>
+      <guid>http://localhost:1313/tags/research/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Student Assistance</title>
+      <link>http://localhost:1313/tags/student-assistance/</link>
+      <pubDate>Wed, 11 Dec 2024 20:29:48 -0800</pubDate>
+      <guid>http://localhost:1313/tags/student-assistance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tools</title>
+      <link>http://localhost:1313/tags/tools/</link>
+      <pubDate>Wed, 11 Dec 2024 20:29:48 -0800</pubDate>
+      <guid>http://localhost:1313/tags/tools/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
