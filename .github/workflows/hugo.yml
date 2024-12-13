@@ -41,7 +41,7 @@ jobs:
         run: |
           hugo \
             --minify \
-            baseURL: "https://Maxllevy.github.io/wildland-fire-library/"
+            --baseURL "https://Maxllevy.github.io/wildland-fire-library/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
