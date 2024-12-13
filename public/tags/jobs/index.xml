@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Jobs on Wildland Fire Data Library</title>
-    <link>http://localhost:1313/tags/jobs/</link>
+    <link>//localhost:1313/tags/jobs/</link>
     <description>Recent content in Jobs on Wildland Fire Data Library</description>
     <generator>Hugo -- 0.139.4</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 11 Dec 2024 20:29:48 -0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/jobs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/jobs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AFE Job Board</title>
-      <link>http://localhost:1313/posts/afe-jobboard/</link>
+      <link>//localhost:1313/posts/afe-jobboard/</link>
       <pubDate>Wed, 11 Dec 2024 20:29:48 -0800</pubDate>
-      <guid>http://localhost:1313/posts/afe-jobboard/</guid>
+      <guid>//localhost:1313/posts/afe-jobboard/</guid>
       <description>&lt;p&gt;The Association for Fire Ecology shares announcements about job openings in fire ecology, fire management, and the environmental sector here&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Visit AFE job board here!&lt;/strong&gt; (&lt;a href=&#34;https://fireecology.org/jobs-board&#34;&gt;https://fireecology.org/jobs-board&lt;/a&gt;)&lt;/p&gt;</description>
     </item>
     <item>
       <title>Department of the Interior Job Board</title>
-      <link>http://localhost:1313/posts/doi-jobbard/</link>
+      <link>//localhost:1313/posts/doi-jobbard/</link>
       <pubDate>Wed, 11 Dec 2024 20:29:48 -0800</pubDate>
-      <guid>http://localhost:1313/posts/doi-jobbard/</guid>
+      <guid>//localhost:1313/posts/doi-jobbard/</guid>
       <description>&lt;p&gt;The Department of the Interior&amp;rsquo;s job board. Includes tips on how to apply to USA jobs, as well as agency specific links.&lt;/p&gt;
 &lt;p&gt;The below agencies are included:&lt;/p&gt;
 &lt;p&gt;Bureau of Land Management (BLM), US Fish and Wildlife Service (USFWS), the National Park Service (NPS), and the Bureau of Indian Affairs (BIA)&lt;/p&gt;
@@ -28,26 +28,26 @@
     </item>
     <item>
       <title>Explore Your Wildfire Risk</title>
-      <link>http://localhost:1313/posts/usa-jobs/</link>
+      <link>//localhost:1313/posts/usa-jobs/</link>
       <pubDate>Wed, 11 Dec 2024 20:29:48 -0800</pubDate>
-      <guid>http://localhost:1313/posts/usa-jobs/</guid>
+      <guid>//localhost:1313/posts/usa-jobs/</guid>
       <description>&lt;p&gt;Apply here for government jobs!
 Tips: Search with keywords range technician, forestry technician, 0462, smokejumper, hotshot, or fire management&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Visit USAjobs website here!&lt;/strong&gt; (&lt;a href=&#34;https://www.usajobs.gov/&#34;&gt;https://www.usajobs.gov/&lt;/a&gt;)&lt;/p&gt;</description>
     </item>
     <item>
       <title>FRAMES Job Board</title>
-      <link>http://localhost:1313/posts/frames-job-board/</link>
+      <link>//localhost:1313/posts/frames-job-board/</link>
       <pubDate>Wed, 11 Dec 2024 20:29:48 -0800</pubDate>
-      <guid>http://localhost:1313/posts/frames-job-board/</guid>
+      <guid>//localhost:1313/posts/frames-job-board/</guid>
       <description>&lt;p&gt;The Fire Research and Management Exchange System (Frames) supports wildland fire and natural resource professionals and policymakers by promoting and facilitating information and technology sharing, exchange, collaboration, and development through a state-of-the-art web-based content management system and resource cataloging system.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Visit Frames job board website here!&lt;/strong&gt; (&lt;a href=&#34;https://www.frames.gov/announcements/current&#34;&gt;https://www.frames.gov/announcements/current&lt;/a&gt;)&lt;/p&gt;</description>
     </item>
     <item>
       <title>NPS Job Board</title>
-      <link>http://localhost:1313/posts/nps-job-board/</link>
+      <link>//localhost:1313/posts/nps-job-board/</link>
       <pubDate>Wed, 11 Dec 2024 20:29:48 -0800</pubDate>
-      <guid>http://localhost:1313/posts/nps-job-board/</guid>
+      <guid>//localhost:1313/posts/nps-job-board/</guid>
       <description>&lt;p&gt;Apply for wildland fire jobs through the National Parks Service here.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Visit NPS Job Board here!&lt;/strong&gt; (&lt;a href=&#34;https://www.nps.gov/subjects/fire/current-wildland-fire-job-openings.htm&#34;&gt;https://www.nps.gov/subjects/fire/current-wildland-fire-job-openings.htm&lt;/a&gt;)&lt;/p&gt;</description>
     </item>

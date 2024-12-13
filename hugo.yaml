@@ -1,4 +1,4 @@
-baseURL: "https://Maxllevy.github.io/wildland-fire-library/"
+#baseURL: "https://Maxllevy.github.io/wildland-fire-library/"
 languageCode: "en-us"
 title: "Wildland Fire Data Library"
 theme: "PaperMod"
