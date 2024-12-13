@@ -3,7 +3,7 @@ title: "Wildland Fire Data Library"
 description: "Welcome to the Wildland Fire Data Library"
 ---
 
-<h1 style="text-align: center;">Welcome To The Wildland Fire Data Library</h1>
+# Welcome To The Wildland Fire Data Library
 
 Your comprehensive resource for wildland fire information, research, and resources.
 
