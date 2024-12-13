@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tools on Wildland Fire Data Library</title>
     <link>http://localhost:1313/tags/tools/</link>
     <description>Recent content in Tools on Wildland Fire Data Library</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- 0.139.4</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 11 Dec 2024 20:29:48 -0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Community Wildfire Protection Plan Portal and Data Library</title>
+      <link>http://localhost:1313/posts/fire-adapted-cwpp-library/</link>
+      <pubDate>Wed, 11 Dec 2024 20:29:48 -0800</pubDate>
+      <guid>http://localhost:1313/posts/fire-adapted-cwpp-library/</guid>
+      <description>&lt;p&gt;The CWPP Portal and Data Library offers a range of resources for wildfire risk mitigation practitioners and researchers.
+Data encompass 20,000+ records of individuals’ participation in 1,000+ CWPPs in 11 states of the fire-prone US West, attributes of individuals and plans, and the plan documents themselves.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Visit the CWPP Data Library website here!&lt;/strong&gt; (&lt;a href=&#34;https://fireadapted.org/cwpp-database/&#34;&gt;https://fireadapted.org/cwpp-database/&lt;/a&gt;)&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Explore Your Wildfire Risk</title>
       <link>http://localhost:1313/posts/wildfire-risk/</link>
       <pubDate>Wed, 11 Dec 2024 20:29:48 -0800</pubDate>
       <guid>http://localhost:1313/posts/wildfire-risk/</guid>
-      <description>&lt;p&gt;Use this tool to explore location specific wildfire risk.&#xA;Includes grant-writing assistance&#xA;&lt;strong&gt;Visit the Wildfire Risk website here!&lt;/strong&gt; (&lt;a href=&#34;https://wildfirerisk.org/explore&#34;&gt;https://wildfirerisk.org/explore&lt;/a&gt;)&lt;/p&gt;</description>
+      <description>&lt;p&gt;Use this tool to explore location specific wildfire risk.
+Includes grant-writing assistance
+&lt;strong&gt;Visit the Wildfire Risk website here!&lt;/strong&gt; (&lt;a href=&#34;https://wildfirerisk.org/explore&#34;&gt;https://wildfirerisk.org/explore&lt;/a&gt;)&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

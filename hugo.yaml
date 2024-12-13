@@ -1,24 +1,107 @@
----
 baseURL: "https://example.org/"
 languageCode: "en-us"
 title: "Wildland Fire Data Library"
-theme: "fluency"
+theme: "PaperMod"
 
-# Taxonomies
 taxonomies:
   tag: "tags"
   category: "categories"
 
-# Main menu
 menu:
   main:
-    - name: Tags
-      url: "tags/"
+    - name: Home
+      url: /
       weight: 1
+    - name: Resources
+      url: /posts/
+      weight: 2
+    - name: Search
+      url: /search/
+      weight: 3
+    - name: Tags
+      url: /tags/
+      weight: 4
 
-# Fluency theme specific settings
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+baseURL: "https://example.org/"
+languageCode: "en-us"
+title: "Wildland Fire Data Library"
+theme: "PaperMod"
+
+taxonomies:
+  tag: "tags"
+  category: "categories"
+
+menu:
+  main:
+    - name: Home
+      url: /
+      weight: 1
+    - name: Resources
+      url: /posts/
+      weight: 2
+    - name: Search
+      url: /search/
+      weight: 3
+    - name: Tags
+      url: /tags/
+      weight: 4
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+baseURL: "https://example.org/"
+languageCode: "en-us"
+title: "Wildland Fire Data Library"
+theme: "PaperMod"
+
+taxonomies:
+  tag: "tags"
+  category: "categories"
+
+menu:
+  main:
+    - name: Home
+      url: /
+      weight: 1
+    - name: Resources
+      url: /posts/
+      weight: 2
+    - name: Search
+      url: /search/
+      weight: 3
+    - name: Tags
+      url: /tags/
+      weight: 4
+
 params:
-  description: "Your site description here"
-  author: "Your Name"
-  tools: []  # Add empty tools array to prevent the iteration error
---- 
+  hideList: true
+  homeInfoParams:
+    enabled: true
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

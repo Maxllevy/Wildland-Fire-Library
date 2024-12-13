@@ -1,377 +1,383 @@
 <!DOCTYPE html>
-<html
-  lang="en-us"
-  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
->
-  
+<html lang="en" dir="auto">
 
+<head>
+	<meta name="generator" content="Hugo 0.139.4"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Wildland Fire Data Library</title>
 
+<meta name="description" content="Welcome to the Wildland Fire Data Library">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.0cdaafe26a15dd4029c058523b1fac1d6a48c8ee67212aeb607f6f81191fa77c.css" integrity="sha256-DNqv4moV3UApwFhSOx&#43;sHWpIyO5nISrrYH9vgRkfp3w=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml">
+<link rel="alternate" type="application/json" href="http://localhost:1313/index.json">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-  
-  
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
+            .list {
+                background: var(--theme);
+            }
 
-<head lang="en-us"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="MobileOptimized" content="320" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="dark light">
-  <meta name="description" content="Your site description here" />
-  <meta name="author" content="Your Name">
-  <meta name="keywords" content="">
-  <title>Wildland Fire Data Library</title>
-  <link rel="canonical" href="http://localhost:1313/" />
-  
-    <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="Wildland Fire Data Library">
-  
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
 
-  
-  <meta property="og:type" content="website" />
-  <meta property="og:description" content="Your site description here" />
-  <meta property="og:title" content="Wildland Fire Data Library" />
-  <meta property="og:site_name" content="Wildland Fire Data Library" />
-  <meta property="og:image:type" content="image/jpeg" />
-  <meta property="og:url" content="http://localhost:1313/" />
-  <meta property="og:locale" content="en-us" />
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
 
-  
-
-  
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Wildland Fire Data Library" />
-  <meta name="twitter:description" content="Your site description here" />
-  <meta name="twitter:domain" content="http://localhost:1313/" />
-
-  
-  
-    <link rel="icon" href="http://localhost:1313/favicon.ico">
-  
-  
-  
-  
-
-  
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css">
-
-  
-  
-  
-
-  
-
-  
-    <link rel="stylesheet" href="http://localhost:1313/style.css" rel="preload stylesheet" as="style"/>
-  
-
-  
-  
+    </style>
+</noscript>
 </head>
 
-  <body>
-    <header id="header">
-  <div class="row">
-    <div class="container has-padding nav">
-      <button id="navbar-toggler" class="navbar-button" aria-hidden="true">
-
-
-
-
-
-
-
-
-
-
-
-<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><path d='M64 384h384v-42.67H64zm0-106.67h384v-42.66H64zM64 128v42.67h384V128z'/></svg>
-
-
-
-
-
-</button>
-      <div class="navbar-brand">
-        <a class="logo navbar-button" href="http://localhost:1313/" title="Wildland Fire Data Library">
-          <span>Wildland Fire Data Library</span>
-        </a>
-      </div>
-      <nav class="navbar" role="navigation">
-        <ul>
-          
-          
-            <li class="nav-bar-item active">
-              <a class="nav-link navbar-button" href="/tags/" title="Tags">
-                <span>tags</span>
-              </a>
-            </li>
-          
-        </ul>
-      </nav>
-      <div class="theme-selector">
-        <button class="button is-text" id="theme-selector-button" title="toggle theme">
-          <span class="label icon">
-
-
-
-
-
-<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><path d='M256 32C132.29 32 32 132.29 32 256s100.29 224 224 224 224-100.29 224-224S379.71 32 256 32zM128.72 383.28A180 180 0 01256 76v360a178.82 178.82 0 01-127.28-52.72z'/></svg>
-
-
-
-
-
-
-
-
-
-
-
-</span>
-        </button>
-      </div>
-    </div>
-    
-      <div class="container has-padding">
-        <div class="breadcrumb">
-          
-
-
-
-        </div>
-      </div>
-    
-  </div>
-</header>
-
-    
-<main id="main" class="index-page homepage" role="main">
-  <div class="container has-padding">
-    
-    
-    
-
-    
-    <div class="article-list">
-      
-      <article class="post">
-        <h3 class="title">
-          <a href="http://localhost:1313/posts/afe-jobboard/" title="AFE Job Board">AFE Job Board</a>
-        </h3>
-        
-          <div class="content summary">
-            <p><p>The Association for Fire Ecology shares announcements about job openings in fire ecology, fire management, and the environmental sector here</p>
-<p><strong>Visit AFE job board here!</strong> (<a href="https://fireecology.org/jobs-board">https://fireecology.org/jobs-board</a>)</p></p>
-            
-          </div>
-          <a class="readmore" href="http://localhost:1313/posts/afe-jobboard/" aria-label="READ MORE">READ MORE</a>
-        
-        <div class="date float-right">
-          
-          <time datetime="2024-12-11T20:29:48-0800" class="date">December 11, 2024</time>
-        </div>
-      </article>
-      
-      <article class="post">
-        <h3 class="title">
-          <a href="http://localhost:1313/posts/afe-mentoring/" title="Association for Fire Ecology Mentoring Program">Association for Fire Ecology Mentoring Program</a>
-        </h3>
-        
-          <div class="content summary">
-            <p><p>The goal of the Mentoring Futures Program is to actively cultivate the future of wildland fire and resource conservation by investing in future leaders.</p>
-<p>Mentors and mentees can be in any career stage and have a focus in any wildland fire-related discipline or field.</p>
-<p><strong>Visit Mentoring Futures Program website here!</strong> (<a href="https://fireecology.org/mentoring">https://fireecology.org/mentoring</a>)</p></p>
-            
-          </div>
-          <a class="readmore" href="http://localhost:1313/posts/afe-mentoring/" aria-label="READ MORE">READ MORE</a>
-        
-        <div class="date float-right">
-          
-          <time datetime="2024-12-11T20:29:48-0800" class="date">December 11, 2024</time>
-        </div>
-      </article>
-      
-      <article class="post">
-        <h3 class="title">
-          <a href="http://localhost:1313/posts/climate-resilience-fund-database/" title="Climate Resilience Fund Database">Climate Resilience Fund Database</a>
-        </h3>
-        
-          <div class="content summary">
-            <p><p>The Climate Resilience Fund is an organization that promotes sustainablility for communities</p>
-<p><strong>Visit the Climate Resilience Fund&rsquo;s Database here!</strong> (<a href="https://www.climateresiliencefund.org/planning-resources/">https://www.climateresiliencefund.org/planning-resources/</a>)</p></p>
-            
-          </div>
-          <a class="readmore" href="http://localhost:1313/posts/climate-resilience-fund-database/" aria-label="READ MORE">READ MORE</a>
-        
-        <div class="date float-right">
-          
-          <time datetime="2024-12-11T20:29:48-0800" class="date">December 11, 2024</time>
-        </div>
-      </article>
-      
-      <article class="post">
-        <h3 class="title">
-          <a href="http://localhost:1313/posts/doi-jobbard/" title="Department of the Interior Job Board">Department of the Interior Job Board</a>
-        </h3>
-        
-          <div class="content summary">
-            <p><p>The Department of the Interior&rsquo;s job board. Includes tips on how to apply to USA jobs, as well as agency specific links.</p>
-<p>The below agencies are included:</p>
-<p>Bureau of Land Management (BLM), US Fish and Wildlife Service (USFWS), the National Park Service (NPS), and the Bureau of Indian Affairs (BIA)</p>
-<p><strong>Visit DOI Job Board here!</strong> (<a href="https://www.firejobs.doi.gov/">https://www.firejobs.doi.gov/</a>)</p></p>
-            
-          </div>
-          <a class="readmore" href="http://localhost:1313/posts/doi-jobbard/" aria-label="READ MORE">READ MORE</a>
-        
-        <div class="date float-right">
-          
-          <time datetime="2024-12-11T20:29:48-0800" class="date">December 11, 2024</time>
-        </div>
-      </article>
-      
-      <article class="post">
-        <h3 class="title">
-          <a href="http://localhost:1313/posts/wildfire-risk/" title="Explore Your Wildfire Risk">Explore Your Wildfire Risk</a>
-        </h3>
-        
-          <div class="content summary">
-            <p><p>Use this tool to explore location specific wildfire risk.
-Includes grant-writing assistance
-<strong>Visit the Wildfire Risk website here!</strong> (<a href="https://wildfirerisk.org/explore">https://wildfirerisk.org/explore</a>)</p></p>
-            
-          </div>
-          <a class="readmore" href="http://localhost:1313/posts/wildfire-risk/" aria-label="READ MORE">READ MORE</a>
-        
-        <div class="date float-right">
-          
-          <time datetime="2024-12-11T20:29:48-0800" class="date">December 11, 2024</time>
-        </div>
-      </article>
-      
-    </div>
-    
-
-
-<div class="pagination">
-  <ul class="pagination-container">
-    
-
-    
-    
-
-    
-      
-      
-      
-      
-      
-        
-        
-      
-
-      
-        <li class="page-item current page-number"><a class="page-link" href="/">1</a></li>
-      
-    
-      
-      
-      
-      
-      
-        
-        
-      
-
-      
-        <li class="page-item  page-number"><a class="page-link" href="/page/2/">2</a></li>
-      
-    
-      
-      
-      
-      
-      
-        
-        
-      
-
-      
-        <li class="page-item  page-number"><a class="page-link" href="/page/3/">3</a></li>
-      
-    
-      
-      
-      
-      
-      
-        
-        
-      
-
-      
-        <li class="page-item  page-number"><a class="page-link" href="/page/4/">4</a></li>
-      
-    
-
-    
-    <li class="page-item to-right">
-      <a href="/page/2/" class="page-link" aria-label="Next">
-        <span aria-hidden="true">Next &#xbb;</span>
-      </a>
-    </li>
-    
-  </ul>
-</div>
-
-
-
-  </div>
-</main>
-
-    <footer id="footer">
-  <div class="container has-padding is-flex">
-    <ul class="links">
-      
-      <li>
-          <a class="nav-link navbar-button" href="http://localhost:1313/index.xml" type="application/rss&#43;xml">RSS</a>
-        </li>
-      <li>
-        <a
-          rel="nofollow"
-          target="_blank"
-          href="https://github.com/wayjam/hugo-theme-fluency"
-          title="using Hugo theme fluency">
-          Theme Fluency
-        </a>
-      </li>
-      <li>
-        <a rel="nofollow" target="_blank" href="https://gohugo.io" title="Built with hugo">Built with Hugo</a>
-      </li>
-    </ul>
-    <div class="copyright">
-       &copy; 2024 Wildland Fire Data Library
-      
-    </div>
-  </div>
-</footer>
-
+<body class="list" id="top">
 <script>
-    window.FluencyCopyIcon = '\r\n\r\n\r\n\r\n\r\n\r\n\r\n\u003csvg xmlns=\u0027http:\/\/www.w3.org\/2000\/svg\u0027 class=\u0027ionicon\u0027 viewBox=\u00270 0 512 512\u0027\u003e\u003crect x=\u0027128\u0027 y=\u0027128\u0027 width=\u0027336\u0027 height=\u0027336\u0027 rx=\u002757\u0027 ry=\u002757\u0027 stroke-linejoin=\u0027round\u0027 class=\u0027ionicon-fill-none ionicon-stroke-width\u0027\/\u003e\u003cpath d=\u0027M383.5 128l.5-24a56.16 56.16 0 00-56-56H112a64.19 64.19 0 00-64 64v216a56.16 56.16 0 0056 56h24\u0027 stroke-linecap=\u0027round\u0027 stroke-linejoin=\u0027round\u0027 class=\u0027ionicon-fill-none ionicon-stroke-width\u0027\/\u003e\u003c\/svg\u003e\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n'
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
 </script>
 
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Wildland Fire Data Library (Alt + H)">Wildland Fire Data Library</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="Home">
+                    <span class="active">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Resources">
+                    <span>Resources</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<div class="post-content"><h1 style="text-align: center;">Welcome To The Wildland Fire Data Library</h1>
+<p>Your comprehensive resource for wildland fire information, research, and resources.</p>
+<h3 id="what-youll-find-here">What You&rsquo;ll Find Here<a hidden class="anchor" aria-hidden="true" href="#what-youll-find-here">#</a></h3>
+<ul>
+<li>Academic Resources and Research</li>
+<li>Job Opportunities</li>
+<li>Student Assistance Programs</li>
+<li>Community Resources</li>
+<li>Research Tools and Databases</li>
+</ul>
+<h3 id="how-to-use-this-site">How to Use This Site<a hidden class="anchor" aria-hidden="true" href="#how-to-use-this-site">#</a></h3>
+<ul>
+<li>Use the <a href="/search/"><strong>Search</strong></a> function to find specific resources</li>
+<li>Browse by <a href="/tags/"><strong>Tags</strong></a> to explore different categories</li>
+<li>View all entries under <a href="/posts/"><strong>Resources</strong></a></li>
+</ul>
+<h3 id="about-us">About Us<a hidden class="anchor" aria-hidden="true" href="#about-us">#</a></h3>
+<p>This library serves as a centralized hub for the wildland fire community, providing access to valuable resources, opportunities, and information.</p>
+<p>This site was created and is maintained by Max Levy and Eric Evenson, a Mentee/Mentor Partnership though the International Association of Wildland Firefighters.</p>
 
-<script defer src="http://localhost:1313/js/main.min.15ea6de828b83519cdc1bc66872563a50cd5e59b4b1cfc6f31019951922b2e78.js" integrity="sha256-Fept6Ci4NRnNwbxmhyVjpQzV5ZtLHPxvMQGZUZIrLng=" crossorigin="anonymous" async></script>
 
+</div>
+<article class="first-entry home-info">
+    <header class="entry-header">
+        <h1></h1>
+    </header>
+    <div class="entry-content">
+        
+    </div>
+    <footer class="entry-footer">
+        <div class="social-icons" >
+</div>
 
+    </footer>
+</article>
 
-<noscript>
-<style type=text/css>#theme-selector-button{display:none}</style>
-</noscript>
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">AFE Job Board
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The Association for Fire Ecology shares announcements about job openings in fire ecology, fire management, and the environmental sector here
+Visit AFE job board here! (https://fireecology.org/jobs-board)
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-11 20:29:48 -0800 PST'>December 11, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to AFE Job Board" href="http://localhost:1313/posts/afe-jobboard/"></a>
+</article>
 
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Association for Fire Ecology Mentoring Program
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The goal of the Mentoring Futures Program is to actively cultivate the future of wildland fire and resource conservation by investing in future leaders.
+Mentors and mentees can be in any career stage and have a focus in any wildland fire-related discipline or field.
+Visit Mentoring Futures Program website here! (https://fireecology.org/mentoring)
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-11 20:29:48 -0800 PST'>December 11, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Association for Fire Ecology Mentoring Program" href="http://localhost:1313/posts/afe-mentoring/"></a>
+</article>
 
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Climate Resilience Fund Database
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The Climate Resilience Fund is an organization that promotes sustainablility for communities
+Visit the Climate Resilience Fund’s Database here! (https://www.climateresiliencefund.org/planning-resources/)
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-11 20:29:48 -0800 PST'>December 11, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Climate Resilience Fund Database" href="http://localhost:1313/posts/climate-resilience-fund-database/"></a>
+</article>
 
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Community Wildfire Protection Plan Portal and Data Library
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The CWPP Portal and Data Library offers a range of resources for wildfire risk mitigation practitioners and researchers. Data encompass 20,000&#43; records of individuals’ participation in 1,000&#43; CWPPs in 11 states of the fire-prone US West, attributes of individuals and plans, and the plan documents themselves.
+Visit the CWPP Data Library website here! (https://fireadapted.org/cwpp-database/)
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-11 20:29:48 -0800 PST'>December 11, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Community Wildfire Protection Plan Portal and Data Library" href="http://localhost:1313/posts/fire-adapted-cwpp-library/"></a>
+</article>
 
-  </body>
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Department of the Interior Job Board
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The Department of the Interior’s job board. Includes tips on how to apply to USA jobs, as well as agency specific links.
+The below agencies are included:
+Bureau of Land Management (BLM), US Fish and Wildlife Service (USFWS), the National Park Service (NPS), and the Bureau of Indian Affairs (BIA)
+Visit DOI Job Board here! (https://www.firejobs.doi.gov/)
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-11 20:29:48 -0800 PST'>December 11, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Department of the Interior Job Board" href="http://localhost:1313/posts/doi-jobbard/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Explore Your Wildfire Risk
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Apply here for government jobs! Tips: Search with keywords range technician, forestry technician, 0462, smokejumper, hotshot, or fire management
+Visit USAjobs website here! (https://www.usajobs.gov/)
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-11 20:29:48 -0800 PST'>December 11, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Explore Your Wildfire Risk" href="http://localhost:1313/posts/usa-jobs/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Explore Your Wildfire Risk
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Use this tool to explore location specific wildfire risk. Includes grant-writing assistance Visit the Wildfire Risk website here! (https://wildfirerisk.org/explore)
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-11 20:29:48 -0800 PST'>December 11, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Explore Your Wildfire Risk" href="http://localhost:1313/posts/wildfire-risk/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Fire Adapted Communities
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The following data library offers a range of resources for wildfire risk mitigation practitioners and researchers
+Visit the Fire Adapted Communities’ data libray here! (https://fireadapted.org/cwpp-database/)
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-11 20:29:48 -0800 PST'>December 11, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Fire Adapted Communities" href="http://localhost:1313/posts/fire-adapted-communities/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">FRAMES Job Board
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The Fire Research and Management Exchange System (Frames) supports wildland fire and natural resource professionals and policymakers by promoting and facilitating information and technology sharing, exchange, collaboration, and development through a state-of-the-art web-based content management system and resource cataloging system.
+Visit Frames job board website here! (https://www.frames.gov/announcements/current)
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-11 20:29:48 -0800 PST'>December 11, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to FRAMES Job Board" href="http://localhost:1313/posts/frames-job-board/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">International Association of Wildand Firefighters Scholarships
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>International Association of Wildand Firefighters Scholarships The International Association of Wildland Fire (IAWF) awards two graduate-level scholarships typically valued at $3,000 USD to Master of Science (M.Sc.) or Ph.D. students studying wildland fire or wildland fire-related topics. Student submitted essays are evaluated by an international panel of fire science experts and one award recipient is chosen for the Masters level and one for the Doctoral level. The IAWF has been presenting this award annually to members of the fire science community since 2007.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-11 20:29:48 -0800 PST'>December 11, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to International Association of Wildand Firefighters Scholarships" href="http://localhost:1313/posts/iawf-scholarships/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="http://localhost:1313/page/2/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="http://localhost:1313/">Wildland Fire Data Library</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
 </html>

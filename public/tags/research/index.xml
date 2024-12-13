@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Research on Wildland Fire Data Library</title>
     <link>http://localhost:1313/tags/research/</link>
     <description>Recent content in Research on Wildland Fire Data Library</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- 0.139.4</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 11 Dec 2024 20:29:48 -0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/research/index.xml" rel="self" type="application/rss+xml" />
@@ -13,14 +13,17 @@
       <link>http://localhost:1313/posts/jfse-proposal-tips/</link>
       <pubDate>Wed, 11 Dec 2024 20:29:48 -0800</pubDate>
       <guid>http://localhost:1313/posts/jfse-proposal-tips/</guid>
-      <description>&lt;p&gt;JFSE current funding announcements and proposal submission tips and preparation&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Visit JFSE funding website here!&lt;/strong&gt; (&lt;a href=&#34;https://www.firescience.gov/ords/prd/jf_jfsp/jf_jfsp/r/jfspublic/jfsp-funding?session=5335727171373&#34;&gt;https://www.firescience.gov/ords/prd/jf_jfsp/jf_jfsp/r/jfspublic/jfsp-funding?session=5335727171373&lt;/a&gt;)&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Visit the JFSE proposal assistance here&lt;/strong&gt; (&lt;a href=&#34;https://firescience.gov/ords/prd/jf_jfsp/jf_jfsp/r/134/files/static/v206/JFSP_Proposal_Submittal_and_Preparation_Tips_2024.pdf&#34;&gt;https://firescience.gov/ords/prd/jf_jfsp/jf_jfsp/r/134/files/static/v206/JFSP_Proposal_Submittal_and_Preparation_Tips_2024.pdf&lt;/a&gt;)&lt;/p&gt;</description>
+      <description>&lt;p&gt;JFSE current funding announcements, proposal submission tips, and preparation&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Visit JFSE funding website here!&lt;/strong&gt; (&lt;a href=&#34;https://www.firescience.gov/ords/prd/jf_jfsp/jf_jfsp/r/jfspublic/jfsp-funding?session=5335727171373&#34;&gt;https://www.firescience.gov/ords/prd/jf_jfsp/jf_jfsp/r/jfspublic/jfsp-funding?session=5335727171373&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Visit the JFSE proposal assistance here&lt;/strong&gt; (&lt;a href=&#34;https://firescience.gov/ords/prd/jf_jfsp/jf_jfsp/r/134/files/static/v206/JFSP_Proposal_Submittal_and_Preparation_Tips_2024.pdf&#34;&gt;https://firescience.gov/ords/prd/jf_jfsp/jf_jfsp/r/134/files/static/v206/JFSP_Proposal_Submittal_and_Preparation_Tips_2024.pdf&lt;/a&gt;)&lt;/p&gt;</description>
     </item>
     <item>
       <title>Northwest Fire Science Consortium Research Support</title>
       <link>http://localhost:1313/posts/nwfsc-support-letter/</link>
       <pubDate>Wed, 11 Dec 2024 20:29:48 -0800</pubDate>
       <guid>http://localhost:1313/posts/nwfsc-support-letter/</guid>
-      <description>&lt;p&gt;The Northwest Fire Science COnsortium offers letters of support for research or proposals, as well as assisting collaboration between fire scientists and fire managers in Washington and Oregon.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Visit the NFSC website here!&lt;/strong&gt; (&lt;a href=&#34;https://nwfirescience.org/working-with-us&#34;&gt;https://nwfirescience.org/working-with-us&lt;/a&gt;)&lt;/p&gt;</description>
+      <description>&lt;p&gt;The Northwest Fire Science COnsortium offers letters of support for research or proposals, as well as assisting collaboration between fire scientists and fire managers in Washington and Oregon.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Visit the NFSC website here!&lt;/strong&gt; (&lt;a href=&#34;https://nwfirescience.org/working-with-us&#34;&gt;https://nwfirescience.org/working-with-us&lt;/a&gt;)&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

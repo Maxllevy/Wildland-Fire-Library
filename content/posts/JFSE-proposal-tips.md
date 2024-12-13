@@ -5,7 +5,7 @@ draft: false
 date: '2024-12-11T20:29:48-08:00'
 ---
 
-JFSE current funding announcements and proposal submission tips and preparation
+JFSE current funding announcements, proposal submission tips, and preparation
 
 **Visit JFSE funding website here!** (https://www.firescience.gov/ords/prd/jf_jfsp/jf_jfsp/r/jfspublic/jfsp-funding?session=5335727171373)
 
