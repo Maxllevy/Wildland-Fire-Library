@@ -24,12 +24,8 @@ menu:
 
 params:
   hideList: true
-  mainSections: ["posts"]  # Added this line
   homeInfoParams:
     enabled: true
-    Title: "Welcome to the Wildland Fire Data Library"  # Added this
-    Content: >  # Add your welcome text here
-      Your welcome text goes here.
   fuseOpts:
     isCaseSensitive: false
     shouldSort: true
@@ -38,6 +34,7 @@ params:
     threshold: 0.4
     minMatchCharLength: 0
     keys: ["title", "permalink", "summary", "content"]
+
     
 outputs:
   home:
