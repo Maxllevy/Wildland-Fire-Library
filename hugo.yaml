@@ -21,6 +21,10 @@ menu:
     - name: Tags
       url: /tags/
       weight: 4
+    - name: "Suggest a Resource"
+      url: "https://app.formbricks.com/s/cm5fpim0i0000jn03zar52rrc"
+      weight: 5
+      
 
 params:
   hideList: true
