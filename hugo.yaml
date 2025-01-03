@@ -2,7 +2,10 @@ baseURL: "https://Maxllevy.github.io/wildland-fire-library/"
 languageCode: "en-us"
 title: "Wildland Fire Data Library"
 theme: "PaperMod"
-googleAnalytics: "G-ED0FEG6PZD"
+
+services:
+  googleAnalytics:
+    ID: G-ED0FEG6PZDs  # Your GA4 Measurement ID here
 
 taxonomies:
   tag: "tags"
