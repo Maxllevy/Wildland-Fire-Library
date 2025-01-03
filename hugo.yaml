@@ -27,6 +27,9 @@ menu:
     - name: "Suggest a Resource"
       url: "https://app.formbricks.com/s/cm5fpim0i0000jn03zar52rrc"
       weight: 5
+    - name: "Help"
+      url: "#"
+      weight: 6
 
 params:
   hideList: true

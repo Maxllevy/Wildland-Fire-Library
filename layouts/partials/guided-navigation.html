@@ -305,18 +305,31 @@
         // Store in localStorage that user has seen the welcome message
         localStorage.setItem('welcomeSeen', 'true');
     }
+   // Replace your existing DOMContentLoaded event listener with this one:
+
+document.addEventListener('DOMContentLoaded', () => {
+    const welcomeSeen = localStorage.getItem('welcomeSeen');
+    const modal = document.getElementById('welcomeModal');
+    const urlParams = new URLSearchParams(window.location.search);
+    const showGuide = urlParams.get('showGuide');
     
-    // Check if user has seen the welcome message
-    document.addEventListener('DOMContentLoaded', () => {
-        const welcomeSeen = localStorage.getItem('welcomeSeen');
-        const modal = document.getElementById('welcomeModal');
-        
-        if (!welcomeSeen) {
-            modal.style.display = 'flex';
-        } else {
-            modal.style.display = 'none';
-        }
-        
-        renderNavigation('welcome');
+    if (!welcomeSeen || showGuide === 'true') {
+        modal.style.display = 'flex';
+        // Remove the parameter from URL without refreshing
+        window.history.replaceState({}, document.title, window.location.pathname);
+    } else {
+        modal.style.display = 'none';
+    }
+    
+    renderNavigation('welcome');
+
+    // Add help menu click handler
+    const helpLinks = document.querySelectorAll('a[href="/help/"]');
+    helpLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            showModal();
+        });
     });
+});
     </script>
