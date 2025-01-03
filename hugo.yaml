@@ -40,6 +40,10 @@ params:
     threshold: 0.4
     minMatchCharLength: 0
     keys: ["title", "permalink", "summary", "content"]
+  analytics:
+    google:
+      SiteVerificationTag: "your-site-verification-tag"  # Optional
+    googleAnalytics: "G-ED0FEG6PZD"  # Replace with your GA4 Measurement ID
   # Taxonomy structure
   taxonomy:
     landowner:
@@ -53,7 +57,7 @@ params:
       grants:
         - Available Grants
         - Grant-Writing Tips
-    
+
     student:
       academic_assistance:
         - Mentorships
@@ -65,6 +69,7 @@ params:
       - Climate
       - Research Databases
       - Current Strategies
+
 
 outputs:
   home:
