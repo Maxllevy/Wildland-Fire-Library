@@ -19,4 +19,19 @@
     {{- if $pages }}
     {{- range first 1 $pages.ByLastmod.Reverse }}
     <article class="post-entry">
-        <header
+        <header class="entry-header">
+            <h3>{{ .Title }}</h3>
+        </header>
+        <section class="entry-content">
+            {{ .Summary }}
+        </section>
+        <footer class="entry-footer">
+            <time>{{ .Lastmod.Format "January 2, 2006" }}</time>
+        </footer>
+        <a class="entry-link" href="{{ .Permalink }}" aria-label="Read more: {{ .Title }}"></a>
+    </article>
+    {{- end }}
+    {{- end }}
+</div>
+
+{{- end }}
