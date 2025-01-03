@@ -1,0 +1,282 @@
+<!-- layouts/partials/guided-navigation.html -->
+<style>
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+    
+    .modal-content {
+        background: var(--entry);
+        max-width: 90%;
+        width: 800px;
+        max-height: 90vh;
+        border-radius: 8px;
+        padding: 2rem;
+        overflow-y: auto;
+        position: relative;
+    }
+    
+    .close-modal {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--primary);
+        padding: 0.5rem;
+    }
+    
+    .guided-nav {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .question-container {
+        background: var(--entry);
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .options-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .option-button {
+        background: var(--primary);
+        color: var(--theme);
+        border: none;
+        border-radius: 4px;
+        padding: 1rem;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: opacity 0.2s;
+        text-align: left;
+        display: block;
+        width: 100%;
+        text-decoration: none;
+    }
+    
+    .option-button:hover {
+        opacity: 0.9;
+    }
+    
+    .back-button {
+        background: var(--border);
+        color: var(--primary);
+        border: none;
+        border-radius: 4px;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        margin-bottom: 1rem;
+        display: none;
+    }
+    
+    .back-button:hover {
+        opacity: 0.9;
+    }
+    
+    .skip-button {
+        background: none;
+        border: none;
+        color: var(--primary);
+        text-decoration: underline;
+        cursor: pointer;
+        margin-top: 1rem;
+        padding: 0.5rem;
+        width: 100%;
+        text-align: center;
+    }
+    </style>
+    
+    <div id="welcomeModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()">×</button>
+            <div class="guided-nav">
+                <div id="navigation-content"></div>
+                <button class="skip-button" onclick="closeModal()">Skip guide and browse all resources</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    const navigationData = {
+        welcome: {
+            question: "Welcome to the Wildland Fire Data Library! What best describes you?",
+            options: [
+                {
+                    text: "I'm a private landowner",
+                    next: "landowner"
+                },
+                {
+                    text: "I'm a researcher",
+                    next: "researcher"
+                },
+                {
+                    text: "I'm a fire management professional",
+                    next: "professional"
+                },
+                {
+                    text: "I'm a student",
+                    next: "student"
+                }
+            ]
+        },
+        landowner: {
+            question: "What information are you looking for?",
+            options: [
+                {
+                    text: "Fire prevention and preparedness",
+                    link: "/tags/prevention"
+                },
+                {
+                    text: "Property management guidelines",
+                    link: "/tags/management"
+                },
+                {
+                    text: "Recovery resources",
+                    link: "/tags/recovery"
+                }
+            ]
+        },
+        researcher: {
+            question: "What type of research interests you?",
+            options: [
+                {
+                    text: "Climate and fire behavior",
+                    link: "/tags/climate"
+                },
+                {
+                    text: "Ecological impacts",
+                    link: "/tags/ecology"
+                },
+                {
+                    text: "Fire management strategies",
+                    link: "/tags/strategies"
+                }
+            ]
+        },
+        professional: {
+            question: "What resources are you looking for?",
+            options: [
+                {
+                    text: "Training materials",
+                    link: "/tags/training"
+                },
+                {
+                    text: "Management tools",
+                    link: "/tags/tools"
+                },
+                {
+                    text: "Research findings",
+                    link: "/tags/research"
+                }
+            ]
+        },
+        student: {
+            question: "What are you studying?",
+            options: [
+                {
+                    text: "Fire science basics",
+                    link: "/tags/basics"
+                },
+                {
+                    text: "Current research",
+                    link: "/tags/research"
+                },
+                {
+                    text: "Career resources",
+                    link: "/tags/careers"
+                }
+            ]
+        }
+    };
+    
+    let currentScreen = 'welcome';
+    let navigationHistory = [];
+    
+    function renderNavigation(screenId) {
+        const screen = navigationData[screenId];
+        const container = document.getElementById('navigation-content');
+        
+        let html = '';
+        
+        // Back button
+        if (navigationHistory.length > 0) {
+            html += '<button class="back-button" onclick="goBack()">← Back</button>';
+        }
+        
+        // Question container
+        html += `
+            <div class="question-container">
+                <h2>${screen.question}</h2>
+                <div class="options-grid">
+        `;
+        
+        // Options
+        screen.options.forEach(option => {
+            if (option.link) {
+                html += `<a href="${option.link}" class="option-button" onclick="closeModal()">${option.text}</a>`;
+            } else {
+                html += `<button class="option-button" onclick="navigate('${option.next}')">${option.text}</button>`;
+            }
+        });
+        
+        html += '</div></div>';
+        container.innerHTML = html;
+        
+        // Show/hide back button
+        const backButton = container.querySelector('.back-button');
+        if (backButton) {
+            backButton.style.display = navigationHistory.length > 0 ? 'block' : 'none';
+        }
+    }
+    
+    function navigate(screenId) {
+        navigationHistory.push(currentScreen);
+        currentScreen = screenId;
+        renderNavigation(screenId);
+    }
+    
+    function goBack() {
+        if (navigationHistory.length > 0) {
+            currentScreen = navigationHistory.pop();
+            renderNavigation(currentScreen);
+        }
+    }
+    
+    function closeModal() {
+        const modal = document.getElementById('welcomeModal');
+        modal.style.display = 'none';
+        
+        // Store in localStorage that user has seen the welcome message
+        localStorage.setItem('welcomeSeen', 'true');
+    }
+    
+    // Check if user has seen the welcome message
+    document.addEventListener('DOMContentLoaded', () => {
+        const welcomeSeen = localStorage.getItem('welcomeSeen');
+        const modal = document.getElementById('welcomeModal');
+        
+        if (!welcomeSeen) {
+            modal.style.display = 'flex';
+        } else {
+            modal.style.display = 'none';
+        }
+        
+        renderNavigation('welcome');
+    });
+    </script>
