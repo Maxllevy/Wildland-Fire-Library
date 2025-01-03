@@ -28,7 +28,7 @@ menu:
       url: "https://app.formbricks.com/s/cm5fpim0i0000jn03zar52rrc"
       weight: 5
     - name: "Help"
-      url: "#"
+      url: "/help/"
       weight: 6
 
 params:
