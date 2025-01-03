@@ -100,212 +100,216 @@
         width: 100%;
         text-align: center;
     }
-    </style>
-    
-    <div id="welcomeModal" class="modal-overlay">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal()">×</button>
-            <div class="guided-nav">
-                <div id="navigation-content"></div>
-                <button class="skip-button" onclick="closeModal()">Skip guide and browse all resources</button>
-            </div>
+</style>
+
+<div id="welcomeModal" class="modal-overlay">
+    <div class="modal-content">
+        <button class="close-modal" onclick="closeModal()">×</button>
+        <div class="guided-nav">
+            <div id="navigation-content"></div>
+            <button class="skip-button" onclick="closeModal()">Skip guide and browse all resources</button>
         </div>
     </div>
-    
-    <script>
-    const navigationData = {
-        welcome: {
-            question: "Welcome to the Wildland Fire Data Library! What best describes you?",
-            options: [
-                {
-                    text: "I'm a private landowner",
-                    next: "landowner"
-                },
-                {
-                    text: "I'm a student",
-                    next: "student"
-                },
-                {
-                    text: "I'm a researcher",
-                    next: "researcher"
-                }
-            ]
-        },
-        landowner: {
-            question: "What kind of information are you looking for?",
-            options: [
-                {
-                    text: "Fire Preparedness",
-                    next: "fire_preparedness"
-                },
-                {
-                    text: "Property Management",
-                    next: "property_management"
-                },
-                {
-                    text: "Finding and Writing Grants",
-                    next: "grants"
-                }
-            ]
-        },
-        fire_preparedness: {
-            question: "What preparedness information do you need?",
-            options: [
-                {
-                    text: "Escape Plans",
-                    link: "/tags/Landowner/Fire-Preparedness/Escape-Plans"
-                },
-                {
-                    text: "Stay Informed",
-                    link: "/tags/Landowner/Fire-Preparedness/Stay-Informed"
-                },
-                {
-                    text: "Current Fire Information",
-                    link: "/tags/Landowner/Fire-Preparedness/Current-Fire-Information"
-                },
-                {
-                    text: "Smoke Preparation",
-                    link: "/tags/Landowner/Fire-Preparedness/Smoke-Preparation"
-                }
-            ]
-        },
-        property_management: {
-            question: "What property management information do you need?",
-            options: [
-                {
-                    text: "Building and Maintaining",
-                    link: "/tags/Landowner/Property-Management/Building-and-Maintaining"
-                }
-            ]
-        },
-        grants: {
-            question: "What grant information are you looking for?",
-            options: [
-                {
-                    text: "Available Grants",
-                    link: "/tags/Landowner/Grants/Available-Grants"
-                },
-                {
-                    text: "Grant-Writing Tips",
-                    link: "/tags/Landowner/Grants/Grant-Writing-Tips"
-                }
-            ]
-        },
-        student: {
-            question: "What do you need help with?",
-            options: [
-                {
-                    text: "Academic Assistance",
-                    next: "academic_assistance"
-                },
-                {
-                    text: "Career Assistance",
-                    next: "career_assistance"
-                }
-            ]
-        },
-        academic_assistance: {
-            question: "What type of academic assistance do you need?",
-            options: [
-                {
-                    text: "Mentorships",
-                    link: "/tags/Student/Academic-Assistance/Mentorships"
-                },
-                {
-                    text: "Financial Assistance",
-                    link: "/tags/Student/Academic-Assistance/Financial-Assistance"
-                }
-            ]
-        },
-        career_assistance: {
-            question: "What career assistance do you need?",
-            options: [
-                {
-                    text: "Jobs",
-                    link: "/tags/Student/Career-Assistance/Jobs"
-                }
-            ]
-        },
-        researcher: {
-            question: "What do you need help finding?",
-            options: [
-                {
-                    text: "Climate",
-                    link: "/tags/Researcher/Climate"
-                },
-                {
-                    text: "Research Databases",
-                    link: "/tags/Researcher/Research-Databases"
-                },
-                {
-                    text: "Current Strategies",
-                    link: "/tags/Researcher/Current-Strategies"
-                }
-            ]
-        }
-    };
-    
-    let currentScreen = 'welcome';
-    let navigationHistory = [];
-    
-    function renderNavigation(screenId) {
-        const screen = navigationData[screenId];
-        const container = document.getElementById('navigation-content');
-        
-        let html = '';
-        
-        // Back button
-        if (navigationHistory.length > 0) {
-            html += '<button class="back-button" onclick="goBack()">← Back</button>';
-        }
-        
-        // Question container
-        html += `
-            <div class="question-container">
-                <h2>${screen.question}</h2>
-                <div class="options-grid">
-        `;
-        
-        // Options
-        screen.options.forEach(option => {
-            if (option.link) {
-                html += `<a href="${option.link}" class="option-button" onclick="closeModal()">${option.text}</a>`;
-            } else {
-                html += `<button class="option-button" onclick="navigate('${option.next}')">${option.text}</button>`;
+</div>
+
+<script>
+const navigationData = {
+    welcome: {
+        question: "Welcome to the Wildland Fire Data Library! What best describes you?",
+        options: [
+            {
+                text: "I'm a private landowner",
+                next: "landowner"
+            },
+            {
+                text: "I'm a student",
+                next: "student"
+            },
+            {
+                text: "I'm a researcher",
+                next: "researcher"
             }
-        });
-        
-        html += '</div></div>';
-        container.innerHTML = html;
-        
-        // Show/hide back button
-        const backButton = container.querySelector('.back-button');
-        if (backButton) {
-            backButton.style.display = navigationHistory.length > 0 ? 'block' : 'none';
+        ]
+    },
+    landowner: {
+        question: "What kind of information are you looking for?",
+        options: [
+            {
+                text: "Fire Preparedness",
+                next: "fire_preparedness"
+            },
+            {
+                text: "Property Management",
+                next: "property_management"
+            },
+            {
+                text: "Finding and Writing Grants",
+                next: "grants"
+            }
+        ]
+    },
+    fire_preparedness: {
+        question: "What preparedness information do you need?",
+        options: [
+            {
+                text: "Escape Plans",
+                link: "/tags/Landowner/Fire-Preparedness/Escape-Plans"
+            },
+            {
+                text: "Stay Informed",
+                link: "/tags/Landowner/Fire-Preparedness/Stay-Informed"
+            },
+            {
+                text: "Current Fire Information",
+                link: "/tags/Landowner/Fire-Preparedness/Current-Fire-Information"
+            },
+            {
+                text: "Smoke Preparation",
+                link: "/tags/Landowner/Fire-Preparedness/Smoke-Preparation"
+            }
+        ]
+    },
+    property_management: {
+        question: "What property management information do you need?",
+        options: [
+            {
+                text: "Building and Maintaining",
+                link: "/tags/Landowner/Property-Management/Building-and-Maintaining"
+            }
+        ]
+    },
+    grants: {
+        question: "What grant information are you looking for?",
+        options: [
+            {
+                text: "Available Grants",
+                link: "/tags/Landowner/Grants/Available-Grants"
+            },
+            {
+                text: "Grant-Writing Tips",
+                link: "/tags/Landowner/Grants/Grant-Writing-Tips"
+            }
+        ]
+    },
+    student: {
+        question: "What do you need help with?",
+        options: [
+            {
+                text: "Academic Assistance",
+                next: "academic_assistance"
+            },
+            {
+                text: "Career Assistance",
+                next: "career_assistance"
+            }
+        ]
+    },
+    academic_assistance: {
+        question: "What type of academic assistance do you need?",
+        options: [
+            {
+                text: "Mentorships",
+                link: "/tags/Student/Academic-Assistance/Mentorships"
+            },
+            {
+                text: "Financial Assistance",
+                link: "/tags/Student/Academic-Assistance/Financial-Assistance"
+            }
+        ]
+    },
+    career_assistance: {
+        question: "What career assistance do you need?",
+        options: [
+            {
+                text: "Jobs",
+                link: "/tags/Student/Career-Assistance/Jobs"
+            }
+        ]
+    },
+    researcher: {
+        question: "What do you need help finding?",
+        options: [
+            {
+                text: "Climate",
+                link: "/tags/Researcher/Climate"
+            },
+            {
+                text: "Research Databases",
+                link: "/tags/Researcher/Research-Databases"
+            },
+            {
+                text: "Current Strategies",
+                link: "/tags/Researcher/Current-Strategies"
+            }
+        ]
+    }
+};
+
+let currentScreen = 'welcome';
+let navigationHistory = [];
+
+function renderNavigation(screenId) {
+    const screen = navigationData[screenId];
+    const container = document.getElementById('navigation-content');
+    
+    let html = '';
+    
+    // Back button
+    if (navigationHistory.length > 0) {
+        html += '<button class="back-button" onclick="goBack()">← Back</button>';
+    }
+    
+    // Question container
+    html += `
+        <div class="question-container">
+            <h2>${screen.question}</h2>
+            <div class="options-grid">
+    `;
+    
+    // Options
+    screen.options.forEach(option => {
+        if (option.link) {
+            html += `<a href="${option.link}" class="option-button" onclick="closeModal()">${option.text}</a>`;
+        } else {
+            html += `<button class="option-button" onclick="navigate('${option.next}')">${option.text}</button>`;
         }
-    }
+    });
     
-    function navigate(screenId) {
-        navigationHistory.push(currentScreen);
-        currentScreen = screenId;
-        renderNavigation(screenId);
-    }
+    html += '</div></div>';
+    container.innerHTML = html;
     
-    function goBack() {
-        if (navigationHistory.length > 0) {
-            currentScreen = navigationHistory.pop();
-            renderNavigation(currentScreen);
-        }
+    // Show/hide back button
+    const backButton = container.querySelector('.back-button');
+    if (backButton) {
+        backButton.style.display = navigationHistory.length > 0 ? 'block' : 'none';
     }
-    
-    function closeModal() {
-        const modal = document.getElementById('welcomeModal');
-        modal.style.display = 'none';
-        
-        // Store in localStorage that user has seen the welcome message
-        localStorage.setItem('welcomeSeen', 'true');
+}
+
+function navigate(screenId) {
+    navigationHistory.push(currentScreen);
+    currentScreen = screenId;
+    renderNavigation(screenId);
+}
+
+function goBack() {
+    if (navigationHistory.length > 0) {
+        currentScreen = navigationHistory.pop();
+        renderNavigation(currentScreen);
     }
-   // Replace your existing DOMContentLoaded event listener with this one:
+}
+
+function closeModal() {
+    const modal = document.getElementById('welcomeModal');
+    modal.style.display = 'none';
+    localStorage.setItem('welcomeSeen', 'true');
+}
+
+function showModal() {
+    const modal = document.getElementById('welcomeModal');
+    modal.style.display = 'flex';
+    renderNavigation('welcome');
+    return false;
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     const welcomeSeen = localStorage.getItem('welcomeSeen');
@@ -332,4 +336,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-    </script>
+</script>
