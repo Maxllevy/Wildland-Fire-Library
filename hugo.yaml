@@ -15,21 +15,18 @@ menu:
     - name: Home
       url: /
       weight: 1
-    - name: Resources
-      url: /posts/
-      weight: 2
     - name: Search
       url: /search/
-      weight: 3
+      weight: 2
     - name: Tags
       url: /tags/
-      weight: 4
+      weight: 3
     - name: "Suggest a Resource"
       url: "https://app.formbricks.com/s/cm5fpim0i0000jn03zar52rrc"
-      weight: 5
+      weight: 4
     - name: "Help"
       url: "/help/"
-      weight: 6
+      weight: 5
 
 params:
   hideList: true
