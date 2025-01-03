@@ -1,4 +1,5 @@
 #baseURL: "https://Maxllevy.github.io/wildland-fire-library/"
+googleAnalytics: "G-ED0FEG6PZD"
 languageCode: "en-us"
 title: "Wildland Fire Data Library"
 theme: "PaperMod"
@@ -43,8 +44,7 @@ params:
   analytics:
     google:
       SiteVerificationTag: "your-site-verification-tag"  # Optional
-    googleAnalytics: "G-ED0FEG6PZD"  # Replace with your GA4 Measurement ID
-  # Taxonomy structure
+    googleAnalytics: "G-ED0FEG6PZD"  
   taxonomy:
     landowner:
       fire_preparedness:
