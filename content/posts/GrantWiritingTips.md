@@ -1,6 +1,6 @@
 ---
 title: "Grant Writing Basics"
-tags: ['Grants', 'Community Resources']
+tags: ['Grants/Help-Writing', 'Community Resources']  # Note the forward slash to indicate hierarchy
 draft: false
 date: '2024-12-11T20:29:48-08:00'
 ---

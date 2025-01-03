@@ -6,6 +6,9 @@ theme: "PaperMod"
 taxonomies:
   tag: "tags"
   category: "categories"
+  landowner_category: "landowner_categories"
+  student_category: "student_categories"
+  researcher_category: "researcher_categories"
 
 menu:
   main:
@@ -24,7 +27,6 @@ menu:
     - name: "Suggest a Resource"
       url: "https://app.formbricks.com/s/cm5fpim0i0000jn03zar52rrc"
       weight: 5
-      
 
 params:
   hideList: true
@@ -38,8 +40,32 @@ params:
     threshold: 0.4
     minMatchCharLength: 0
     keys: ["title", "permalink", "summary", "content"]
-
+  # Taxonomy structure
+  taxonomy:
+    landowner:
+      fire_preparedness:
+        - Escape Plans
+        - Stay Informed
+        - Current Fire Information
+        - Smoke Preparation
+      property_management:
+        - Building and Maintaining
+      grants:
+        - Available Grants
+        - Grant-Writing Tips
     
+    student:
+      academic_assistance:
+        - Mentorships
+        - Financial Assistance
+      career_assistance:
+        - Jobs
+    
+    researcher:
+      - Climate
+      - Research Databases
+      - Current Strategies
+
 outputs:
   home:
     - HTML

@@ -122,84 +122,124 @@
                     next: "landowner"
                 },
                 {
-                    text: "I'm a researcher",
-                    next: "researcher"
-                },
-                {
-                    text: "I'm a fire management professional",
-                    next: "professional"
-                },
-                {
                     text: "I'm a student",
                     next: "student"
+                },
+                {
+                    text: "I'm a researcher",
+                    next: "researcher"
                 }
             ]
         },
         landowner: {
-            question: "What information are you looking for?",
+            question: "What kind of information are you looking for?",
             options: [
                 {
-                    text: "Fire prevention and preparedness",
-                    link: "/tags/prevention"
+                    text: "Fire Preparedness",
+                    next: "fire_preparedness"
                 },
                 {
-                    text: "Property management guidelines",
-                    link: "/tags/management"
+                    text: "Property Management",
+                    next: "property_management"
                 },
                 {
-                    text: "Recovery resources",
-                    link: "/tags/recovery"
+                    text: "Finding and Writing Grants",
+                    next: "grants"
                 }
             ]
         },
-        researcher: {
-            question: "What type of research interests you?",
+        fire_preparedness: {
+            question: "What preparedness information do you need?",
             options: [
                 {
-                    text: "Climate and fire behavior",
-                    link: "/tags/climate"
+                    text: "Escape Plans",
+                    link: "/tags/Landowner/Fire-Preparedness/Escape-Plans"
                 },
                 {
-                    text: "Ecological impacts",
-                    link: "/tags/ecology"
+                    text: "Stay Informed",
+                    link: "/tags/Landowner/Fire-Preparedness/Stay-Informed"
                 },
                 {
-                    text: "Fire management strategies",
-                    link: "/tags/strategies"
+                    text: "Current Fire Information",
+                    link: "/tags/Landowner/Fire-Preparedness/Current-Fire-Information"
+                },
+                {
+                    text: "Smoke Preparation",
+                    link: "/tags/Landowner/Fire-Preparedness/Smoke-Preparation"
                 }
             ]
         },
-        professional: {
-            question: "What resources are you looking for?",
+        property_management: {
+            question: "What property management information do you need?",
             options: [
                 {
-                    text: "Training materials",
-                    link: "/tags/training"
+                    text: "Building and Maintaining",
+                    link: "/tags/Landowner/Property-Management/Building-and-Maintaining"
+                }
+            ]
+        },
+        grants: {
+            question: "What grant information are you looking for?",
+            options: [
+                {
+                    text: "Available Grants",
+                    link: "/tags/Landowner/Grants/Available-Grants"
                 },
                 {
-                    text: "Management tools",
-                    link: "/tags/tools"
-                },
-                {
-                    text: "Research findings",
-                    link: "/tags/research"
+                    text: "Grant-Writing Tips",
+                    link: "/tags/Landowner/Grants/Grant-Writing-Tips"
                 }
             ]
         },
         student: {
-            question: "What are you studying?",
+            question: "What do you need help with?",
             options: [
                 {
-                    text: "Fire science basics",
-                    link: "/tags/basics"
+                    text: "Academic Assistance",
+                    next: "academic_assistance"
                 },
                 {
-                    text: "Current research",
-                    link: "/tags/research"
+                    text: "Career Assistance",
+                    next: "career_assistance"
+                }
+            ]
+        },
+        academic_assistance: {
+            question: "What type of academic assistance do you need?",
+            options: [
+                {
+                    text: "Mentorships",
+                    link: "/tags/Student/Academic-Assistance/Mentorships"
                 },
                 {
-                    text: "Career resources",
-                    link: "/tags/careers"
+                    text: "Financial Assistance",
+                    link: "/tags/Student/Academic-Assistance/Financial-Assistance"
+                }
+            ]
+        },
+        career_assistance: {
+            question: "What career assistance do you need?",
+            options: [
+                {
+                    text: "Jobs",
+                    link: "/tags/Student/Career-Assistance/Jobs"
+                }
+            ]
+        },
+        researcher: {
+            question: "What do you need help finding?",
+            options: [
+                {
+                    text: "Climate",
+                    link: "/tags/Researcher/Climate"
+                },
+                {
+                    text: "Research Databases",
+                    link: "/tags/Researcher/Research-Databases"
+                },
+                {
+                    text: "Current Strategies",
+                    link: "/tags/Researcher/Current-Strategies"
                 }
             ]
         }
