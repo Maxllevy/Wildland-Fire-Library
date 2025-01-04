@@ -1,3 +1,14 @@
+<!-- Debug Section -->
+<div style="background: #eee; padding: 10px; margin: 10px;">
+  Main Category: [{{ .mainCategory }}]<br>
+  Sub Category: [{{ .subCategory }}]<br>
+  Last Element: [{{ .lastElement }}]<br>
+  Number of Pages: {{ len .context.Pages }}<br>
+  First Page Content Sample: 
+  {{- range first 1 .context.Pages }}
+      {{ .Content | truncate 50 }}
+  {{- end }}
+</div>
 {{/* Landowner Section Analyzers */}}
 {{- if eq .mainCategory "landowner" -}}
     {{- if eq .subCategory "fire_preparedness" -}}
