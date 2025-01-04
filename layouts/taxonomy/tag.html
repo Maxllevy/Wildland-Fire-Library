@@ -31,30 +31,205 @@
             {{ $lastElement | humanize | title }}
         </h1>
 
-        <!-- Dynamic Summary -->
+        <!-- Dynamic Section-Specific Summaries -->
         {{- if gt (len .Pages) 0 }}
         <div class="post-description">
-            {{- if gt (len .Pages) 1 }}
-                This section contains {{ len .Pages }} resources about {{ .Title | lower | humanize }}.
-                {{- $firstThree := first 3 .Pages }}
-                Topics include
-                {{- range $index, $page := $firstThree }}
-                    {{- if eq $index 0 }} {{ else if eq $index (sub (len $firstThree) 1) }} and {{ else }}, {{ end }}
-                    {{ lower $page.Title }}
-                {{- end }}.
-            {{- else }}
-                {{- with index .Pages 0 }}
-                    {{- if .Description }}
-                        {{ .Description | truncate 100 }}
-                    {{- else }}
-                        {{ .Summary | truncate 100 }}
+            {{/* Get section path elements for categorization */}}
+            {{- $pathElements := split .Title "/" }}
+            {{- $mainCategory := index $pathElements 0 }}
+            {{- $subCategory := "" }}
+            {{- if gt (len $pathElements) 1 }}
+                {{- $subCategory = index $pathElements 1 }}
+            {{- end }}
+            {{- $lastElement := index $pathElements (sub (len $pathElements) 1) }}
+
+            {{/* Landowner Section Analyzers */}}
+            {{- if eq $mainCategory "landowner" }}
+                {{- if eq $subCategory "fire_preparedness" }}
+                    {{- if eq $lastElement "escape_plans" }}
+                        {{- $keywords := slice }}
+                        {{- range .Pages }}
+                            {{- $content := lower .Content }}
+                            {{- if findRE "evacuation|route|emergency|exit" $content }}
+                                {{- $keywords = $keywords | append "evacuation routes" }}
+                            {{- end }}
+                            {{- if findRE "communication|alert|notification" $content }}
+                                {{- $keywords = $keywords | append "emergency communications" }}
+                            {{- end }}
+                            {{- if findRE "checklist|preparation|pack|kit" $content }}
+                                {{- $keywords = $keywords | append "preparation checklists" }}
+                            {{- end }}
+                        {{- end }}
+                        {{- $keywords = uniq $keywords }}
+                        Resources for planning safe evacuations, including {{ delimit (first 3 $keywords) ", " }}.
+                    {{- else if eq $lastElement "stay_informed" }}
+                        Information sources for fire alerts, weather conditions, and emergency updates from local and federal agencies.
+                    {{- else if eq $lastElement "current_fire_information" }}
+                        Real-time data on active fires, smoke conditions, and fire weather forecasts.
+                    {{- else if eq $lastElement "smoke_preparation" }}
+                        Guidelines for protecting your health during smoke events and improving indoor air quality.
                     {{- end }}
+                {{- else if eq $subCategory "property_management" }}
+                    {{- if eq $lastElement "building_and_maintaining" }}
+                        {{- $topics := slice }}
+                        {{- range .Pages }}
+                            {{- $content := lower .Content }}
+                            {{- if findRE "defensible space|clearing|vegetation" $content }}
+                                {{- $topics = $topics | append "creating defensible space" }}
+                            {{- end }}
+                            {{- if findRE "construction|material|roof|siding" $content }}
+                                {{- $topics = $topics | append "fire-resistant construction" }}
+                            {{- end }}
+                            {{- if findRE "maintenance|upkeep|regular|seasonal" $content }}
+                                {{- $topics = $topics | append "maintenance guides" }}
+                            {{- end }}
+                        {{- end }}
+                        {{- $topics = uniq $topics }}
+                        Property protection resources covering {{ delimit (first 3 $topics) ", " }}.
+                    {{- end }}
+                {{- else if eq $subCategory "grants" }}
+                    {{- if eq $lastElement "available_grants" }}
+                        {{- $grantTypes := slice }}
+                        {{- range .Pages }}
+                            {{- $content := lower .Content }}
+                            {{- if findRE "federal|government|agency" $content }}
+                                {{- $grantTypes = $grantTypes | append "federal grants" }}
+                            {{- end }}
+                            {{- if findRE "state|local|county" $content }}
+                                {{- $grantTypes = $grantTypes | append "state/local funding" }}
+                            {{- end }}
+                            {{- if findRE "non.?profit|foundation|private" $content }}
+                                {{- $grantTypes = $grantTypes | append "private funding" }}
+                            {{- end }}
+                        {{- end }}
+                        {{- $grantTypes = uniq $grantTypes }}
+                        Current funding opportunities including {{ delimit (first 3 $grantTypes) ", " }}.
+                    {{- else if eq $lastElement "grant_writing_tips" }}
+                        Expert guidance on crafting successful grant applications and managing funding proposals.
+                    {{- end }}
+                {{- end }}
+
+            {{/* Student Section Analyzers */}}
+            {{- else if eq $mainCategory "student" }}
+                {{- if eq $subCategory "academic_assistance" }}
+                    {{- if eq $lastElement "mentorships" }}
+                        {{- $mentorshipTypes := slice }}
+                        {{- range .Pages }}
+                            {{- $content := lower .Content }}
+                            {{- if findRE "research|lab|scientific" $content }}
+                                {{- $mentorshipTypes = $mentorshipTypes | append "research mentoring" }}
+                            {{- end }}
+                            {{- if findRE "field|practical|hands.?on" $content }}
+                                {{- $mentorshipTypes = $mentorshipTypes | append "field experience" }}
+                            {{- end }}
+                            {{- if findRE "career|professional|development" $content }}
+                                {{- $mentorshipTypes = $mentorshipTypes | append "career development" }}
+                            {{- end }}
+                        {{- end }}
+                        {{- $mentorshipTypes = uniq $mentorshipTypes }}
+                        Mentorship opportunities focused on {{ delimit (first 3 $mentorshipTypes) ", " }}.
+                    {{- else if eq $lastElement "financial_assistance" }}
+                        {{- $fundingTypes := slice }}
+                        {{- range .Pages }}
+                            {{- $content := lower .Content }}
+                            {{- if findRE "scholarship|tuition|academic" $content }}
+                                {{- $fundingTypes = $fundingTypes | append "scholarships" }}
+                            {{- end }}
+                            {{- if findRE "fellowship|research|study" $content }}
+                                {{- $fundingTypes = $fundingTypes | append "fellowships" }}
+                            {{- end }}
+                            {{- if findRE "grant|project|funding" $content }}
+                                {{- $fundingTypes = $fundingTypes | append "research grants" }}
+                            {{- end }}
+                        {{- end }}
+                        {{- $fundingTypes = uniq $fundingTypes }}
+                        Financial support including {{ delimit (first 3 $fundingTypes) ", " }}.
+                    {{- end }}
+                {{- else if eq $subCategory "career_assistance" }}
+                    {{- if eq $lastElement "jobs" }}
+                        {{- $keywords := slice }}
+                        {{- $organizations := slice }}
+                        {{- range .Pages }}
+                            {{- $content := lower .Content }}
+                            {{- if findRE "fire\\s*(management|ecology|science)" $content }}
+                                {{- $keywords = $keywords | append "fire management" }}
+                            {{- end }}
+                            {{- if findRE "research|scientist|fellowship" $content }}
+                                {{- $keywords = $keywords | append "research" }}
+                            {{- end }}
+                            {{- if findRE "seasonal|temporary|summer" $content }}
+                                {{- $keywords = $keywords | append "seasonal" }}
+                            {{- end }}
+                            {{- if findRE "federal|government|agency|usfs|blm|nps" $content }}
+                                {{- $organizations = $organizations | append "federal agencies" }}
+                            {{- end }}
+                            {{- if findRE "university|college|academic" $content }}
+                                {{- $organizations = $organizations | append "academic institutions" }}
+                            {{- end }}
+                        {{- end }}
+                        {{- $keywords = uniq $keywords }}
+                        {{- $organizations = uniq $organizations }}
+                        Job opportunities including {{ delimit (first 3 $keywords) ", " }} positions with {{ delimit (first 2 $organizations) " and " }}.
+                    {{- end }}
+                {{- end }}
+
+            {{/* Researcher Section Analyzers */}}
+            {{- else if eq $mainCategory "researcher" }}
+                {{- if eq $lastElement "climate" }}
+                    {{- $topics := slice }}
+                    {{- range .Pages }}
+                        {{- $content := lower .Content }}
+                        {{- if findRE "model|prediction|forecast" $content }}
+                            {{- $topics = $topics | append "climate modeling" }}
+                        {{- end }}
+                        {{- if findRE "data|measurement|observation" $content }}
+                            {{- $topics = $topics | append "climate data" }}
+                        {{- end }}
+                        {{- if findRE "impact|effect|influence" $content }}
+                            {{- $topics = $topics | append "impact studies" }}
+                        {{- end }}
+                    {{- end }}
+                    {{- $topics = uniq $topics }}
+                    Climate research resources focusing on {{ delimit (first 3 $topics) ", " }}.
+                {{- else if eq $lastElement "research_databases" }}
+                    {{- $dbTypes := slice }}
+                    {{- range .Pages }}
+                        {{- $content := lower .Content }}
+                        {{- if findRE "fire|burn|wildland" $content }}
+                            {{- $dbTypes = $dbTypes | append "fire occurrence" }}
+                        {{- end }}
+                        {{- if findRE "climate|weather|atmospheric" $content }}
+                            {{- $dbTypes = $dbTypes | append "climate data" }}
+                        {{- end }}
+                        {{- if findRE "vegetation|ecological|species" $content }}
+                            {{- $dbTypes = $dbTypes | append "ecological" }}
+                        {{- end }}
+                    {{- end }}
+                    {{- $dbTypes = uniq $dbTypes }}
+                    Research databases covering {{ delimit (first 3 $dbTypes) ", " }} data.
+                {{- else if eq $lastElement "current_strategies" }}
+                    {{- $strategies := slice }}
+                    {{- range .Pages }}
+                        {{- $content := lower .Content }}
+                        {{- if findRE "prevention|mitigation|reduction" $content }}
+                            {{- $strategies = $strategies | append "fire prevention" }}
+                        {{- end }}
+                        {{- if findRE "management|prescribed|controlled" $content }}
+                            {{- $strategies = $strategies | append "fire management" }}
+                        {{- end }}
+                        {{- if findRE "restoration|recovery|rehabilitation" $content }}
+                            {{- $strategies = $strategies | append "ecosystem restoration" }}
+                        {{- end }}
+                    {{- end }}
+                    {{- $strategies = uniq $strategies }}
+                    Current research on {{ delimit (first 3 $strategies) ", " }} strategies.
                 {{- end }}
             {{- end }}
         </div>
         {{- end }}
     </header>
 
+    <!-- Content List -->
     <div class="post-content">
         {{- range .Pages.ByTitle }}
         <div class="post-entry">
