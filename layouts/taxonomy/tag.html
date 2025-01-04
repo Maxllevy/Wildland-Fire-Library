@@ -1,0 +1,74 @@
+{{- define "main" }}
+<article class="post-single">
+    <header class="post-header">
+        <!-- Breadcrumb Navigation -->
+        <div class="breadcrumb" style="font-size: 0.9em; opacity: 0.7; margin-bottom: 1rem;">
+            <a href="/" class="no-underline">Home</a>
+            {{- $pathElements := split .Title "/" }}
+            {{- $fullPath := "" }}
+            {{- range $index, $element := $pathElements }}
+                {{- $fullPath = printf "%s/%s" $fullPath $element }}
+                <span class="mx-2">/</span>
+                {{- $currentPath := printf "/tags%s" $fullPath }}
+                {{- if ($.Site.GetPage $currentPath) }}
+                    {{- $page := $.Site.GetPage $currentPath }}
+                    {{- if gt (len $page.Pages) 0 }}
+                        <a href="{{$currentPath}}" class="no-underline hover:opacity-70">
+                            {{ $element | humanize | title }}
+                        </a>
+                    {{- else }}
+                        <span>{{ $element | humanize | title }}</span>
+                    {{- end }}
+                {{- else }}
+                    <span>{{ $element | humanize | title }}</span>
+                {{- end }}
+            {{- end }}
+        </div>
+
+        <!-- Main Title -->
+        <h1 class="post-title">
+            {{- $lastElement := index (split .Title "/") (sub (len (split .Title "/")) 1) }}
+            {{ $lastElement | humanize | title }}
+        </h1>
+
+        <!-- Dynamic Summary -->
+        {{- if gt (len .Pages) 0 }}
+        <div class="post-description">
+            {{- if gt (len .Pages) 1 }}
+                This section contains {{ len .Pages }} resources about {{ .Title | lower | humanize }}.
+                {{- $firstThree := first 3 .Pages }}
+                Topics include
+                {{- range $index, $page := $firstThree }}
+                    {{- if eq $index 0 }} {{ else if eq $index (sub (len $firstThree) 1) }} and {{ else }}, {{ end }}
+                    {{ lower $page.Title }}
+                {{- end }}.
+            {{- else }}
+                {{- with index .Pages 0 }}
+                    {{- if .Description }}
+                        {{ .Description | truncate 100 }}
+                    {{- else }}
+                        {{ .Summary | truncate 100 }}
+                    {{- end }}
+                {{- end }}
+            {{- end }}
+        </div>
+        {{- end }}
+    </header>
+
+    <div class="post-content">
+        {{- range .Pages.ByTitle }}
+        <div class="post-entry">
+            <header class="entry-header">
+                <h2>{{ .Title }}</h2>
+            </header>
+            <div class="entry-content">
+                {{ .Summary }}
+            </div>
+            <footer class="entry-footer">
+                <a class="entry-link" href="{{ .Permalink }}"></a>
+            </footer>
+        </div>
+        {{- end }}
+    </div>
+</article>
+{{- end }}

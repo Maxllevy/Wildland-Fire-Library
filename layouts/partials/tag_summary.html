@@ -1,0 +1,31 @@
+// layouts/partials/tag-summary.html
+{{ define "get-tag-summary" }}
+  {{- $tag := . -}}
+  {{- $allContent := "" -}}
+  {{- range .Pages -}}
+    {{- $allContent = printf "%s %s" $allContent .Summary -}}
+  {{- end -}}
+
+  {{- $wordCount := len (split $allContent " ") -}}
+  
+  {{- if gt $wordCount 0 -}}
+    {{- if gt (len .Pages) 1 -}}
+      This section contains {{ len .Pages }} resources about {{ .Title | lower }}. 
+      {{- if gt $wordCount 50 -}}
+        Topics include {{ range $index, $page := first 3 .Pages }}{{ if ne $index 0 }}, {{ end }}{{ lower $page.Title }}{{ end }}.
+      {{- end -}}
+    {{- else if eq (len .Pages) 1 -}}
+      This section contains information about {{ index .Pages 0 | .Title | lower }}.
+      {{- with index .Pages 0 -}}
+        {{- if .Description -}}
+          {{ .Description | truncate 100 }}
+        {{- else -}}
+          {{ .Summary | truncate 100 }}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- else -}}
+    No resources currently available in this section.
+  {{- end -}}
+{{ end }}
+
