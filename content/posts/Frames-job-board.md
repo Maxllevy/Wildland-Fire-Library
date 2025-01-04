@@ -1,6 +1,6 @@
 ---
 title: "FRAMES Job Board"
-tags: ['Jobs']
+tags: ['student/career_assistance/jobs']
 draft: false
 date: '2024-12-11T20:29:48-08:00'
 ---
