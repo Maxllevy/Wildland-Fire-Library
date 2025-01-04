@@ -1,0 +1,27 @@
+{{/* Landowner Section Analyzers */}}
+{{- if eq .mainCategory "landowner" }}
+    {{- if eq .subCategory "fire_preparedness" }}
+        {{- if eq .lastElement "escape_plans" }}
+            {{- $keywords := slice }}
+            {{- range .context.Pages }}
+                {{- $content := lower .Content }}
+                {{- if findRE "evacuation|route|emergency|exit" $content }}
+                    {{- $keywords = $keywords | append "evacuation planning" }}
+                {{- end }}
+                {{- if findRE "communication|alert|notification" $content }}
+                    {{- $keywords = $keywords | append "emergency alerts" }}
+                {{- end }}
+                {{- if findRE "checklist|preparation|pack|kit" $content }}
+                    {{- $keywords = $keywords | append "emergency kits" }}
+                {{- end }}
+            {{- end }}
+            {{- $keywords = uniq $keywords }}
+            {{- if gt (len $keywords) 0 }}
+                Resources for emergency preparedness, including {{ delimit (first 3 $keywords) ", " }}.
+            {{- else }}
+                Essential resources for creating and maintaining wildfire evacuation plans.
+            {{- end }}
+
+        [... Continue with all the other conditions from the previous template ...]
+
+{{- end }}
