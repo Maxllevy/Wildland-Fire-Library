@@ -1,6 +1,6 @@
 ---
 title: "Fire Networks Resources"
-tags: ['Academic', 'Research', 'Data Libraries']
+tags: ["researcher/research_databases"]
 draft: false
 date: '2024-12-11T20:29:48-08:00'
 ---

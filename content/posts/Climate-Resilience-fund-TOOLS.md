@@ -1,6 +1,6 @@
 ---
 title: "Climate Resilience Fund Tools and Resources"
-tags: ['Tools', 'Academic', 'Research']
+tags: ["researcher/research_databases"]
 draft: false
 date: '2024-12-11T20:29:48-08:00'
 ---

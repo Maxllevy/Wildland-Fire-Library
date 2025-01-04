@@ -1,6 +1,6 @@
 ---
 title: "International Association of Wildland Firefighters Mentoring Program"
-tags: ['Academic', 'Student Assistance', 'Mentoring']
+tags: ["student/academic_assistance/mentorships"]
 draft: false
 date: '2024-12-11T20:29:48-08:00'
 ---

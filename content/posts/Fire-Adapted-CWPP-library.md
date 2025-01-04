@@ -1,6 +1,6 @@
 ---
 title: "Community Wildfire Protection Plan Portal and Data Library"
-tags: ['Community Assistance', 'Tools', 'Database']
+tags: ["researcher/research_databases"]
 draft: false
 date: '2024-12-11T20:29:48-08:00'
 ---

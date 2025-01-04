@@ -1,6 +1,6 @@
 ---
 title: "Fire Adapted Network Grant Primer"
-tags: ['Grants', 'Community Resources']
+tags: ["landowner/grants/grant_writing_tips"]
 draft: false
 date: '2024-12-11T20:29:48-08:00'
 ---

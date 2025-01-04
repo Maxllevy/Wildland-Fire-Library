@@ -1,6 +1,6 @@
 ---
 title: "International Association of Wildand Firefighters Scholarships"
-tags: ['Student Assistance', 'Academic']
+tags: ["student/academic_assistance/financial_assistance"]
 draft: false
 date: '2024-12-11T20:29:48-08:00'
 ---
