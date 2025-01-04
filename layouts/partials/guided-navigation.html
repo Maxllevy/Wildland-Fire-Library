@@ -153,19 +153,19 @@ const navigationData = {
         options: [
             {
                 text: "Escape Plans",
-                link: "/tags/Landowner/Fire-Preparedness/Escape-Plans"
+                link: "/tags/landowner/fire_preparedness/escape_plans"
             },
             {
                 text: "Stay Informed",
-                link: "/tags/Landowner/Fire-Preparedness/Stay-Informed"
+                link: "/tags/landowner/fire_preparedness/stay_informed"
             },
             {
                 text: "Current Fire Information",
-                link: "/tags/Landowner/Fire-Preparedness/Current-Fire-Information"
+                link: "/tags/landowner/fire_preparedness/current_fire_information"
             },
             {
                 text: "Smoke Preparation",
-                link: "/tags/Landowner/Fire-Preparedness/Smoke-Preparation"
+                link: "/tags/landowner/fire_preparedness/smoke_preparation"
             }
         ]
     },
@@ -174,7 +174,7 @@ const navigationData = {
         options: [
             {
                 text: "Building and Maintaining",
-                link: "/tags/Landowner/Property-Management/Building-and-Maintaining"
+                link: "/tags/landowner/property_management/building_and_maintaining"
             }
         ]
     },
@@ -183,11 +183,11 @@ const navigationData = {
         options: [
             {
                 text: "Available Grants",
-                link: "/tags/Landowner/Grants/Available-Grants"
+                link: "/tags/landowner/grants/available_grants"
             },
             {
                 text: "Grant-Writing Tips",
-                link: "/tags/Landowner/Grants/Grant-Writing-Tips"
+                link: "/tags/landowner/grants/grant_writing_tips"
             }
         ]
     },
@@ -209,11 +209,11 @@ const navigationData = {
         options: [
             {
                 text: "Mentorships",
-                link: "/tags/Student/Academic-Assistance/Mentorships"
+                link: "/tags/student/academic_assistance/mentorships"
             },
             {
                 text: "Financial Assistance",
-                link: "/tags/Student/Academic-Assistance/Financial-Assistance"
+                link: "/tags/student/academic_assistance/financial_assistance"
             }
         ]
     },
@@ -222,7 +222,7 @@ const navigationData = {
         options: [
             {
                 text: "Jobs",
-                link: "/tags/Student/Career-Assistance/Jobs"
+                link: "/tags/student/career_assistance/jobs"
             }
         ]
     },
@@ -231,15 +231,15 @@ const navigationData = {
         options: [
             {
                 text: "Climate Research",
-                link: "/tags/Researcher/Climate"
+                link: "/tags/researcher/climate"
             },
             {
                 text: "Research Databases",
-                link: "/tags/Researcher/Research-Databases"
+                link: "/tags/researcher/research_databases"
             },
             {
                 text: "Current Strategies",
-                link: "/tags/Researcher/Current-Strategies"
+                link: "/tags/researcher/current_strategies"
             }
         ]
     }
@@ -254,19 +254,16 @@ function renderNavigation(screenId) {
     
     let html = '';
     
-    // Back button
     if (navigationHistory.length > 0) {
         html += '<button class="back-button" onclick="goBack()">← Back</button>';
     }
     
-    // Question container
     html += `
         <div class="question-container">
             <h2>${screen.question}</h2>
             <div class="options-grid">
     `;
     
-    // Options
     screen.options.forEach(option => {
         if (option.link) {
             html += `<a href="${option.link}" class="option-button" onclick="closeModal()">${option.text}</a>`;
@@ -278,7 +275,6 @@ function renderNavigation(screenId) {
     html += '</div></div>';
     container.innerHTML = html;
     
-    // Show/hide back button
     const backButton = container.querySelector('.back-button');
     if (backButton) {
         backButton.style.display = navigationHistory.length > 0 ? 'block' : 'none';
@@ -319,7 +315,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (!welcomeSeen || showGuide === 'true') {
         modal.style.display = 'flex';
-        // Remove the parameter from URL without refreshing
         window.history.replaceState({}, document.title, window.location.pathname);
     } else {
         modal.style.display = 'none';
@@ -327,7 +322,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     renderNavigation('welcome');
 
-    // Add help menu click handler
     const helpLinks = document.querySelectorAll('a[href="/help/"]');
     helpLinks.forEach(link => {
         link.addEventListener('click', (e) => {
