@@ -1,18 +1,7 @@
-<!-- Debug Section -->
-<div style="background: #eee; padding: 10px; margin: 10px;">
-  Main Category: [{{ .mainCategory }}]<br>
-  Sub Category: [{{ .subCategory }}]<br>
-  Last Element: [{{ .lastElement }}]<br>
-  Number of Pages: {{ len .context.Pages }}<br>
-  First Page Content Sample: 
-  {{- range first 1 .context.Pages }}
-      {{ .Content | truncate 50 }}
-  {{- end }}
-</div>
-{{/* Landowner Section Analyzers */}}
-{{- if eq .mainCategory "landowner" -}}
-    {{- if eq .subCategory "fire_preparedness" -}}
-        {{- if eq .lastElement "escape_plans" -}}
+{{/* Case-insensitive section analyzers */}}
+{{- if eq (lower .mainCategory) (lower "landowner") -}}
+    {{- if eq (lower .subCategory) (lower "fire_preparedness") -}}
+        {{- if eq (lower .lastElement) (lower "escape_plans") -}}
             {{- $keywords := slice -}}
             {{- range .context.Pages -}}
                 {{- $content := lower .Content -}}
@@ -32,7 +21,7 @@
             {{- else -}}
                 Essential resources for creating and maintaining wildfire evacuation plans.
             {{- end -}}
-        {{- else if eq .lastElement "stay_informed" -}}
+        {{- else if eq (lower .lastElement) (lower "stay_informed") -}}
             {{- $sources := slice -}}
             {{- range .context.Pages -}}
                 {{- $content := lower .Content -}}
@@ -52,7 +41,7 @@
             {{- else -}}
                 Stay informed with official emergency and fire information sources.
             {{- end -}}
-        {{- else if eq .lastElement "current_fire_information" -}}
+        {{- else if eq (lower .lastElement) (lower "current_fire_information") -}}
             {{- $infoTypes := slice -}}
             {{- range .context.Pages -}}
                 {{- $content := lower .Content -}}
@@ -72,7 +61,7 @@
             {{- else -}}
                 Track active fires and current fire conditions in your area.
             {{- end -}}
-        {{- else if eq .lastElement "smoke_preparation" -}}
+        {{- else if eq (lower .lastElement) (lower "smoke_preparation") -}}
             {{- $smokeInfo := slice -}}
             {{- range .context.Pages -}}
                 {{- $content := lower .Content -}}
@@ -93,8 +82,8 @@
                 Protect yourself and your home from wildfire smoke impacts.
             {{- end -}}
         {{- end -}}
-    {{- else if eq .subCategory "property_management" -}}
-        {{- if eq .lastElement "building_and_maintaining" -}}
+    {{- else if eq (lower .subCategory) (lower "property_management") -}}
+        {{- if eq (lower .lastElement) (lower "building_and_maintaining") -}}
             {{- $topics := slice -}}
             {{- range .context.Pages -}}
                 {{- $content := lower .Content -}}
@@ -115,8 +104,8 @@
                 Guidelines for creating and maintaining fire-resistant properties.
             {{- end -}}
         {{- end -}}
-    {{- else if eq .subCategory "grants" -}}
-        {{- if eq .lastElement "available_grants" -}}
+    {{- else if eq (lower .subCategory) (lower "grants") -}}
+        {{- if eq (lower .lastElement) (lower "available_grants") -}}
             {{- $grantTypes := slice -}}
             {{- range .context.Pages -}}
                 {{- $content := lower .Content -}}
@@ -136,7 +125,7 @@
             {{- else -}}
                 Find current grant opportunities for fire preparation projects.
             {{- end -}}
-        {{- else if eq .lastElement "grant_writing_tips" -}}
+        {{- else if eq (lower .lastElement) (lower "grant_writing_tips") -}}
             {{- $tipTypes := slice -}}
             {{- range .context.Pages -}}
                 {{- $content := lower .Content -}}
@@ -158,9 +147,9 @@
             {{- end -}}
         {{- end -}}
     {{- end -}}
-{{- else if eq .mainCategory "student" -}}
-    {{- if eq .subCategory "academic_assistance" -}}
-        {{- if eq .lastElement "mentorships" -}}
+{{- else if eq (lower .mainCategory) (lower "student") -}}
+    {{- if eq (lower .subCategory) (lower "academic_assistance") -}}
+        {{- if eq (lower .lastElement) (lower "mentorships") -}}
             {{- $mentorshipTypes := slice -}}
             {{- range .context.Pages -}}
                 {{- $content := lower .Content -}}
@@ -180,7 +169,7 @@
             {{- else -}}
                 Find mentorship opportunities in fire ecology and management.
             {{- end -}}
-        {{- else if eq .lastElement "financial_assistance" -}}
+        {{- else if eq (lower .lastElement) (lower "financial_assistance") -}}
             {{- $fundingTypes := slice -}}
             {{- range .context.Pages -}}
                 {{- $content := lower .Content -}}
@@ -201,12 +190,12 @@
                 Discover financial support options for your education and research.
             {{- end -}}
         {{- end -}}
-    {{- else if eq .subCategory "career_assistance" -}}
-        {{- if eq .lastElement "jobs" -}}
+    {{- else if eq (lower .subCategory) (lower "career_assistance") -}}
+        {{- if eq (lower .lastElement) (lower "jobs") -}}
             {{- $jobBoards := slice -}}
             {{- range .context.Pages -}}
                 {{- $content := lower .Content -}}
-                {{- if findRE "fire ecology|fireecology.org" $content -}}
+                {{- if findRE "fire ecology|fireecology|afe" $content -}}
                     {{- $jobBoards = $jobBoards | append "fire ecology" -}}
                 {{- end -}}
                 {{- if findRE "usajobs|federal|government|interior" $content -}}
@@ -223,12 +212,12 @@
             {{- if gt (len $jobBoards) 0 -}}
                 Access job boards specializing in {{ delimit (first 3 $jobBoards) ", " }} positions.
             {{- else -}}
-                Find job opportunities in fire ecology and management.
+                Browse job boards for fire ecology and management positions.
             {{- end -}}
         {{- end -}}
     {{- end -}}
-{{- else if eq .mainCategory "researcher" -}}
-    {{- if eq .lastElement "climate" -}}
+{{- else if eq (lower .mainCategory) (lower "researcher") -}}
+    {{- if eq (lower .lastElement) (lower "climate") -}}
         {{- $topics := slice -}}
         {{- range .context.Pages -}}
             {{- $content := lower .Content -}}
@@ -248,7 +237,7 @@
         {{- else -}}
             Explore climate research resources and data.
         {{- end -}}
-    {{- else if eq .lastElement "research_databases" -}}
+    {{- else if eq (lower .lastElement) (lower "research_databases") -}}
         {{- $dbTypes := slice -}}
         {{- range .context.Pages -}}
             {{- $content := lower .Content -}}
@@ -268,7 +257,7 @@
         {{- else -}}
             Access comprehensive research databases for fire science.
         {{- end -}}
-    {{- else if eq .lastElement "current_strategies" -}}
+    {{- else if eq (lower .lastElement) (lower "current_strategies") -}}
         {{- $strategies := slice -}}
         {{- range .context.Pages -}}
             {{- $content := lower .Content -}}
