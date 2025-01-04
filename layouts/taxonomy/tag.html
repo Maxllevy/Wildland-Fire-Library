@@ -1,68 +1,62 @@
 {{- define "main" }}
-<article class="post-single">
-    <header class="post-header">
-        <!-- Breadcrumb Navigation -->
-        <div class="breadcrumb" style="font-size: 0.9em; opacity: 0.7; margin-bottom: 1rem;">
-            <a href="/" class="no-underline">Home</a>
-            {{- $pathElements := split .Title "/" }}
-            {{- $fullPath := "" }}
-            {{- range $index, $element := $pathElements }}
-                {{- $fullPath = printf "%s/%s" $fullPath $element }}
-                <span class="mx-2">/</span>
-                {{- $currentPath := printf "/tags%s" $fullPath }}
-                {{- if ($.Site.GetPage $currentPath) }}
-                    {{- $page := $.Site.GetPage $currentPath }}
-                    {{- if gt (len $page.Pages) 0 }}
-                        <a href="{{$currentPath}}" class="no-underline hover:opacity-70">
-                            {{ $element | humanize | title }}
-                        </a>
-                    {{- else }}
-                        <span>{{ $element | humanize | title }}</span>
-                    {{- end }}
+<header class="page-header">
+    <h1>
+        {{- $lastElement := index (split .Title "/") (sub (len (split .Title "/")) 1) }}
+        {{ $lastElement | humanize | title }}
+    </h1>
+    <!-- Breadcrumb -->
+    <div class="breadcrumb" style="font-size: 0.9em; margin-bottom: 1rem; color: var(--secondary);">
+        <a href="/" style="color: var(--primary);">Home</a>
+        {{- $pathElements := split .Title "/" }}
+        {{- $fullPath := "" }}
+        {{- range $index, $element := $pathElements }}
+            {{- $fullPath = printf "%s/%s" $fullPath $element }}
+            <span class="px-2">/</span>
+            {{- $currentPath := printf "/tags%s" $fullPath }}
+            {{- if ($.Site.GetPage $currentPath) }}
+                {{- $page := $.Site.GetPage $currentPath }}
+                {{- if gt (len $page.Pages) 0 }}
+                    <a href="{{$currentPath}}" style="color: var(--primary);">
+                        {{ $element | humanize | title }}
+                    </a>
                 {{- else }}
                     <span>{{ $element | humanize | title }}</span>
                 {{- end }}
+            {{- else }}
+                <span>{{ $element | humanize | title }}</span>
             {{- end }}
-        </div>
-
-        <!-- Main Title -->
-        <h1 class="post-title">
-            {{- $lastElement := index (split .Title "/") (sub (len (split .Title "/")) 1) }}
-            {{ $lastElement | humanize | title }}
-        </h1>
-
-        <!-- Dynamic Section-Specific Summaries -->
-        {{- if gt (len .Pages) 0 }}
-        <div class="post-description">
-            {{/* Get section path elements for categorization */}}
-            {{- $pathElements := split .Title "/" }}
-            {{- $mainCategory := lower (index $pathElements 0) }}
-            {{- $subCategory := "" }}
-            {{- if gt (len $pathElements) 1 }}
-                {{- $subCategory = lower (index $pathElements 1) }}
-            {{- end }}
-            {{- $lastElement := lower (index $pathElements (sub (len $pathElements) 1)) }}
-
-            {{ partial "tag-summaries.html" (dict "context" . "mainCategory" $mainCategory "subCategory" $subCategory "lastElement" $lastElement) }}
-        </div>
-        {{- end }}
-    </header>
-
-    <!-- Content List -->
-    <div class="post-content">
-        {{- range .Pages.ByTitle }}
-        <div class="post-entry">
-            <header class="entry-header">
-                <h2>{{ .Title }}</h2>
-            </header>
-            <div class="entry-content">
-                {{ .Summary }}
-            </div>
-            <footer class="entry-footer">
-                <a class="entry-link" href="{{ .Permalink }}"></a>
-            </footer>
-        </div>
         {{- end }}
     </div>
-</article>
+
+    <!-- Description -->
+    {{- if gt (len .Pages) 0 }}
+    <div class="post-description">
+        {{/* Get section path elements for categorization */}}
+        {{- $pathElements := split .Title "/" }}
+        {{- $mainCategory := index $pathElements 0 }}
+        {{- $subCategory := "" }}
+        {{- if gt (len $pathElements) 1 }}
+            {{- $subCategory = index $pathElements 1 }}
+        {{- end }}
+        {{- $lastElement := index $pathElements (sub (len $pathElements) 1) }}
+        
+        {{ partial "tag-summaries.html" (dict "context" . "mainCategory" $mainCategory "subCategory" $subCategory "lastElement" $lastElement) }}
+    </div>
+    {{- end }}
+</header>
+
+<!-- Posts -->
+<main class="posts">
+    {{- range .Pages.ByTitle }}
+    <article class="post-entry">
+        <header class="entry-header">
+            <h2>{{ .Title }}</h2>
+        </header>
+        <div class="entry-content">
+            <p>{{ .Summary | truncate 200 }}</p>
+        </div>
+        <a class="entry-link" aria-label="post link to {{ .Title }}" href="{{ .Permalink }}"></a>
+    </article>
+    {{- end }}
+</main>
 {{- end }}
