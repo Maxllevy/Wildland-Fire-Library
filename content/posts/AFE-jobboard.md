@@ -1,6 +1,6 @@
 ---
 title: "AFE Job Board"
-tags: ['Jobs']
+tags: ['Student/Career-Assistance/Jobs']
 draft: false
 date: '2024-12-11T20:29:48-08:00'
 ---
