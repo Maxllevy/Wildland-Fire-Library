@@ -1,15 +1,4 @@
-{{- define "formatList" -}}
-    {{- $list := . -}}
-    {{- $len := len $list -}}
-    {{- if eq $len 1 -}}{{index $list 0}}
-    {{- else if eq $len 2 -}}{{index $list 0}} and {{index $list 1}}
-    {{- else -}}
-        {{- $last := index $list (sub $len 1) -}}
-        {{- $initial := slice $list 0 (sub $len 1) -}}
-        {{- delimit $initial ", " }}, and {{$last}}
-    {{- end -}}
-{{- end -}}
-
+<!-- Debug: This is the post-summary partial -->
 {{- $content := .Content | plainify | lower -}}
 {{- $keywords := slice -}}
 
@@ -28,14 +17,21 @@
 {{- if findRE "policy|legislation" $content -}}
     {{- $keywords = $keywords | append "fire policy" -}}
 {{- end -}}
+{{- if findRE "grant|funding" $content -}}
+    {{- $keywords = $keywords | append "grant opportunities" -}}
+{{- end -}}
+{{- if findRE "database|resource|library" $content -}}
+    {{- $keywords = $keywords | append "research databases" -}}
+{{- end -}}
 
 {{- $keywords = uniq $keywords -}}
 
+This resource 
 {{- if gt (len $keywords) 0 -}}
-    This resource provides information on {{ template "formatList" (first 3 $keywords) }}. 
+    provides information on {{ delimit $keywords ", " }}
 {{- else -}}
-    This resource offers insights into current fire science and management strategies.
-{{- end -}}
+    offers insights into current fire science and management strategies
+{{- end -}}. 
 {{- if .Params.tags -}}
     It is relevant for {{ delimit .Params.tags ", " }}.
 {{- end -}}

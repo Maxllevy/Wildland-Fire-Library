@@ -1,7 +1,9 @@
 <article>
     <header>
         <h1>{{ .Title }}</h1>
+        <!-- Debug: Start of post summary -->
         <p class="post-summary">{{ partial "post-summary" . }}</p>
+        <!-- Debug: End of post summary -->
     </header>
     <div class="content">
         {{ .Content }}
