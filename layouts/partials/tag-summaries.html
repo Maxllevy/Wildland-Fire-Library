@@ -204,22 +204,36 @@
                 Discover financial support options for your education and research.
             {{- end -}}
         {{- end -}}
-    {{- else if eq (lower .subCategory) (lower "career_assistance") -}}
-        {{- if eq (lower .lastElement) (lower "jobs") -}}
-            {{- $jobBoards := slice -}}
-            {{- range .context.Pages -}}
-                {{- $content := lower .Content -}}
-                {{- if findRE "fire ecology|fireecology|afe" $content -}}
-                    {{- $jobBoards = $jobBoards | append "fire ecology" -}}
-                {{- end -}}
-                {{- if findRE "usajobs|federal|government|interior" $content -}}
-                    {{- $jobBoards = $jobBoards | append "federal" -}}
-                {{- end -}}
-                {{- if findRE "university|college|academic" $content -}}
-                    {{- $jobBoards = $jobBoards | append "academic" -}}
-                {{- end -}}
-                {{- if findRE "environment|conservation" $content -}}
-                    {{- $jobBoards = $jobBoards | append "environmental" -}}
+        {{- else if eq (lower .lastElement) (lower "jobs") -}}
+        {{- $jobBoards := slice -}}
+        {{- range .context.Pages -}}
+            {{- $content := lower .Content -}}
+            {{- if findRE "fire ecology|fireecology|afe" $content -}}
+                {{- $jobBoards = $jobBoards | append "fire ecology" -}}
+            {{- end -}}
+            {{- if findRE "usajobs|federal|government|interior" $content -}}
+                {{- $jobBoards = $jobBoards | append "federal" -}}
+            {{- end -}}
+            {{- if findRE "university|college|academic" $content -}}
+                {{- $jobBoards = $jobBoards | append "academic" -}}
+            {{- end -}}
+            {{- if findRE "environment|conservation" $content -}}
+                {{- $jobBoards = $jobBoards | append "environmental" -}}
+            {{- end -}}
+        {{- end -}}
+        {{- $jobBoards = uniq $jobBoards -}}
+        <!-- Debug output -->
+        <!-- Job boards: {{ $jobBoards }} -->
+        {{- if gt (len $jobBoards) 0 -}}
+            {{- $formattedBoards := first 3 $jobBoards -}}
+            {{- if gt (len $formattedBoards) 0 -}}
+                Access job boards specializing in {{ template "formatList" $formattedBoards }} positions.
+            {{- else -}}
+                Access specialized job boards for fire ecology and management positions.
+            {{- end -}}
+        {{- else -}}
+            Browse job boards for fire ecology and management positions.
+        {{- end -}}
                 {{- end -}}
             {{- end -}}
             {{- $jobBoards = uniq $jobBoards -}}
