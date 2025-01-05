@@ -14,6 +14,7 @@ Your comprehensive resource for wildland fire information, research, and resourc
 - Use the [**Search**](/search/) function to find specific resources
 - Browse by [**Tags**](/tags/) to explore different categories
 - View all entries under [**Resources**](/posts/)
+- The [**Help**](/help) button provides guided navigation to explore resources in the data library, organized by demographics and topics of interest, making it easy to find relevant content.
 
 
 ## About Us
