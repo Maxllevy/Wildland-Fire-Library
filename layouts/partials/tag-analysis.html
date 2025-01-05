@@ -1,0 +1,301 @@
+{{- define "delimitsmart" -}}
+    {{- $list := . -}}
+    {{- $len := len $list -}}
+    {{- if eq $len 0 -}}
+        {{- "" -}}
+    {{- else if eq $len 1 -}}
+        {{- index $list 0 -}}
+    {{- else if eq $len 2 -}}
+        {{- printf "%s and %s" (index $list 0) (index $list 1) -}}
+    {{- else -}}
+        {{- $allButLast := first (sub $len 1) $list -}}
+        {{- $last := index $list (sub $len 1) -}}
+        {{- printf "%s, and %s" (delimit $allButLast ", ") $last -}}
+    {{- end -}}
+{{- end -}}
+
+{{- $tagParts := split .Title "/" -}}
+{{- $mainCategory := index $tagParts 0 -}}
+{{- $subCategory := cond (gt (len $tagParts) 1) (index $tagParts 1) "" -}}
+{{- $lastElement := index $tagParts (sub (len $tagParts) 1) -}}
+
+{{- if eq (lower $mainCategory) (lower "landowner") -}}
+    {{- if eq (lower $subCategory) (lower "fire_preparedness") -}}
+        {{- if eq (lower $lastElement) (lower "escape_plans") -}}
+            {{- $keywords := slice -}}
+            {{- range .Pages -}}
+                {{- $content := lower .Content -}}
+                {{- if findRE "evacuation|route|emergency|exit" $content -}}
+                    {{- $keywords = $keywords | append "evacuation planning" -}}
+                {{- end -}}
+                {{- if findRE "communication|alert|notification" $content -}}
+                    {{- $keywords = $keywords | append "emergency alerts" -}}
+                {{- end -}}
+                {{- if findRE "checklist|preparation|pack|kit" $content -}}
+                    {{- $keywords = $keywords | append "emergency kits" -}}
+                {{- end -}}
+            {{- end -}}
+            {{- $keywords = uniq $keywords -}}
+            {{- if gt (len $keywords) 0 -}}
+                Resources for emergency preparedness, including {{ template "delimitsmart" (first 3 $keywords) }}.
+            {{- else -}}
+                Essential resources for creating and maintaining wildfire evacuation plans.
+            {{- end -}}
+        {{- else if eq (lower $lastElement) (lower "stay_informed") -}}
+            {{- $sources := slice -}}
+            {{- range .Pages -}}
+                {{- $content := lower .Content -}}
+                {{- if findRE "alert|notification|warning" $content -}}
+                    {{- $sources = $sources | append "emergency alerts" -}}
+                {{- end -}}
+                {{- if findRE "weather|forecast|condition" $content -}}
+                    {{- $sources = $sources | append "weather updates" -}}
+                {{- end -}}
+                {{- if findRE "fire|incident|emergency" $content -}}
+                    {{- $sources = $sources | append "fire updates" -}}
+                {{- end -}}
+            {{- end -}}
+            {{- $sources = uniq $sources -}}
+            {{- if gt (len $sources) 0 -}}
+                Access {{ template "delimitsmart" (first 3 $sources) }} from official sources.
+            {{- else -}}
+                Stay informed with official emergency and fire information sources.
+            {{- end -}}
+        {{- else if eq (lower $lastElement) (lower "current_fire_information") -}}
+            {{- $infoTypes := slice -}}
+            {{- range .Pages -}}
+                {{- $content := lower .Content -}}
+                {{- if findRE "active|current|ongoing" $content -}}
+                    {{- $infoTypes = $infoTypes | append "active fire locations" -}}
+                {{- end -}}
+                {{- if findRE "smoke|air.?quality" $content -}}
+                    {{- $infoTypes = $infoTypes | append "smoke conditions" -}}
+                {{- end -}}
+                {{- if findRE "weather|forecast|prediction" $content -}}
+                    {{- $infoTypes = $infoTypes | append "fire weather" -}}
+                {{- end -}}
+            {{- end -}}
+            {{- $infoTypes = uniq $infoTypes -}}
+            {{- if gt (len $infoTypes) 0 -}}
+                Current information on {{ template "delimitsmart" (first 3 $infoTypes) }}.
+            {{- else -}}
+                Track active fires and current fire conditions in your area.
+            {{- end -}}
+        {{- else if eq (lower $lastElement) (lower "smoke_preparation") -}}
+            {{- $smokeInfo := slice -}}
+            {{- range .Pages -}}
+                {{- $content := lower .Content -}}
+                {{- if findRE "health|medical|breathing" $content -}}
+                    {{- $smokeInfo = $smokeInfo | append "health protection" -}}
+                {{- end -}}
+                {{- if findRE "filter|purifier|ventilation" $content -}}
+                    {{- $smokeInfo = $smokeInfo | append "air filtration" -}}
+                {{- end -}}
+                {{- if findRE "indoor|home|building" $content -}}
+                    {{- $smokeInfo = $smokeInfo | append "indoor air quality" -}}
+                {{- end -}}
+            {{- end -}}
+            {{- $smokeInfo = uniq $smokeInfo -}}
+            {{- if gt (len $smokeInfo) 0 -}}
+                Resources for {{ template "delimitsmart" (first 3 $smokeInfo) }} during smoke events.
+            {{- else -}}
+                Protect yourself and your home from wildfire smoke impacts.
+            {{- end -}}
+        {{- end -}}
+    {{- else if eq (lower $subCategory) (lower "property_management") -}}
+        {{- if eq (lower $lastElement) (lower "building_and_maintaining") -}}
+            {{- $topics := slice -}}
+            {{- range .Pages -}}
+                {{- $content := lower .Content -}}
+                {{- if findRE "defensible space|clearing|vegetation" $content -}}
+                    {{- $topics = $topics | append "defensible space" -}}
+                {{- end -}}
+                {{- if findRE "construction|material|building" $content -}}
+                    {{- $topics = $topics | append "fire-resistant construction" -}}
+                {{- end -}}
+                {{- if findRE "maintenance|upkeep|regular" $content -}}
+                    {{- $topics = $topics | append "maintenance guidelines" -}}
+                {{- end -}}
+            {{- end -}}
+            {{- $topics = uniq $topics -}}
+            {{- if gt (len $topics) 0 -}}
+                Resources for {{ template "delimitsmart" (first 3 $topics) }}.
+            {{- else -}}
+                Guidelines for creating and maintaining fire-resistant properties.
+            {{- end -}}
+        {{- end -}}
+        {{- else if eq (lower $subCategory) (lower "grants") -}}
+        {{- if eq (lower $lastElement) (lower "available_grants") -}}
+            {{- $grantTypes := slice -}}
+            {{- range .Pages -}}
+                {{- $content := lower .Content -}}
+                {{- if findRE "federal|government|agency" $content -}}
+                    {{- $grantTypes = $grantTypes | append "federal grants" -}}
+                {{- end -}}
+                {{- if findRE "state|local|county" $content -}}
+                    {{- $grantTypes = $grantTypes | append "state programs" -}}
+                {{- end -}}
+                {{- if findRE "non.?profit|foundation|private" $content -}}
+                    {{- $grantTypes = $grantTypes | append "private funding" -}}
+                {{- end -}}
+            {{- end -}}
+            {{- $grantTypes = uniq $grantTypes -}}
+            {{- if gt (len $grantTypes) 0 -}}
+                Available funding through {{ template "delimitsmart" (first 3 $grantTypes) }}.
+            {{- else -}}
+                Find current grant opportunities for fire preparation projects.
+            {{- end -}}
+        {{- else if eq (lower $lastElement) (lower "grant_writing_tips") -}}
+            {{- $tipTypes := slice -}}
+            {{- range .Pages -}}
+                {{- $content := lower .Content -}}
+                {{- if findRE "application|proposal|writing" $content -}}
+                    {{- $tipTypes = $tipTypes | append "proposal writing" -}}
+                {{- end -}}
+                {{- if findRE "budget|financial|cost" $content -}}
+                    {{- $tipTypes = $tipTypes | append "budget planning" -}}
+                {{- end -}}
+                {{- if findRE "reporting|management|tracking" $content -}}
+                    {{- $tipTypes = $tipTypes | append "grant management" -}}
+                {{- end -}}
+            {{- end -}}
+            {{- $tipTypes = uniq $tipTypes -}}
+            {{- if gt (len $tipTypes) 0 -}}
+                Guidance for {{ template "delimitsmart" (first 3 $tipTypes) }}.
+            {{- else -}}
+                Expert tips for writing successful grant applications.
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+{{- else if eq (lower $mainCategory) (lower "student") -}}
+    {{- if eq (lower $subCategory) (lower "academic_assistance") -}}
+        {{- if eq (lower $lastElement) (lower "mentorships") -}}
+            {{- $mentorshipTypes := slice -}}
+            {{- range .Pages -}}
+                {{- $content := lower .Content -}}
+                {{- if findRE "research|lab|scientific" $content -}}
+                    {{- $mentorshipTypes = $mentorshipTypes | append "research" -}}
+                {{- end -}}
+                {{- if findRE "field|practical|hands.?on" $content -}}
+                    {{- $mentorshipTypes = $mentorshipTypes | append "field work" -}}
+                {{- end -}}
+                {{- if findRE "career|professional|development" $content -}}
+                    {{- $mentorshipTypes = $mentorshipTypes | append "career development" -}}
+                {{- end -}}
+            {{- end -}}
+            {{- $mentorshipTypes = uniq $mentorshipTypes -}}
+            {{- if gt (len $mentorshipTypes) 0 -}}
+                Connect with mentors in {{ template "delimitsmart" (first 3 $mentorshipTypes) }}.
+            {{- else -}}
+                Find mentorship opportunities in fire ecology and management.
+            {{- end -}}
+        {{- else if eq (lower $lastElement) (lower "financial_assistance") -}}
+            {{- $fundingTypes := slice -}}
+            {{- range .Pages -}}
+                {{- $content := lower .Content -}}
+                {{- if findRE "scholarship|tuition|academic" $content -}}
+                    {{- $fundingTypes = $fundingTypes | append "scholarships" -}}
+                {{- end -}}
+                {{- if findRE "fellowship|research|study" $content -}}
+                    {{- $fundingTypes = $fundingTypes | append "fellowships" -}}
+                {{- end -}}
+                {{- if findRE "grant|funding|support" $content -}}
+                    {{- $fundingTypes = $fundingTypes | append "research grants" -}}
+                {{- end -}}
+            {{- end -}}
+            {{- $fundingTypes = uniq $fundingTypes -}}
+            {{- if gt (len $fundingTypes) 0 -}}
+                Find {{ template "delimitsmart" (first 3 $fundingTypes) }} opportunities.
+            {{- else -}}
+                Discover financial support options for your education and research.
+            {{- end -}}
+        {{- end -}}
+    {{- else if eq (lower $subCategory) (lower "career_assistance") -}}
+        {{- if eq (lower $lastElement) (lower "jobs") -}}
+            {{- $jobBoards := slice -}}
+            {{- range .Pages -}}
+                {{- $content := lower .Content -}}
+                {{- if findRE "fire ecology|fireecology|afe" $content -}}
+                    {{- $jobBoards = $jobBoards | append "fire ecology" -}}
+                {{- end -}}
+                {{- if findRE "usajobs|federal|government|interior" $content -}}
+                    {{- $jobBoards = $jobBoards | append "federal" -}}
+                {{- end -}}
+                {{- if findRE "university|college|academic" $content -}}
+                    {{- $jobBoards = $jobBoards | append "academic" -}}
+                {{- end -}}
+                {{- if findRE "environment|conservation" $content -}}
+                    {{- $jobBoards = $jobBoards | append "environmental" -}}
+                {{- end -}}
+            {{- end -}}
+            {{- $jobBoards = uniq $jobBoards -}}
+            {{- if gt (len $jobBoards) 0 -}}
+                Access job boards specializing in {{ template "delimitsmart" (first 3 $jobBoards) }} positions.
+            {{- else -}}
+                Browse job boards for fire ecology and management positions.
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+{{- else if eq (lower $mainCategory) (lower "researcher") -}}
+    {{- if eq (lower $lastElement) (lower "climate") -}}
+        {{- $topics := slice -}}
+        {{- range .Pages -}}
+            {{- $content := lower .Content -}}
+            {{- if findRE "model|prediction|forecast" $content -}}
+                {{- $topics = $topics | append "climate modeling" -}}
+            {{- end -}}
+            {{- if findRE "data|measurement|observation" $content -}}
+                {{- $topics = $topics | append "climate data" -}}
+            {{- end -}}
+            {{- if findRE "impact|effect|influence" $content -}}
+                {{- $topics = $topics | append "impact analysis" -}}
+            {{- end -}}
+        {{- end -}}
+        {{- $topics = uniq $topics -}}
+        {{- if gt (len $topics) 0 -}}
+            Access resources for {{ template "delimitsmart" (first 3 $topics) }}.
+        {{- else -}}
+            Explore climate research resources and data.
+        {{- end -}}
+    {{- else if eq (lower $lastElement) (lower "research_databases") -}}
+        {{- $dbTypes := slice -}}
+        {{- range .Pages -}}
+            {{- $content := lower .Content -}}
+            {{- if findRE "fire|burn|wildland" $content -}}
+                {{- $dbTypes = $dbTypes | append "fire occurrence" -}}
+            {{- end -}}
+            {{- if findRE "climate|weather|atmospheric" $content -}}
+                {{- $dbTypes = $dbTypes | append "climate data" -}}
+            {{- end -}}
+            {{- if findRE "vegetation|ecological|species" $content -}}
+                {{- $dbTypes = $dbTypes | append "ecological" -}}
+            {{- end -}}
+        {{- end -}}
+        {{- $dbTypes = uniq $dbTypes -}}
+        {{- if gt (len $dbTypes) 0 -}}
+            Research databases covering {{ template "delimitsmart" (first 3 $dbTypes) }}.
+        {{- else -}}
+            Access comprehensive research databases for fire science.
+        {{- end -}}
+    {{- else if eq (lower $lastElement) (lower "current_strategies") -}}
+        {{- $strategies := slice -}}
+        {{- range .Pages -}}
+            {{- $content := lower .Content -}}
+            {{- if findRE "prevention|mitigation|reduction" $content -}}
+                {{- $strategies = $strategies | append "fire prevention" -}}
+            {{- end -}}
+            {{- if findRE "management|prescribed|controlled" $content -}}
+                {{- $strategies = $strategies | append "fire management" -}}
+            {{- end -}}
+            {{- if findRE "restoration|recovery|rehabilitation" $content -}}
+                {{- $strategies = $strategies | append "ecosystem restoration" -}}
+            {{- end -}}
+        {{- end -}}
+        {{- $strategies = uniq $strategies -}}
+        {{- if gt (len $strategies) 0 -}}
+            Current research on {{ template "delimitsmart" (first 3 $strategies) }}.
+        {{- else -}}
+            Latest research and strategies in fire science.
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
