@@ -1,3 +1,17 @@
+{{- define "formatList" -}}
+    {{- $list := . -}}
+    {{- $len := len $list -}}
+    {{- if eq $len 1 -}}
+        {{- index $list 0 -}}
+    {{- else if eq $len 2 -}}
+        {{- index $list 0 -}} and {{- index $list 1 -}}
+    {{- else -}}
+        {{- $last := index $list (sub $len 1) -}}
+        {{- $initial := slice $list 0 (sub $len 1) -}}
+        {{- delimit $initial ", " -}}, and {{- $last -}}
+    {{- end -}}
+{{- end -}}
+
 {{/* Case-insensitive section analyzers */}}
 {{- if eq (lower .mainCategory) (lower "landowner") -}}
     {{- if eq (lower .subCategory) (lower "fire_preparedness") -}}
@@ -17,7 +31,7 @@
             {{- end -}}
             {{- $keywords = uniq $keywords -}}
             {{- if gt (len $keywords) 0 -}}
-                Resources for emergency preparedness, including {{ delimit (first 3 $keywords) ", " }}.
+                Resources for emergency preparedness, including {{ template "formatList" (first 3 $someSlice) }}.
             {{- else -}}
                 Essential resources for creating and maintaining wildfire evacuation plans.
             {{- end -}}
@@ -37,7 +51,7 @@
             {{- end -}}
             {{- $sources = uniq $sources -}}
             {{- if gt (len $sources) 0 -}}
-                Access {{ delimit (first 3 $sources) ", " }} from official sources.
+                Access {{ template "formatList" (first 3 $someSlice) }} from official sources.
             {{- else -}}
                 Stay informed with official emergency and fire information sources.
             {{- end -}}
@@ -57,7 +71,7 @@
             {{- end -}}
             {{- $infoTypes = uniq $infoTypes -}}
             {{- if gt (len $infoTypes) 0 -}}
-                Current information on {{ delimit (first 3 $infoTypes) ", " }}.
+                Current information on {{ template "formatList" (first 3 $someSlice) }}.
             {{- else -}}
                 Track active fires and current fire conditions in your area.
             {{- end -}}
@@ -77,7 +91,7 @@
             {{- end -}}
             {{- $smokeInfo = uniq $smokeInfo -}}
             {{- if gt (len $smokeInfo) 0 -}}
-                Resources for {{ delimit (first 3 $smokeInfo) ", " }} during smoke events.
+                Resources for {{ template "formatList" (first 3 $someSlice) }} during smoke events.
             {{- else -}}
                 Protect yourself and your home from wildfire smoke impacts.
             {{- end -}}
@@ -99,7 +113,7 @@
             {{- end -}}
             {{- $topics = uniq $topics -}}
             {{- if gt (len $topics) 0 -}}
-                Resources for {{ delimit (first 3 $topics) ", " }}.
+                Resources for {{ template "formatList" (first 3 $someSlice) }}.
             {{- else -}}
                 Guidelines for creating and maintaining fire-resistant properties.
             {{- end -}}
@@ -121,7 +135,7 @@
             {{- end -}}
             {{- $grantTypes = uniq $grantTypes -}}
             {{- if gt (len $grantTypes) 0 -}}
-                Available funding through {{ delimit (first 3 $grantTypes) ", " }}.
+                Available funding through {{ template "formatList" (first 3 $someSlice) }}.
             {{- else -}}
                 Find current grant opportunities for fire preparation projects.
             {{- end -}}
@@ -141,7 +155,7 @@
             {{- end -}}
             {{- $tipTypes = uniq $tipTypes -}}
             {{- if gt (len $tipTypes) 0 -}}
-                Guidance for {{ delimit (first 3 $tipTypes) ", " }}.
+                Guidance for {{ template "formatList" (first 3 $someSlice) }}.
             {{- else -}}
                 Expert tips for writing successful grant applications.
             {{- end -}}
@@ -165,7 +179,7 @@
             {{- end -}}
             {{- $mentorshipTypes = uniq $mentorshipTypes -}}
             {{- if gt (len $mentorshipTypes) 0 -}}
-                Connect with mentors in {{ delimit (first 3 $mentorshipTypes) ", " }}.
+                Connect with mentors in {{ template "formatList" (first 3 $someSlice) }}.
             {{- else -}}
                 Find mentorship opportunities in fire ecology and management.
             {{- end -}}
@@ -185,7 +199,7 @@
             {{- end -}}
             {{- $fundingTypes = uniq $fundingTypes -}}
             {{- if gt (len $fundingTypes) 0 -}}
-                Find {{ delimit (first 3 $fundingTypes) ", " }} opportunities.
+                Find {{ template "formatList" (first 3 $someSlice) }} opportunities.
             {{- else -}}
                 Discover financial support options for your education and research.
             {{- end -}}
@@ -210,7 +224,7 @@
             {{- end -}}
             {{- $jobBoards = uniq $jobBoards -}}
             {{- if gt (len $jobBoards) 0 -}}
-                Access job boards specializing in {{ delimit (first 3 $jobBoards) ", " }} positions.
+                Access job boards specializing in {{ template "formatList" (first 3 $someSlice) }} positions.
             {{- else -}}
                 Browse job boards for fire ecology and management positions.
             {{- end -}}
@@ -233,7 +247,7 @@
         {{- end -}}
         {{- $topics = uniq $topics -}}
         {{- if gt (len $topics) 0 -}}
-            Access resources for {{ delimit (first 3 $topics) ", " }}.
+            Access resources for {{ template "formatList" (first 3 $someSlice) }}.
         {{- else -}}
             Explore climate research resources and data.
         {{- end -}}
@@ -253,7 +267,7 @@
         {{- end -}}
         {{- $dbTypes = uniq $dbTypes -}}
         {{- if gt (len $dbTypes) 0 -}}
-            Research databases covering {{ delimit (first 3 $dbTypes) ", " }}.
+            Research databases covering {{ template "formatList" (first 3 $someSlice) }}.
         {{- else -}}
             Access comprehensive research databases for fire science.
         {{- end -}}
@@ -273,7 +287,7 @@
         {{- end -}}
         {{- $strategies = uniq $strategies -}}
         {{- if gt (len $strategies) 0 -}}
-            Current research on {{ delimit (first 3 $strategies) ", " }}.
+            Current research on {{ template "formatList" (first 3 $someSlice) }}.
         {{- else -}}
             Latest research and strategies in fire science.
         {{- end -}}
