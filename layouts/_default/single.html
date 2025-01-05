@@ -1,0 +1,9 @@
+<article>
+    <header>
+        <h1>{{ .Title }}</h1>
+        {{ partial "tag-summaries" (dict "tags" .Params.tags) }}
+    </header>
+    <div class="content">
+        {{ .Content }}
+    </div>
+</article>

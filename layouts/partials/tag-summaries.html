@@ -3,56 +3,29 @@
     {{- $len := len $list -}}
     {{- if eq $len 1 -}}{{index $list 0}}
     {{- else if eq $len 2 -}}{{index $list 0}} and {{index $list 1}}
-    {{- else -}}{{delimit (initial $list) ", " }}, and {{last $list}}
+    {{- else -}}
+        {{- $last := index $list (sub $len 1) -}}
+        {{- $initial := slice $list 0 (sub $len 1) -}}
+        {{- delimit $initial ", " }}, and {{$last}}
     {{- end -}}
 {{- end -}}
 
-{{- define "analyzeContent" -}}
-    {{- $keywords := slice -}}
-    {{- range . -}}
-        {{- $content := lower .Content -}}
-        {{- range $pattern, $keyword := $.patterns -}}
-            {{- if findRE $pattern $content -}}
-                {{- $keywords = $keywords | append $keyword -}}
-            {{- end -}}
+{{- $tags := .tags -}}
+{{- $summary := "" -}}
+{{- $keywords := slice -}}
+
+{{- range $tags -}}
+    {{- $parts := split . "/" -}}
+    {{- if eq (index $parts 0) "researcher" -}}
+        {{- $summary = "Access resources for" -}}
+        {{- if eq (index $parts 1) "current_strategies" -}}
+            {{- $keywords = $keywords | append "current fire management strategies" -}}
         {{- end -}}
     {{- end -}}
-    {{- return (uniq $keywords) -}}
 {{- end -}}
 
-{{- $patterns := dict -}}
-{{- $summary := "" -}}
-
-{{- if eq (lower .mainCategory) "landowner" -}}
-    {{- if eq (lower .subCategory) "fire_preparedness" -}}
-        {{- $patterns = dict "evacuation|route|emergency|exit" "evacuation planning" "communication|alert|notification" "emergency alerts" "checklist|preparation|pack|kit" "emergency kits" -}}
-        {{- $summary = "Resources for emergency preparedness" -}}
-    {{- else if eq (lower .subCategory) "property_management" -}}
-        {{- $patterns = dict "defensible space|clearing|vegetation" "defensible space" "construction|material|building" "fire-resistant construction" "maintenance|upkeep|regular" "maintenance guidelines" -}}
-        {{- $summary = "Resources for" -}}
-    {{- else if eq (lower .subCategory) "grants" -}}
-        {{- $patterns = dict "federal|government|agency" "federal grants" "state|local|county" "state programs" "non.?profit|foundation|private" "private funding" -}}
-        {{- $summary = "Available funding through" -}}
-    {{- end -}}
-{{- else if eq (lower .mainCategory) "student" -}}
-    {{- if eq (lower .subCategory) "academic_assistance" -}}
-        {{- $patterns = dict "research|lab|scientific" "research" "field|practical|hands.?on" "field work" "career|professional|development" "career development" -}}
-        {{- $summary = "Connect with mentors in" -}}
-    {{- else if eq (lower .lastElement) "jobs" -}}
-        {{- $patterns = dict "fire ecology|fireecology|afe" "fire ecology" "usajobs|federal|government|interior" "federal" "university|college|academic" "academic" "environment|conservation" "environmental" -}}
-        {{- $summary = "Access job boards specializing in" -}}
-    {{- end -}}
-{{- else if eq (lower .mainCategory) "researcher" -}}
-    {{- $patterns = dict "model|prediction|forecast" "climate modeling" "data|measurement|observation" "climate data" "impact|effect|influence" "impact analysis" -}}
-    {{- $summary = "Access resources for" -}}
-{{- end -}}
-
-{{- $keywords := partial "analyzeContent" (dict "context" .context.Pages "patterns" $patterns) -}}
-{{- if gt (len $keywords) 0 -}}
+{{- if and (ne $summary "") (gt (len $keywords) 0) -}}
     {{$summary}} {{ template "formatList" (first 3 $keywords) }}.
 {{- else -}}
-    {{- if eq (lower .mainCategory) "landowner" -}}Essential resources for fire preparedness and property management.
-    {{- else if eq (lower .mainCategory) "student" -}}Find opportunities in fire ecology and management.
-    {{- else if eq (lower .mainCategory) "researcher" -}}Explore climate research resources and data.
-    {{- end -}}
+    Explore current research and strategies in fire science.
 {{- end -}}
