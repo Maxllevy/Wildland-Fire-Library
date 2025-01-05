@@ -2,7 +2,6 @@
 title: "Coalitions and Collaboratives AIM Grant"
 tags: ["landowner/grants/available_grants"]
 draft: false
-date: 2024-12-11T20:29:48-08:00
 ---
 
 COCO (a Colorado-based nonprofit) started the Action, Implementation and Mitigation (AIM) Program to accelerate fire adaptation concepts and reduce the risk from wildfire across the U.S. by increasing capacity and on-the-ground work. 

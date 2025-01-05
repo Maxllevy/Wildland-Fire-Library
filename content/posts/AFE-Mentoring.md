@@ -2,7 +2,6 @@
 title: "Association for Fire Ecology Mentoring Program"
 tags: ["student/academic_assistance/mentorships"]
 draft: false
-date: '2024-12-11T20:29:48-08:00'
 ---
 
 The goal of the Mentoring Futures Program is to actively cultivate the future of wildland fire and resource conservation by investing in future leaders. 

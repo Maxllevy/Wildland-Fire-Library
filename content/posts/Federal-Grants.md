@@ -2,7 +2,6 @@
 title: "Federal Grants"
 tags: ["landowner/grants/available_grants"]
 draft: false
-date: '2024-12-11T20:29:48-08:00'
 ---
 
 Government Operated Grant website.

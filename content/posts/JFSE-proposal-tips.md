@@ -2,7 +2,6 @@
 title: "Joint Fire Science Program Proposal Tips"
 tags: ["student/academic_assistance/financial_assistance"]
 draft: false
-date: '2024-12-11T20:29:48-08:00'
 ---
 
 JFSE current funding announcements, proposal submission tips, and preparation

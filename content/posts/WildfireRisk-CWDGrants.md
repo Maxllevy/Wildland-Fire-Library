@@ -2,7 +2,6 @@
 title: "Community Wildfire Defense Grants"
 tags: ["landowner/grants/available_grants"]
 draft: false
-date: '2024-12-11T20:29:48-08:00'
 ---
 
 The U.S. Forest Service's Community Wildfire Defense Grant (CWDG) program is intended to help at-risk communities and Tribes plan for and reduce the risk of wildfire.

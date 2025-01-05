@@ -1,6 +1,6 @@
 ---
 title: "Wildfire Resilience Coaliton Resources"
-tags: ['Academic', 'Research']
+tags: ["researcher/current_strategies"]
 draft: false
 date: '2024-12-11T20:29:48-08:00'
 ---

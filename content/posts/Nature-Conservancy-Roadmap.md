@@ -1,8 +1,7 @@
 ---
 title: "Nature Conservancy Roadmap"
-tags: ['Research', 'Policy']
+tags: ["researcher/current_strategies"]
 draft: false
-date: '2024-12-11T20:29:48-08:00'
 ---
 
 Roadmap for Wildfire Resilience: How to Get There from Here

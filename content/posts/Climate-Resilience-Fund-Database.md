@@ -1,5 +1,4 @@
 ---
-date: '2024-12-11T20:29:48-08:00'
 draft: false
 title: "Climate Resilience Fund Database"
 tags: ["researcher/research_databases"]

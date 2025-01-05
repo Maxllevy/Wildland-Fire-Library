@@ -2,7 +2,6 @@
 title: "Community Wildfire Defense Grant Program"
 tags: ["landowner/grants/available_grants"]
 draft: false
-date: '2024-12-11T20:29:48-08:00'
 ---
 
 Community Wildfire Defense Grants (CWDG) help communities and Tribes plan for and reduce wildfire risk and implement the National Cohesive Wildland Fire Management Strategy.

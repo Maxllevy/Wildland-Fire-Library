@@ -2,7 +2,6 @@
 title: "Community Wildfire Protection Plan Portal and Data Library"
 tags: ["researcher/research_databases"]
 draft: false
-date: '2024-12-11T20:29:48-08:00'
 ---
 
 The CWPP Portal and Data Library offers a range of resources for wildfire risk mitigation practitioners and researchers.
