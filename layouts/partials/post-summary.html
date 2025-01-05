@@ -1,0 +1,41 @@
+{{- define "formatList" -}}
+    {{- $list := . -}}
+    {{- $len := len $list -}}
+    {{- if eq $len 1 -}}{{index $list 0}}
+    {{- else if eq $len 2 -}}{{index $list 0}} and {{index $list 1}}
+    {{- else -}}
+        {{- $last := index $list (sub $len 1) -}}
+        {{- $initial := slice $list 0 (sub $len 1) -}}
+        {{- delimit $initial ", " }}, and {{$last}}
+    {{- end -}}
+{{- end -}}
+
+{{- $content := .Content | plainify | lower -}}
+{{- $keywords := slice -}}
+
+{{- if findRE "wildfire|fire" $content -}}
+    {{- $keywords = $keywords | append "wildfire management" -}}
+{{- end -}}
+{{- if findRE "risk|assessment" $content -}}
+    {{- $keywords = $keywords | append "risk assessment" -}}
+{{- end -}}
+{{- if findRE "prevention|mitigation" $content -}}
+    {{- $keywords = $keywords | append "fire prevention" -}}
+{{- end -}}
+{{- if findRE "ecology|ecosystem" $content -}}
+    {{- $keywords = $keywords | append "fire ecology" -}}
+{{- end -}}
+{{- if findRE "policy|legislation" $content -}}
+    {{- $keywords = $keywords | append "fire policy" -}}
+{{- end -}}
+
+{{- $keywords = uniq $keywords -}}
+
+{{- if gt (len $keywords) 0 -}}
+    This resource provides information on {{ template "formatList" (first 3 $keywords) }}. 
+{{- else -}}
+    This resource offers insights into current fire science and management strategies.
+{{- end -}}
+{{- if .Params.tags -}}
+    It is relevant for {{ delimit .Params.tags ", " }}.
+{{- end -}}

@@ -1,7 +1,7 @@
 <article>
     <header>
         <h1>{{ .Title }}</h1>
-        {{ partial "tag-summaries" (dict "tags" .Params.tags) }}
+        <p class="post-summary">{{ partial "post-summary" . }}</p>
     </header>
     <div class="content">
         {{ .Content }}
