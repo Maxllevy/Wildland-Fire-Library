@@ -1,0 +1,22 @@
+{{ define "main" }}
+<header class="page-header">
+    <h1>{{ .Title }}</h1>
+</header>
+
+<ul class="terms-tags">
+    {{ range .Data.Terms.Alphabetical }}
+    <li>
+        <a href="{{ .Page.RelPermalink }}">
+            {{/* Convert underscores to spaces and capitalize each word */}}
+            {{ $words := split .Name "_" }}
+            {{ $titleCase := slice }}
+            {{ range $words }}
+                {{ $titleCase = append $titleCase (title .) }}
+            {{ end }}
+            {{ delimit $titleCase " " }}
+            <sup><strong><sup>{{ .Count }}</sup></strong></sup>
+        </a>
+    </li>
+    {{ end }}
+</ul>
+{{ end }}
