@@ -5,7 +5,7 @@ theme: "PaperMod"
 
 services:
   googleAnalytics:
-    ID: G-ED0FEG6PZDs  # Your GA4 Measurement ID here
+    ID: G-ED0FEG6PZDs
 
 taxonomies:
   tag: "tags"
@@ -46,46 +46,41 @@ params:
     keys: ["title", "permalink", "summary", "content"]
   analytics:
     google:
-      SiteVerificationTag: "your-site-verification-tag"  # Optional
-    googleAnalytics: "G-ED0FEG6PZD"  
-  taxonomy:
-    tag:
-      terms: 
-        "smoke_preparation": "Smoke Preparation"
-        "stay_informed": "Stay Informed"
-        "available_grants": "Available Grants"
-        "grant_writing_tips": "Grant-Writing Tips"
-        "building_and_maintaining": "Building and Maintaining"
-        "climate": "Climate Data and Research"
-        "current_strategies": "Current Strategies"
-        "research_databases": "Research Databases"
-        "financial_assistance": "Financial Assistance"
-        "mentorships": "Mentorships"
-        "jobs": "Job Boards"
-    landowner:
-      fire_preparedness:
-        - Escape Plans
-        - Stay Informed
-        - Current Fire Information
-        - Smoke Preparation
-      property_management:
-        - Building and Maintaining
-      grants:
-        - Available Grants
-        - Grant-Writing Tips
-
-    student:
-      academic_assistance:
-        - Mentorships
-        - Financial Assistance
-      career_assistance:
-        - Jobs
-    
-    researcher:
-      - Climate
-      - Research Databases
-      - Current Strategies
-
+      SiteVerificationTag: "your-site-verification-tag"
+  terms:
+    smoke_preparation: "Smoke Preparation"
+    landowner/fire_preparedness/stay_informed: "Stay Informed"
+    landowner/fire_preparedness/current_fire_information: "Current Fire Information"
+    available_grants: "Available Grants"
+    grant_writing_tips: "Grant-Writing Tips"
+    building_and_maintaining: "Building and Maintaining"
+    climate: "Climate Data and Research"
+    current_strategies: "Current Strategies"
+    research_databases: "Research Databases"
+    financial_assistance: "Financial Assistance"
+    mentorships: "Mentorships"
+    jobs: "Job Boards"
+  landowner:
+    fire_preparedness:
+      - "Escape Plans"
+      - "Stay Informed"
+      - "Current Fire Information"
+      - "Smoke Preparation"
+    property_management:
+      - "Building and Maintaining"
+    grants:
+      - "Available Grants"
+      - "Grant-Writing Tips"
+  student:
+    academic_assistance:
+      - "Mentorships"
+      - "Financial Assistance"
+    career_assistance:
+      - "Jobs"
+  researcher:
+    - "Climate"
+    - "Research Databases"
+    - "Current Strategies"
 
 outputs:
   home:

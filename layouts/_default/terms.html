@@ -1,0 +1,29 @@
+{{- define "main" }}
+
+<header class="page-header">
+    <h1>{{ .Title }}</h1>
+    {{- if .Description }}
+    <div class="post-description">
+        {{ .Description }}
+    </div>
+    {{- end }}
+</header>
+
+<ul class="terms-tags">
+    {{- $type := .Type }}
+    {{- range $key, $value := .Data.Terms.Alphabetical }}
+    {{- $name := .Name }}
+    {{- $count := .Count }}
+    {{- with $.Site.GetPage (printf "/%s/%s" $type $name) }}
+    <li>
+        <a href="{{ .Permalink }}">
+            {{- $displayName := index (last 1 (split .Path "/")) 0 | replaceRE "_" " " | title -}}
+            {{ $displayName }}
+            <sup><strong><sup>{{ $count }}</sup></strong></sup>
+        </a>
+    </li>
+    {{- end }}
+    {{- end }}
+</ul>
+
+{{- end }}
