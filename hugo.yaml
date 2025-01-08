@@ -33,6 +33,9 @@ menu:
       weight: 5
 
 params:
+  assests:
+    css: 
+      - css/custom.css
   hideList: true
   homeInfoParams:
     enabled: true
