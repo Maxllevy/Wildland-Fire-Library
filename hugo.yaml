@@ -49,6 +49,19 @@ params:
       SiteVerificationTag: "your-site-verification-tag"  # Optional
     googleAnalytics: "G-ED0FEG6PZD"  
   taxonomy:
+    tag:
+      terms: 
+        "smoke_preparation": "Smoke Preparation"
+        "stay_informed": "Stay Informed"
+        "available_grants": "Available Grants"
+        "grant_writing_tips": "Grant-Writing Tips"
+        "building_and_maintaining": "Building and Maintaining"
+        "climate": "Climate Data and Research"
+        "current_strategies": "Current Strategies"
+        "research_databases": "Research Databases"
+        "financial_assistance": "Financial Assistance"
+        "mentorships": "Mentorships"
+        "jobs": "Job Boards"
     landowner:
       fire_preparedness:
         - Escape Plans
