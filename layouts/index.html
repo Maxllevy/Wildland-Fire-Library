@@ -1,6 +1,4 @@
 {{- define "main" }}
-{{- $pages := where .Site.RegularPages "Type" "posts" }}
-{{- $recentPages := first 1 $pages.ByLastmod.Reverse }}
 
 {{- partial "guided-navigation.html" . -}}
 
@@ -10,30 +8,4 @@
     </div>
 </article>
 
-<div class="spacer"></div>
-
-<div class="recent-posts post-single">
-    <h2>Recently Edited</h2>
-    {{- with $recentPages }}
-        {{- range . }}
-        <article class="post-entry">
-            <header class="entry-header">
-                <h3>{{- .Title -}}</h3>
-            </header>
-            <section class="entry-content">
-                {{- .Summary -}}
-            </section>
-            <footer class="entry-footer">
-                <time datetime="{{ .Lastmod.Format "2006-01-02" }}">
-                    {{- .Lastmod.Format "January 2, 2006" -}}
-                </time>
-            </footer>
-            <a class="entry-link" 
-               href="{{- .Permalink -}}" 
-               aria-label="Read more: {{- .Title -}}">
-            </a>
-        </article>
-        {{- end }}
-    {{- end }}
-</div>
 {{- end }}
