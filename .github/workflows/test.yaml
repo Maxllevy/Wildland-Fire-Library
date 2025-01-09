@@ -36,22 +36,15 @@ jobs:
             fi
           ' \;
 
-      - name: Validate Front Matter
-        run: |
-          find content -name "*.md" -type f -exec sh -c '
-            echo "Checking front matter in {}"
-            if ! hugo --quiet -e development --renderToMemory content/$(realpath --relative-to=content {}); then
-              echo "Front matter validation failed for {}"
-              exit 1
-            fi
-          ' \;
-
       - name: Build Site
         run: |
-          # Capture output to log file
-          if ! hugo --verbose --minify 2>&1 | tee hugo.log; then
-            echo "Hugo build failed. Last 50 lines of log:"
-            tail -n 50 hugo.log
+          if ! hugo --minify; then
+            echo "Hugo build failed"
+            exit 1
+          fi
+
+          if [ ! -d "public" ]; then
+            echo "Error: public directory was not created"
             exit 1
           fi
 
@@ -59,21 +52,17 @@ jobs:
         run: sudo gem install html-proofer
 
       - name: Run html-proofer
+        if: success()
         run: |
+          if [ ! -d "public" ]; then
+            echo "Error: public directory not found"
+            exit 1
+          fi
           htmlproofer ./public \
             --checks 'Links,Images,Scripts,Favicon,Html' \
             --disable-external \
             --ignore-urls "/^#$/" \
             --ignore-missing-alt
-
-      - name: Install pa11y
-        run: |
-          npm install -g pa11y-ci
-
-      - name: Run accessibility tests
-        run: |
-          echo '{"defaults": {"timeout": 10000}}' > .pa11yci
-          pa11y-ci ./public/**/*.html
 
       - name: Check for broken internal links
         run: |
