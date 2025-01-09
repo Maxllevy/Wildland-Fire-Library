@@ -6,5 +6,5 @@ draft: False
 
 Get air quality  and wildfire smoke data where you live.
 
-**Visit the website here!** (https://www.airnow.gov/)
+[**Visit the website here!**](https://www.airnow.gov/)
 

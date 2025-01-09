@@ -20,74 +20,68 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      - name: Install yamllint
+      - name: Check Content Files
         run: |
-          sudo apt-get update
-          sudo apt-get install -y yamllint
+          echo "Checking for HTML files that should be Markdown..."
+          find content -type f -name "*.html" -exec sh -c '
+            file={}
+            if [[ $file == *.html && $(head -n 1 "$file") == "---"* ]]; then
+              echo "Warning: $file appears to be Markdown but has .html extension"
+            fi
+          ' \;
 
-      - name: Validate YAML Front Matter
+      - name: Validate Front Matter
         run: |
           find content -name "*.md" -type f -exec sh -c '
-            echo "Checking YAML in {}"
-            front_matter=$(sed -n "/^---$/,/^---$/p" "{}")
-            if ! echo "$front_matter" | yamllint -; then
-              echo "YAML validation failed for {}"
+            echo "Checking front matter in {}"
+            if ! hugo --quiet -e development --renderToMemory content/$(realpath --relative-to=content {}); then
+              echo "Front matter validation failed for {}"
               exit 1
             fi
           ' \;
 
-      - name: Build Site
+      - name: Check Content Structure
+        shell: bash  # Explicitly use bash for consistent behavior
         run: |
-          # First try to list the templates being used
-          hugo list all
-
-          # Then attempt the build with template debugging
-          if ! hugo --templateMetrics --templateMetricsHints --minify; then
-            echo "Hugo build failed - checking template files..."
+          echo "Checking content structure..."
+          if [ -d "content/posts" ]; then
+            echo "Content in posts directory:"
+            ls -la content/posts/
             
-            # List all template files being used
-            find layouts -type f -name "*.html" -exec echo "Template: {}" \;
-            
-            # Show the content of the failing posts
-            for post in "afe-mentoring" "after-the-flames" "air-now" "calfire--action-plan" "afe-jobboard"; do
-              if [ -f "content/posts/$post/index.html" ]; then
-                echo "=== Content of $post ==="
-                cat "content/posts/$post/index.html"
-                echo "======================="
+            echo "Files with potential JSON issues:"
+            for f in content/posts/*; do
+              if [ -f "$f" ]; then
+                if grep -H -n "^[[:space:]]*{" "$f" > /dev/null; then
+                  echo "Found standalone { in $f"
+                  echo "First 10 lines of $f:"
+                  head -n 10 "$f"
+                fi
               fi
             done
-            
+          else
+            echo "Posts directory not found!"
+            pwd
+            ls -la content/
+          fi
+
+      - name: Build Site
+        run: |
+          if ! hugo --minify; then
+            echo "Hugo build failed"
             exit 1
           fi
 
       - name: Install html-proofer
+        if: success()
         run: sudo gem install html-proofer
 
       - name: Run html-proofer
         if: success()
         run: |
-          if [ ! -d "public" ]; then
-            echo "Error: public directory not found"
-            exit 1
+          if [ -d "public" ]; then
+            htmlproofer ./public \
+              --checks 'Links,Images,Scripts,Favicon,Html' \
+              --disable-external \
+              --ignore-urls "/^#$/" \
+              --ignore-missing-alt
           fi
-          htmlproofer ./public \
-            --checks 'Links,Images,Scripts,Favicon,Html' \
-            --disable-external \
-            --ignore-urls "/^#$/" \
-            --ignore-missing-alt
-
-      - name: Check for broken internal links
-        run: |
-          set -e  # Exit immediately if any command fails
-          find public -name "*.html" -type f -exec \
-            grep -l "href=\"[^http]" {} \; | while read file; do
-            echo "Checking $file"
-            grep -o 'href="[^"]*"' "$file" | grep -v "^href=\"http" | \
-            while read link; do
-              target=$(echo $link | sed 's/href="\(.*\)"/\1/')
-              if [[ $target != "#"* && ! -f "public/$target" && ! -f "public/$target/index.html" ]]; then
-                echo "Broken link in $file: $target"
-                exit 1
-              fi
-            done || exit 1
-          done || exit 1

@@ -8,5 +8,5 @@ The goal of the Mentoring Futures Program is to actively cultivate the future of
 
 Mentors and mentees can be in any career stage and have a focus in any wildland fire-related discipline or field. 
 
-**Visit Mentoring Futures Program website here!** (https://fireecology.org/mentoring)
+[**Visit Mentoring Futures Program website here!**](https://fireecology.org/mentoring)
 
