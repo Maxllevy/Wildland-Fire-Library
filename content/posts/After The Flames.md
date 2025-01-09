@@ -1,7 +1,7 @@
 ---
 title: "After the Flames"
 tags: ["landowner/property_management/building_and_maintaining"]
-draft: False
+draft: false
 ---
 
 Recovery after the fire resources. 

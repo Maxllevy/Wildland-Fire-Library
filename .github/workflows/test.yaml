@@ -20,8 +20,41 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
+      - name: Install yamllint
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y yamllint
+
+      - name: Validate YAML Front Matter
+        run: |
+          find content -name "*.md" -type f -exec sh -c '
+            echo "Checking YAML in {}"
+            front_matter=$(sed -n "/^---$/,/^---$/p" "{}")
+            if ! echo "$front_matter" | yamllint -; then
+              echo "YAML validation failed for {}"
+              exit 1
+            fi
+          ' \;
+
+      - name: Validate Front Matter
+        run: |
+          find content -name "*.md" -type f -exec sh -c '
+            echo "Checking front matter in {}"
+            if ! hugo --quiet -e development --renderToMemory content/$(realpath --relative-to=content {}); then
+              echo "Front matter validation failed for {}"
+              exit 1
+            fi
+          ' \;
+
       - name: Build Site
-        run: hugo --minify
+        run: |
+          # Enable verbose output for debugging
+          HUGO_LOGFILE=hugo.log
+          hugo --logFile $HUGO_LOGFILE --verbose --minify || {
+            echo "Hugo build failed. Last 50 lines of log:"
+            tail -n 50 $HUGO_LOGFILE
+            exit 1
+          }
 
       - name: Install html-proofer
         run: sudo gem install html-proofer
@@ -49,6 +82,7 @@ jobs:
 
       - name: Check for broken internal links
         run: |
+          set -e  # Exit immediately if any command fails
           find public -name "*.html" -type f -exec \
             grep -l "href=\"[^http]" {} \; | while read file; do
             echo "Checking $file"
@@ -59,5 +93,5 @@ jobs:
                 echo "Broken link in $file: $target"
                 exit 1
               fi
-            done
-          done
+            done || exit 1
+          done || exit 1
