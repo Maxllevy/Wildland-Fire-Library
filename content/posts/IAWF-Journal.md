@@ -10,5 +10,5 @@ The journal has an international perspective, since wildland fire plays a major 
 
 As of January 1, 2024, IJWF is open access.
 
-**Visit the website here!** (https://www.iawfonline.org/international-journal-wildland-fire-ijwf/)
+[**Visit the website here!**](https://www.iawfonline.org/international-journal-wildland-fire-ijwf/)
 

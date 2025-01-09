@@ -8,5 +8,5 @@ Climate Engine tools use Google Earth Engine for on-demand processing of satelli
 
 With fully customizable analyses, the Climate Engine App enables the user to produce maps and time series summaries from these datasets.
 
-**Visit the website here!** (https://www.climateengine.org/)
+[**Visit the website here!**](https://www.climateengine.org/)
 

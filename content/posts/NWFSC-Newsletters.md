@@ -8,5 +8,5 @@ The Northwest Fire Science Consortium is a multi-disciplinary, multi-institution
 
 Posts Monthly Newsletters
 
-**Visit the website here!** (https://nwfirescience.org/newsletters)
+[**Visit the website here!**](https://nwfirescience.org/newsletters)
 

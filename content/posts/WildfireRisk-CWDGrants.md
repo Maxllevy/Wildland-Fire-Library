@@ -8,5 +8,5 @@ The U.S. Forest Service's Community Wildfire Defense Grant (CWDG) program is int
 
 Use this source to find eligible grants, as well as tips on writing your grant proposal. 
 
-**Visit the website here!** (https://wildfirerisk.org/cwdg-tool)
+[**Visit the website here!**](https://wildfirerisk.org/cwdg-tool)
 

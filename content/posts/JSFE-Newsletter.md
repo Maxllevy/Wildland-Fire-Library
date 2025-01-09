@@ -8,5 +8,5 @@ The Joint Fire Science Program funds scientific research on wildland fires and d
 
 Posts Newsletters and weekly eNews.
 
-**Visit the website here!** (https://firescience.gov/ords/prd/jf_jfsp/jf_jfsp/r/jfspublic/home)
+[**Visit the website here!**](https://firescience.gov/ords/prd/jf_jfsp/jf_jfsp/r/jfspublic/home)
 

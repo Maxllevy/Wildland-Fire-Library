@@ -6,5 +6,5 @@ draft: false
 
 THe CRF's tools and resources. Includes publications and guides for academic and operational practitioners. 
 
-**Visit the website here!** (https://www.climateresiliencefund.org/planning-resources/)
+[**Visit the website here!**](https://www.climateresiliencefund.org/planning-resources/)
 

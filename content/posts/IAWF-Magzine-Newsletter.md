@@ -6,7 +6,7 @@ draft: False
 
 Access the IAWF newsletters and magazine publications.
 
-**Visit the Magazine here!** (https://www.iawfonline.org/wildfire-magazine/)
+[**Visit the Magazine here!**](https://www.iawfonline.org/wildfire-magazine/)
 
-**Visit the Newsletter here!** (https://www.iawfonline.org/resources/e-news-dispatch/)
+[**Visit the Newsletter here!**](https://www.iawfonline.org/resources/e-news-dispatch/)
 

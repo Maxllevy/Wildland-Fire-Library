@@ -8,5 +8,5 @@ Features stories and information from a diversity of perspectives including succ
 
 Weekly blogs.
 
-**Visit the website here!** (https://fireadaptednetwork.org/blog/)
+[**Visit the website here!**](https://fireadaptednetwork.org/blog/)
 

@@ -6,5 +6,5 @@ draft: False
 
 Signup for updates on Western Cohesive Strategy News
 
-**Visit the website here!** (https://wildfireinthewest.org/blog-wildfire/)
+[**Visit the website here!**](https://wildfireinthewest.org/blog-wildfire/)
 

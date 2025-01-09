@@ -9,5 +9,5 @@ This project explored how federal policies interact with social conditions at th
 
 Notes: Fact sheets were particularly insightful.
 
-**Visit the website here!** (https://resilient.uoregon.edu/ewp/wildfire-resilience)
+[**Visit the website here!**](https://resilient.uoregon.edu/ewp/wildfire-resilience)
 

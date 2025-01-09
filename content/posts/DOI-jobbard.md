@@ -10,5 +10,5 @@ The below agencies are included:
 
 Bureau of Land Management (BLM), US Fish and Wildlife Service (USFWS), the National Park Service (NPS), and the Bureau of Indian Affairs (BIA)
 
-**Visit DOI Job Board here!** (https://www.firejobs.doi.gov/)
+[**Visit DOI Job Board here!**](https://www.firejobs.doi.gov/)
 

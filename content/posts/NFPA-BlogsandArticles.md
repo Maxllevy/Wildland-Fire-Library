@@ -6,5 +6,5 @@ draft: False
 
 Get all the latest news, analysis, and more from NFPA
 
-**Visit the website here!** (https://www.nfpa.org/news-blogs-and-articles)
+[**Visit the website here!**](https://www.nfpa.org/news-blogs-and-articles)
 

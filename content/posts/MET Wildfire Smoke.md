@@ -6,5 +6,5 @@ draft: False
 
 Find localized data regarding wildfire smoke and weather patterns.
 
-**Visit the website here!** (https://met.wildlandfiresmoke.net/wrf-dashboard/)
+[**Visit the website here!**](https://met.wildlandfiresmoke.net/wrf-dashboard/)
 

@@ -6,7 +6,7 @@ draft: false
 
 JFSE current funding announcements, proposal submission tips, and preparation
 
-**Visit JFSE funding website here!** (https://www.firescience.gov/ords/prd/jf_jfsp/jf_jfsp/r/jfspublic/jfsp-funding)
+[**Visit JFSE funding website here!**](https://www.firescience.gov/ords/prd/jf_jfsp/jf_jfsp/r/jfspublic/jfsp-funding)
 
-**Visit the JFSE proposal assistance here** (https://firescience.gov/ords/prd/jf_jfsp/jf_jfsp/r/134/files/static/v206/JFSP_Proposal_Submittal_and_Preparation_Tips_2024.pdf)
+[**Visit the JFSE proposal assistance here**](https://firescience.gov/ords/prd/jf_jfsp/jf_jfsp/r/134/files/static/v206/JFSP_Proposal_Submittal_and_Preparation_Tips_2024.pdf)
 

@@ -11,5 +11,5 @@ Resources include roadmaps and reports.
 
 *Worth checking out* "The True Cost of Wildfire in the Western U.S."
 
-**Visit the website here!** (https://wildfireresilience.org/resources/)
+[**Visit the website here!**](https://wildfireresilience.org/resources/)
 

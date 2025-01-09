@@ -16,5 +16,5 @@ Have been impacted by a severe disaster within the previous 10 years which incre
 Develop and revise Community Wildfire Protection Plans 
 Implement projects described in a Community Wildfire Protection Plan that are less than ten years old.
 
-**Visit the website here!** (https://www.fs.usda.gov/managing-land/fire/grants/cwdg)
+[**Visit the website here!**](https://www.fs.usda.gov/managing-land/fire/grants/cwdg)
 
