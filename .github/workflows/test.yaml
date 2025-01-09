@@ -38,13 +38,25 @@ jobs:
 
       - name: Build Site
         run: |
-          if ! hugo --minify; then
-            echo "Hugo build failed"
-            exit 1
-          fi
+          # First try to list the templates being used
+          hugo list all
 
-          if [ ! -d "public" ]; then
-            echo "Error: public directory was not created"
+          # Then attempt the build with template debugging
+          if ! hugo --templateMetrics --templateMetricsHints --minify; then
+            echo "Hugo build failed - checking template files..."
+            
+            # List all template files being used
+            find layouts -type f -name "*.html" -exec echo "Template: {}" \;
+            
+            # Show the content of the failing posts
+            for post in "afe-mentoring" "after-the-flames" "air-now" "calfire--action-plan" "afe-jobboard"; do
+              if [ -f "content/posts/$post/index.html" ]; then
+                echo "=== Content of $post ==="
+                cat "content/posts/$post/index.html"
+                echo "======================="
+              fi
+            done
+            
             exit 1
           fi
 
