@@ -1,7 +1,7 @@
 ---
 title: "Purple Air"
 tags: ["landowner/fire_preparedness/smoke_preparation"]
-draft: False
+draft: false
 ---
 
 Purple Air sensors measure PM 2.5 particulates in the air. 

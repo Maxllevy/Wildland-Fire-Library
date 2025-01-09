@@ -1,7 +1,7 @@
 ---
 title: "International Association of Wildland Firefighers Academic Journal"
 tags: ["researcher/research_databases"]
-draft: False
+draft: false
 ---
 
 The Journal publishes new and significant articles that advance basic and applied research concerning wildland fire.

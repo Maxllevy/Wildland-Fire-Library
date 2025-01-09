@@ -1,7 +1,7 @@
 ---
 title: "NFPA Blogs and Articles"
 tags: ["landowner/fire_preparedness/stay_informed"]
-draft: False
+draft: false
 ---
 
 Get all the latest news, analysis, and more from NFPA

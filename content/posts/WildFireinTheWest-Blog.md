@@ -1,7 +1,7 @@
 ---
 title: "Cohesive Strategy-Wildfire in the West Blog"
 tags: ["landowner/fire_preparedness/stay_informed"]
-draft: False
+draft: false
 ---
 
 Signup for updates on Western Cohesive Strategy News

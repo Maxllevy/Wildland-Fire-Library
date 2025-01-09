@@ -1,7 +1,7 @@
 ---
 title: "FireWise Resources"
 tags: ["landowner/property_management/building_and_maintaining"]
-draft: False
+draft: false
 ---
 
 Firewise USA® has a variety of resources to assist homeowners, program participants, and other wildfire stakeholders as they travel down the path to wildfire risk reduction.

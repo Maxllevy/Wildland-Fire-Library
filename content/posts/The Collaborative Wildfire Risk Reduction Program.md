@@ -1,7 +1,7 @@
 ---
 title: "Collaborative Wildfire Risk Reduction Program"
 tags: ["researcher/current_strategies"]
-draft: False
+draft: false
 ---
 
 The Collaborative Wildfire Risk Reduction Program enables national forests, in collaboration with tribes, communities, and partners, to reduce wildfire risk to communities, critical infrastructure, and natural resources.

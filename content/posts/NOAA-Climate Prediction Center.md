@@ -1,7 +1,7 @@
 ---
 title: "National Weather Service - Climate Prediction Center"
 tags: ["researcher/climate"]
-draft: False
+draft: false
 ---
 
 Offers short and long-term predictions.
