@@ -1,7 +1,7 @@
 ---
 title: "Inciweb"
 tags: ["landowner/fire_preparedness/current_fire_information"]
-draft: False
+draft: True
 ---
 
 InciWeb is an interagency all-risk incident information management system. The system was developed with two primary missions:
