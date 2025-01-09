@@ -1,0 +1,33 @@
+baseURL: "https://Maxllevy.github.io/wildland-fire-library/"
+title: "Wildland Fire Data Library"
+theme: "PaperMod"
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+taxonomies:
+  tag: "tags"
+
+menu:
+  main:
+    - name: Home
+      url: /
+      weight: 1
+    - name: Search
+      url: /search/
+      weight: 2
+    - name: Tags
+      url: /tags/
+      weight: 3
+
+params:
+  hideList: true
+  homeInfoParams:
+    enabled: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
