@@ -48,13 +48,12 @@ jobs:
 
       - name: Build Site
         run: |
-          # Enable verbose output for debugging
-          HUGO_LOGFILE=hugo.log
-          hugo --logFile $HUGO_LOGFILE --verbose --minify || {
+          # Capture output to log file
+          if ! hugo --verbose --minify 2>&1 | tee hugo.log; then
             echo "Hugo build failed. Last 50 lines of log:"
-            tail -n 50 $HUGO_LOGFILE
+            tail -n 50 hugo.log
             exit 1
-          }
+          fi
 
       - name: Install html-proofer
         run: sudo gem install html-proofer
