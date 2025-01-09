@@ -1,0 +1,63 @@
+name: Hugo Site Testing
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build Site
+        run: hugo --minify
+
+      - name: Install html-proofer
+        run: sudo gem install html-proofer
+
+      - name: Run html-proofer
+        run: |
+          htmlproofer ./public \
+            --check-html \
+            --check-img-http \
+            --check-links \
+            --disable-external \
+            --enforce-https \
+            --ignore-urls "/^#$/" \
+            --alt-ignore '/.*/' \
+            --allow-hash-href
+
+      - name: Install pa11y
+        run: |
+          npm install -g pa11y-ci
+
+      - name: Run accessibility tests
+        run: |
+          echo '{"defaults": {"timeout": 10000}}' > .pa11yci
+          pa11y-ci ./public/**/*.html
+
+      - name: Check for broken internal links
+        run: |
+          find public -name "*.html" -type f -exec \
+            grep -l "href=\"[^http]" {} \; | while read file; do
+            echo "Checking $file"
+            grep -o 'href="[^"]*"' "$file" | grep -v "^href=\"http" | \
+            while read link; do
+              target=$(echo $link | sed 's/href="\(.*\)"/\1/')
+              if [[ $target != "#"* && ! -f "public/$target" && ! -f "public/$target/index.html" ]]; then
+                echo "Broken link in $file: $target"
+                exit 1
+              fi
+            done
+          done

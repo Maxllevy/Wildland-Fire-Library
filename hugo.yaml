@@ -1,4 +1,8 @@
 # baseURL: "https://Maxllevy.github.io/wildland-fire-library/"
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
 languageCode: "en-us"
 title: "Wildland Fire Data Library"
 theme: "PaperMod"
