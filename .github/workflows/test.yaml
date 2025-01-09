@@ -61,14 +61,10 @@ jobs:
       - name: Run html-proofer
         run: |
           htmlproofer ./public \
-            --check-html \
-            --check-img-http \
-            --check-links \
+            --checks 'Links,Images,Scripts,Favicon,Html' \
             --disable-external \
-            --enforce-https \
             --ignore-urls "/^#$/" \
-            --alt-ignore '/.*/' \
-            --allow-hash-href
+            --ignore-missing-alt
 
       - name: Install pa11y
         run: |
