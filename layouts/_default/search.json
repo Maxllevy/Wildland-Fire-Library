@@ -1,0 +1,18 @@
+[
+  {{- $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections -}}
+  {{- $limit := .Site.Config.Services.RSS.Limit -}}
+  {{- if ge $limit 1 -}}
+  {{- $pages = $pages | first $limit -}}
+  {{- end -}}
+  {{- $i := 0 -}}
+  {{- range $pages -}}
+  {{- if gt $i 0 }},{{ end -}}
+    {
+      "title": {{ .Title | jsonify }},
+      "url": "{{ .RelPermalink }}",
+      "tags": {{ .Params.tags | jsonify }},
+      "content": {{ .Plain | jsonify }}
+    }
+  {{- $i = add $i 1 -}}
+  {{- end -}}
+]
