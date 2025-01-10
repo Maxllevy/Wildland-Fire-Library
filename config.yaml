@@ -1,12 +1,15 @@
-baseURL: "https://Maxllevy.github.io/wildland-fire-library/"
-title: "Wildland Fire Data Library"
-theme: "PaperMod"
-
+# baseURL: "https://Maxllevy.github.io/wildland-fire-library/"
 enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
 languageCode: "en-us"
+title: "Wildland Fire Data Library"
+theme: "PaperMod"
+
+services:
+  googleAnalytics:
+    ID: G-ED0FEG6PZDs
 
 taxonomies:
   tag: "tags"
@@ -20,26 +23,37 @@ menu:
     - name: Home
       url: /
       weight: 1
+    - name: Search
+      url: /search/
+      weight: 2
     - name: Tags
       url: /tags/
-      weight: 2
+      weight: 3
     - name: "Suggest a Resource"
       url: "https://app.formbricks.com/s/cm5fpim0i0000jn03zar52rrc"
-      weight: 3
+      weight: 4
     - name: "Help"
       url: "/help/"
-      weight: 4
+      weight: 5
 
 params:
+  assests:
+    css: 
+      - css/custom.css
   hideList: true
   homeInfoParams:
     enabled: true
-
-  # Disable schema generation
-  schema:
-    disable: true
-
-  # Your existing terms and categories
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+  analytics:
+    google:
+      SiteVerificationTag: "your-site-verification-tag" ## fix this 
   terms:
     smoke_preparation: "Smoke Preparation"
     landowner/fire_preparedness/stay_informed: "Stay Informed"
@@ -74,3 +88,9 @@ params:
     - "Climate"
     - "Research Databases"
     - "Current Strategies"
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
