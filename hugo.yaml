@@ -42,7 +42,9 @@ params:
       - css/custom.css
   hideList: true
   homeInfoParams:
-    enabled: true
+    enabled: false
+  profileMode: 
+    enabled: false 
   fuseOpts:
     isCaseSensitive: false
     shouldSort: true

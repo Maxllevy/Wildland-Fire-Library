@@ -1,5 +1,5 @@
 ---
-title: "Tthe Fire Networks Blog"
+title: "The Fire Networks Blog"
 tags: ["landowner/fire_preparedness/stay_informed"]
 draft: false
 ---

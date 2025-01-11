@@ -1,5 +1,5 @@
 ---
-title: "Cohesive Strategy-Wildfire in the West Blog"
+title: "Cohesive Strategy: Wildfire in the West"
 tags: ["landowner/fire_preparedness/stay_informed"]
 draft: false
 ---

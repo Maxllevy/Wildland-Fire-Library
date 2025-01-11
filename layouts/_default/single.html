@@ -1,5 +1,0 @@
-{{ define "main" }}
-{{- $displayName := index (last 1 (split .Path "/")) 0 | replaceRE "_" " " | title -}}
-  <h1>{{ $displayName }}</h1>
-  {{ .Content }}
-{{ end }}
