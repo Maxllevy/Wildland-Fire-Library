@@ -4,7 +4,7 @@ tags: ["landowner/grants/grant_writing_tips"]
 draft: false
 ---
 
-Fire Adapted Communitites CWDG Primer: Preparing to Apply for Community Wildfire Defense Grants
+Fire Adapted Communities CWDG Primer: Preparing to Apply for Community Wildfire Defense Grants
 
 
 [**Visit Round One here!**](https://fireadaptednetwork.org/cwdg-primer/)
