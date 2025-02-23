@@ -28,13 +28,6 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
-      - name: Setup Actions
-        uses: actions/upload-artifact@v4
-        with:
-          name: hugo-site
-          path: ./public
-          if-no-files-found: error
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
@@ -50,10 +43,14 @@ jobs:
             --minify \
             --baseURL "https://Maxllevy.github.io/wildland-fire-library/"
 
-      - name: Upload pages artifact
-        uses: actions/upload-pages-artifact@v2
+      # Instead of using actions/upload-pages-artifact, let's try a direct approach
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
         with:
+          name: github-pages
           path: ./public
+          if-no-files-found: error
+          retention-days: 1
 
   deploy:
     environment:
