@@ -44,7 +44,7 @@ jobs:
             --baseURL "https://Maxllevy.github.io/wildland-fire-library/"
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v2  # Keep this at v2
         with:
           path: ./public
 
