@@ -34,6 +34,9 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
+      - name: List directory content before build
+        run: ls -la
+
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production
@@ -43,14 +46,19 @@ jobs:
             --minify \
             --baseURL "https://Maxllevy.github.io/wildland-fire-library/"
 
-      # Instead of using actions/upload-pages-artifact, let's try a direct approach
+      - name: List public directory content
+        run: ls -la public/
+
+      - name: Check public directory size
+        run: du -sh public/
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v4
+
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages
           path: ./public
-          if-no-files-found: error
-          retention-days: 1
 
   deploy:
     environment:
