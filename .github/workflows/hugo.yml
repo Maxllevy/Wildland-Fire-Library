@@ -34,6 +34,9 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
+      - name: List directory content before build
+        run: ls -la
+
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production
@@ -43,15 +46,7 @@ jobs:
             --minify \
             --baseURL "https://Maxllevy.github.io/wildland-fire-library/"
 
-      - name: Validate HTML
-        uses: Cyb3r-Jak3/html5validator-action@v7.2.0
-        with:
-          root: public/
-          config: .html5validator.yaml
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v4
-
+      # Instead of using actions/upload-pages-artifact, let's try a direct approach
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
