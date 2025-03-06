@@ -1,5 +1,5 @@
 ---
-title: "International Association of Wildland Firefighters Mentoring Program"
+title: "International Association of Wildland Fire Mentoring Program"
 tags: ["student/academic_assistance/mentorships"]
 draft: false
 ---

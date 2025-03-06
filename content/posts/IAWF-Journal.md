@@ -1,5 +1,5 @@
 ---
-title: "International Association of Wildland Firefighers Academic Journal"
+title: "International Association of Wildland Fire Academic Journal"
 tags: ["researcher/research_databases"]
 draft: false
 ---
