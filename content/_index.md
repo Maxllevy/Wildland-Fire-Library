@@ -3,11 +3,13 @@
 Your comprehensive resource for wildland fire information, research, and resources.
 
 ## What You'll Find Here
-- Academic Resources and Research
-- Job Opportunities
+- Community Resilience
+- Fire Information
+- [**Smoke Monitoring**](/tags/landowner/fire_preparedness/smoke_preparation/)
+- Fire Weather Resources
 - Student Assistance Programs
-- Community Resources
-- Research Tools and Databases
+- Employment Opportunities
+- Fire and Forestry Groups
 
 
 ## How to Use This Site
