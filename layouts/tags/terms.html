@@ -14,14 +14,18 @@
     {{- range $key, $value := .Data.Terms.Alphabetical }}
     {{- $name := .Name }}
     {{- $count := .Count }}
-    {{- with $.Site.GetPage (printf "/%s/%s" $type $name) }}
-    <li>
-        <a href="{{ .Permalink }}">
-            {{- $displayName := index (last 1 (split .Path "/")) 0 | replaceRE "_" " " | title -}}
-            {{ $displayName }}
-            <sup><strong><sup>{{ $count }}</sup></strong></sup>
-        </a>
-    </li>
+    
+    {{/* Only display non-hierarchical tags (those without slashes) */}}
+    {{- if not (in $name "/") }}
+        {{- with $.Site.GetPage (printf "/%s/%s" $type $name) }}
+        <li>
+            <a href="{{ .Permalink }}">
+                {{- $displayName := index (last 1 (split .Path "/")) 0 | replaceRE "_" " " | title -}}
+                {{ $displayName }}
+                <sup><strong><sup>{{ $count }}</sup></strong></sup>
+            </a>
+        </li>
+        {{- end }}
     {{- end }}
     {{- end }}
 </ul>

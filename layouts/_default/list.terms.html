@@ -6,22 +6,26 @@
 <ul class="terms-tags">
     {{ $type := .Type }}
     {{ range $key, $value := .Data.Terms.Alphabetical }}
-        <li>
-            <a href="{{ .Page.RelPermalink }}">
-                {{ $name := .Name }}
-                {{ if eq $name "smoke_preparation" }}
-                    Smoke Preparation
-                {{ else }}
-                    {{ $words := split .Name "_" }}
-                    {{ $titleCase := slice }}
-                    {{ range $words }}
-                        {{ $titleCase = append $titleCase (title .) }}
+        {{ $name := .Name }}
+        
+        {{/* Only display non-hierarchical tags (those without slashes) */}}
+        {{ if not (in $name "/") }}
+            <li>
+                <a href="{{ .Page.RelPermalink }}">
+                    {{ if eq $name "smoke_preparation" }}
+                        Smoke Preparation
+                    {{ else }}
+                        {{ $words := split .Name "_" }}
+                        {{ $titleCase := slice }}
+                        {{ range $words }}
+                            {{ $titleCase = append $titleCase (title .) }}
+                        {{ end }}
+                        {{ delimit $titleCase " " }}
                     {{ end }}
-                    {{ delimit $titleCase " " }}
-                {{ end }}
-                <sup><strong><sup>{{ .Count }}</sup></strong></sup>
-            </a>
-        </li>
+                    <sup><strong><sup>{{ .Count }}</sup></strong></sup>
+                </a>
+            </li>
+        {{ end }}
     {{ end }}
 </ul>
 {{ end }}

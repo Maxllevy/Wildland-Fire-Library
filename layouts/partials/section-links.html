@@ -1,0 +1,217 @@
+<!-- Section Links for Hugo Homepage -->
+<div class="section-links">
+    <h2 class="section-title">Explore Topics</h2>
+    
+    <div class="section-links-grid">
+      <!-- Community Resilience -->
+      <a href="{{ .Site.BaseURL }}tags/community-resilience/" class="section-card" style="background-color: #e8f5e9;">
+        <div class="section-icon">
+          <i class="fa fa-hands-helping"></i>
+        </div>
+        <div class="section-content">
+          <h3>Community Resilience</h3>
+          <p>Resources and information for building stronger, more resilient communities</p>
+        </div>
+        <div class="section-arrow">
+          <i class="fa fa-arrow-right"></i>
+        </div>
+      </a>
+      
+      <!-- Fire Information -->
+      <a href="{{ .Site.BaseURL }}tags/fire-information/" class="section-card" style="background-color: #ffebee;">
+        <div class="section-icon">
+          <i class="fa fa-fire"></i>
+        </div>
+        <div class="section-content">
+          <h3>Fire Information</h3>
+          <p>Current fire status, updates, and important information</p>
+        </div>
+        <div class="section-arrow">
+          <i class="fa fa-arrow-right"></i>
+        </div>
+      </a>
+      
+      <!-- Smoke Monitoring -->
+      <a href="{{ .Site.BaseURL }}tags/landowner/fire_preparedness/smoke_preparation/" class="section-card" style="background-color: #fff3e0;">
+        <div class="section-icon">
+          <i class="fa fa-cloud"></i>
+        </div>
+        <div class="section-content">
+          <h3>Smoke Monitoring</h3>
+          <p>Air quality monitoring and smoke detection resources</p>
+        </div>
+        <div class="section-arrow">
+          <i class="fa fa-arrow-right"></i>
+        </div>
+      </a>
+      
+      <!-- Fire Weather Resources -->
+      <a href="{{ .Site.BaseURL }}tags/fire-weather/" class="section-card" style="background-color: #e1f5fe;">
+        <div class="section-icon">
+          <i class="fa fa-bolt"></i>
+        </div>
+        <div class="section-content">
+          <h3>Fire Weather Resources</h3>
+          <p>Forecasts, alerts, and weather information related to fire risk</p>
+        </div>
+        <div class="section-arrow">
+          <i class="fa fa-arrow-right"></i>
+        </div>
+      </a>
+      
+      <!-- Student Assistance Programs -->
+      <a href="{{ .Site.BaseURL }}student-assistance/" class="section-card" style="background-color: #e3f2fd;">
+        <div class="section-icon">
+          <i class="fa fa-graduation-cap"></i>
+        </div>
+        <div class="section-content">
+          <h3>Student Assistance Programs</h3>
+          <p>Resources for academic, financial assistance and mentorships</p>
+        </div>
+        <div class="section-arrow">
+          <i class="fa fa-arrow-right"></i>
+        </div>
+      </a>
+      
+      <!-- Employment Opportunities -->
+      <a href="{{ .Site.BaseURL }}tags/employment/" class="section-card" style="background-color: #f3e5f5;">
+        <div class="section-icon">
+          <i class="fa fa-briefcase"></i>
+        </div>
+        <div class="section-content">
+          <h3>Employment Opportunities</h3>
+          <p>Job listings, career resources, and employment information</p>
+        </div>
+        <div class="section-arrow">
+          <i class="fa fa-arrow-right"></i>
+        </div>
+      </a>
+      
+      <!-- Fire and Forestry Groups -->
+      <a href="{{ .Site.BaseURL }}tags/fire-forestry-groups/" class="section-card" style="background-color: #dcedc8;">
+        <div class="section-icon">
+          <i class="fa fa-tree"></i>
+        </div>
+        <div class="section-content">
+          <h3>Fire and Forestry Groups</h3>
+          <p>Organizations, communities, and resources focused on fire and forestry</p>
+        </div>
+        <div class="section-arrow">
+          <i class="fa fa-arrow-right"></i>
+        </div>
+      </a>
+    </div>
+  </div>
+  
+  <style>
+  /* Styling for section links */
+  .section-links {
+    margin: 3rem 0;
+    padding: 0 1rem;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .section-title:after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--primary);
+    margin: 0.5rem auto;
+  }
+  
+  .section-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .section-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--primary);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1.5rem;
+    position: relative;
+    min-height: 180px;
+  }
+  
+  .section-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  }
+  
+  .section-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+  }
+  
+  .section-content {
+    flex-grow: 1;
+  }
+  
+  .section-content h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    color: var(--primary);
+  }
+  
+  .section-content p {
+    margin-bottom: 1rem;
+    opacity: 0.8;
+    color: var(--secondary);
+  }
+  
+  .section-arrow {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 1.2rem;
+    opacity: 0.5;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  
+  .section-card:hover .section-arrow {
+    transform: translateX(5px);
+    opacity: 1;
+  }
+  
+  /* Dark mode compatibility */
+  .dark .section-card {
+    background-color: var(--entry) !important;
+    border: 1px solid var(--border);
+  }
+  
+  .dark .section-content h3,
+  .dark .section-icon,
+  .dark .section-arrow {
+    color: var(--primary);
+  }
+  
+  .dark .section-content p {
+    color: var(--content);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .section-links-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .section-card {
+      min-height: auto;
+    }
+  }
+  </style>
