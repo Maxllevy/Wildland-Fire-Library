@@ -1,0 +1,87 @@
+name: Hugo Site Testing
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Check Content Files
+        run: |
+          echo "Checking for HTML files that should be Markdown..."
+          find content -type f -name "*.html" -exec sh -c '
+            file={}
+            if [[ $file == *.html && $(head -n 1 "$file") == "---"* ]]; then
+              echo "Warning: $file appears to be Markdown but has .html extension"
+            fi
+          ' \;
+
+      - name: Validate Front Matter
+        run: |
+          find content -name "*.md" -type f -exec sh -c '
+            echo "Checking front matter in {}"
+            if ! hugo --quiet -e development --renderToMemory content/$(realpath --relative-to=content {}); then
+              echo "Front matter validation failed for {}"
+              exit 1
+            fi
+          ' \;
+
+      - name: Check Content Structure
+        shell: bash  # Explicitly use bash for consistent behavior
+        run: |
+          echo "Checking content structure..."
+          if [ -d "content/posts" ]; then
+            echo "Content in posts directory:"
+            ls -la content/posts/
+            
+            echo "Files with potential JSON issues:"
+            for f in content/posts/*; do
+              if [ -f "$f" ]; then
+                if grep -H -n "^[[:space:]]*{" "$f" > /dev/null; then
+                  echo "Found standalone { in $f"
+                  echo "First 10 lines of $f:"
+                  head -n 10 "$f"
+                fi
+              fi
+            done
+          else
+            echo "Posts directory not found!"
+            pwd
+            ls -la content/
+          fi
+
+      - name: Build Site
+        run: |
+          if ! hugo --minify; then
+            echo "Hugo build failed"
+            exit 1
+          fi
+
+      - name: Install html-proofer
+        if: success()
+        run: sudo gem install html-proofer
+
+      - name: Run html-proofer
+        if: success()
+        run: |
+          if [ -d "public" ]; then
+            htmlproofer ./public \
+              --checks 'Links,Images,Scripts,Favicon,Html' \
+              --disable-external \
+              --ignore-urls "/^#$/" \
+              --ignore-missing-alt
+          fi

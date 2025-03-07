@@ -1,0 +1,26 @@
+.entry-header h1 {
+    color: #FF0000;
+    text-align: center;
+}
+.breadcrumb a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    opacity: 0.7;
+}
+
+.post-description {
+    margin-top: 1rem;
+    color: var(--secondary);
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.post-entry {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
