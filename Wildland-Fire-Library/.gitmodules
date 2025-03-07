@@ -1,0 +1,7 @@
+[submodule "styles/write-good"]
+    path = styles/write-good
+    url = https://github.com/errata-ai/write-good.git
+
+[submodule "themes/PaperMod"]
+	path = themes/PaperMod
+	url = https://github.com/adityatelange/hugo-PaperMod.git

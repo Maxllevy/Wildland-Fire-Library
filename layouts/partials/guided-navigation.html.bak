@@ -1,0 +1,334 @@
+<!-- layouts/partials/guided-navigation.html -->
+<style>
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+    
+    .modal-content {
+        background: var(--entry);
+        max-width: 90%;
+        width: 800px;
+        max-height: 90vh;
+        border-radius: 8px;
+        padding: 2rem;
+        overflow-y: auto;
+        position: relative;
+    }
+    
+    .close-modal {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--primary);
+        padding: 0.5rem;
+    }
+    
+    .guided-nav {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .question-container {
+        background: var(--entry);
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .options-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .option-button {
+        background: var(--primary);
+        color: var(--theme);
+        border: none;
+        border-radius: 4px;
+        padding: 1rem;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: opacity 0.2s;
+        text-align: left;
+        display: block;
+        width: 100%;
+        text-decoration: none;
+    }
+    
+    .option-button:hover {
+        opacity: 0.9;
+    }
+    
+    .back-button {
+        background: var(--border);
+        color: var(--primary);
+        border: none;
+        border-radius: 4px;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        margin-bottom: 1rem;
+        display: none;
+    }
+    
+    .back-button:hover {
+        opacity: 0.9;
+    }
+    
+    .skip-button {
+        background: none;
+        border: none;
+        color: var(--primary);
+        text-decoration: underline;
+        cursor: pointer;
+        margin-top: 1rem;
+        padding: 0.5rem;
+        width: 100%;
+        text-align: center;
+    }
+</style>
+
+<div id="welcomeModal" class="modal-overlay">
+    <div class="modal-content">
+        <button class="close-modal" onclick="closeModal()">×</button>
+        <div class="guided-nav">
+            <div id="navigation-content"></div>
+            <button class="skip-button" onclick="closeModal()">Skip guide and browse all resources</button>
+        </div>
+    </div>
+</div>
+
+<script>
+const navigationData = {
+    welcome: {
+        question: "Welcome to the Wildland Fire Data Library! What best describes you?",
+        options: [
+            {
+                text: "I'm a Private Landowner",
+                next: "landowner"
+            },
+            {
+                text: "I'm a Student",
+                next: "student"
+            },
+            {
+                text: "I'm a Researcher",
+                next: "researcher"
+            }
+        ]
+    },
+    landowner: {
+        question: "What kind of information are you looking for?",
+        options: [
+            {
+                text: "Fire Preparedness",
+                next: "fire_preparedness"
+            },
+            {
+                text: "Property Management",
+                next: "property_management"
+            },
+            {
+                text: "Finding and Writing Grants",
+                next: "grants"
+            }
+        ]
+    },
+    fire_preparedness: {
+        question: "What preparedness information do you need?",
+        options: [
+            {
+                text: "Escape Plans",
+                link: "/tags/landowner/fire_preparedness/escape_plans"
+            },
+            {
+                text: "Stay Informed",
+                link: "/tags/landowner/fire_preparedness/stay_informed"
+            },
+            {
+                text: "Current Fire Information",
+                link: "/tags/landowner/fire_preparedness/current_fire_information"
+            },
+            {
+                text: "Smoke Preparation",
+                link: "/tags/landowner/fire_preparedness/smoke_preparation"
+            }
+        ]
+    },
+    property_management: {
+        question: "What property management information do you need?",
+        options: [
+            {
+                text: "Building and Maintaining",
+                link: "/tags/landowner/property_management/building_and_maintaining"
+            }
+        ]
+    },
+    grants: {
+        question: "What grant information are you looking for?",
+        options: [
+            {
+                text: "Available Grants",
+                link: "/tags/landowner/grants/available_grants"
+            },
+            {
+                text: "Grant-Writing Tips",
+                link: "/tags/landowner/grants/grant_writing_tips"
+            }
+        ]
+    },
+    student: {
+        question: "What do you need help with?",
+        options: [
+            {
+                text: "Academic Assistance",
+                next: "academic_assistance"
+            },
+            {
+                text: "Career Assistance",
+                next: "career_assistance"
+            }
+        ]
+    },
+    academic_assistance: {
+        question: "What type of academic assistance do you need?",
+        options: [
+            {
+                text: "Mentorships",
+                link: "/tags/student/academic_assistance/mentorships"
+            },
+            {
+                text: "Financial Assistance",
+                link: "/tags/student/academic_assistance/financial_assistance"
+            }
+        ]
+    },
+    career_assistance: {
+        question: "What career assistance do you need?",
+        options: [
+            {
+                text: "Jobs",
+                link: "/tags/student/career_assistance/jobs"
+            }
+        ]
+    },
+    researcher: {
+        question: "What do you need help finding?",
+        options: [
+            {
+                text: "Climate Research",
+                link: "/tags/researcher/climate"
+            },
+            {
+                text: "Research Databases",
+                link: "/tags/researcher/research_databases"
+            },
+            {
+                text: "Current Strategies",
+                link: "/tags/researcher/current_strategies"
+            }
+        ]
+    }
+};
+
+let currentScreen = 'welcome';
+let navigationHistory = [];
+
+function renderNavigation(screenId) {
+    const screen = navigationData[screenId];
+    const container = document.getElementById('navigation-content');
+    
+    let html = '';
+    
+    if (navigationHistory.length > 0) {
+        html += '<button class="back-button" onclick="goBack()">← Back</button>';
+    }
+    
+    html += `
+        <div class="question-container">
+            <h2>${screen.question}</h2>
+            <div class="options-grid">
+    `;
+    
+    screen.options.forEach(option => {
+        if (option.link) {
+            html += `<a href="${option.link}" class="option-button" onclick="closeModal()">${option.text}</a>`;
+        } else {
+            html += `<button class="option-button" onclick="navigate('${option.next}')">${option.text}</button>`;
+        }
+    });
+    
+    html += '</div></div>';
+    container.innerHTML = html;
+    
+    const backButton = container.querySelector('.back-button');
+    if (backButton) {
+        backButton.style.display = navigationHistory.length > 0 ? 'block' : 'none';
+    }
+}
+
+function navigate(screenId) {
+    navigationHistory.push(currentScreen);
+    currentScreen = screenId;
+    renderNavigation(screenId);
+}
+
+function goBack() {
+    if (navigationHistory.length > 0) {
+        currentScreen = navigationHistory.pop();
+        renderNavigation(currentScreen);
+    }
+}
+
+function closeModal() {
+    const modal = document.getElementById('welcomeModal');
+    modal.style.display = 'none';
+    localStorage.setItem('welcomeSeen', 'true');
+}
+
+function showModal() {
+    const modal = document.getElementById('welcomeModal');
+    modal.style.display = 'flex';
+    renderNavigation('welcome');
+    return false;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const welcomeSeen = localStorage.getItem('welcomeSeen');
+    const modal = document.getElementById('welcomeModal');
+    const urlParams = new URLSearchParams(window.location.search);
+    const showGuide = urlParams.get('showGuide');
+    
+    if (!welcomeSeen || showGuide === 'true') {
+        modal.style.display = 'flex';
+        window.history.replaceState({}, document.title, window.location.pathname);
+    } else {
+        modal.style.display = 'none';
+    }
+    
+    renderNavigation('welcome');
+
+    const helpLinks = document.querySelectorAll('a[href="/help/"]');
+    helpLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            showModal();
+        });
+    });
+});
+</script>
+

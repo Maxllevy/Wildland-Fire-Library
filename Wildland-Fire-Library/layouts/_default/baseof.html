@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
+<head>
+    {{- partial "head.html" . }}
+    {{- partial "extend_head.html" . }}
+</head>
+<body>
+    {{- partial "guided-navigation.html" . }}
+    
+    <div id="top" class="container">
+        {{- partialCached "header.html" . .Page}}
+        <main class="main">
+            {{- block "main" . }}{{ end }}
+        </main>
+        {{- partialCached "footer.html" . .Type }}
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,98 @@
+# baseURL: "https://Maxllevy.github.io/wildland-fire-library/"
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+languageCode: "en-us"
+title: "Wildland Fire Data Library"
+theme: "PaperMod"
+
+services:
+  googleAnalytics:
+    ID: G-ED0FEG6PZDs
+
+taxonomies:
+  tag: "tags"
+  category: "categories"
+  landowner_category: "landowner_categories"
+  student_category: "student_categories"
+  researcher_category: "researcher_categories"
+
+menu:
+  main:
+    - name: Home
+      url: /
+      weight: 1
+    - name: Search
+      url: /search/
+      weight: 2
+    - name: Tags
+      url: /tags/
+      weight: 3
+    - name: "Suggest a Resource"
+      url: "https://app.formbricks.com/s/cm5fpim0i0000jn03zar52rrc"
+      weight: 4
+    - name: "Help"
+      url: "/help/"
+      weight: 5
+
+params:
+  assests:
+    css: 
+      - css/custom.css
+  hideList: true
+  homeInfoParams:
+    enabled: false
+  profileMode: 
+    enabled: false 
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+  analytics:
+    google:
+      SiteVerificationTag: "your-site-verification-tag"
+  terms:
+    smoke_preparation: "Smoke Preparation"
+    landowner/fire_preparedness/stay_informed: "Stay Informed"
+    landowner/fire_preparedness/current_fire_information: "Current Fire Information"
+    available_grants: "Available Grants"
+    grant_writing_tips: "Grant-Writing Tips"
+    building_and_maintaining: "Building and Maintaining"
+    climate: "Climate Data and Research"
+    current_strategies: "Current Strategies"
+    research_databases: "Research Databases"
+    financial_assistance: "Financial Assistance"
+    mentorships: "Mentorships"
+    jobs: "Job Boards"
+  landowner:
+    fire_preparedness:
+      - "Escape Plans"
+      - "Stay Informed"
+      - "Current Fire Information"
+      - "Smoke Preparation"
+    property_management:
+      - "Building and Maintaining"
+    grants:
+      - "Available Grants"
+      - "Grant-Writing Tips"
+  student:
+    academic_assistance:
+      - "Mentorships"
+      - "Financial Assistance"
+    career_assistance:
+      - "Jobs"
+  researcher:
+    - "Climate"
+    - "Research Databases"
+    - "Current Strategies"
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
