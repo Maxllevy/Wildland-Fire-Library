@@ -1,6 +1,6 @@
 ---
 title: "Northwest Fire Science Consortium Database"
-tags: ["researcher/research_databases"]
+tags: ["researcher/research_databases", fire and forestry groups]
 draft: false
 ---
 

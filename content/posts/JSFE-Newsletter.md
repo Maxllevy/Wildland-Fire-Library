@@ -1,6 +1,6 @@
 ---
 title: "Joint Fire Science Exchange Newsletter and eNews"
-tags: ["landowner/fire_preparedness/stay_informed"]
+tags: ["landowner/fire_preparedness/stay_informed", community resilience, fire and forestry groups]
 draft: false
 ---
 

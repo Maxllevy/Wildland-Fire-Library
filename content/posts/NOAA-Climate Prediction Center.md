@@ -1,6 +1,6 @@
 ---
 title: "National Weather Service - Climate Prediction Center"
-tags: ["researcher/climate"]
+tags: ["researcher/climate", fire weather, smoke monitoring]
 draft: false
 ---
 

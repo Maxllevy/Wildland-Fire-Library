@@ -5,7 +5,7 @@ Your comprehensive resource for wildland fire information, research, and resourc
 ## What You'll Find Here
 - Community Resilience
 - Fire Information
-- [**Smoke Monitoring**](/tags/landowner/fire_preparedness/smoke_preparation/)
+- [**Smoke Monitoring**](/tags/smoke-monitoring/)
 - Fire Weather Resources
 - Student Assistance Programs
 - Employment Opportunities

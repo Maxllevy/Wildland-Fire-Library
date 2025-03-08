@@ -1,6 +1,6 @@
 ---
 title: "Fire Networks Resources"
-tags: ["researcher/research_databases"]
+tags: ["researcher/research_databases", fire and forestry groups]
 draft: false
 ---
 

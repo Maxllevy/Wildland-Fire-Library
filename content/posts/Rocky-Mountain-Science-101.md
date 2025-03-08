@@ -1,7 +1,7 @@
 ---
 title: "Rocky Mountain Research Station
 Science You Can Use 101"
-tags: ["landowner/property_management/building_and_maintaining"]
+tags: ["landowner/property_management/building_and_maintaining", community resilience]
 draft: false
 ---
 

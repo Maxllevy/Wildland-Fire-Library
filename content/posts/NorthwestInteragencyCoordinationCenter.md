@@ -1,6 +1,6 @@
 ---
 title: "Northwest Interagency Coordination Center"
-tags: ["landowner/fire_preparedness/current_fire_information"]
+tags: ["landowner/fire_preparedness/current_fire_information", fire information]
 draft: false
 ---
 

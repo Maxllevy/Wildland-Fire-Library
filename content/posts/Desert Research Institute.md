@@ -1,6 +1,6 @@
 ---
 title: "Desert Research Institute"
-tags: ["researcher/climate"]
+tags: ["researcher/climate", fire weather, fire and forestry groups]
 draft: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Smoke Readiness: Preparing for Wildfire Smoke"
-tags: ["landowner/fire_preparedness/smoke_preparation"]
+tags: ["landowner/fire_preparedness/smoke_preparation", smoke monitoring]
 draft: false
 ---
 

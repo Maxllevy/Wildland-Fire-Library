@@ -1,6 +1,6 @@
 ---
 title: "NFPA Blogs and Articles"
-tags: ["landowner/fire_preparedness/stay_informed"]
+tags: ["landowner/fire_preparedness/stay_informed", community resilience, fire and forestry groups]
 draft: false
 ---
 

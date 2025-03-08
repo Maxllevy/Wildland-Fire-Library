@@ -1,6 +1,6 @@
 ---
 title: "Collaborative Wildfire Risk Reduction Program"
-tags: ["researcher/current_strategies"]
+tags: ["researcher/current_strategies", fire and forestry groups]
 draft: false
 ---
 

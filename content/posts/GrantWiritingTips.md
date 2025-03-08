@@ -1,6 +1,6 @@
 ---
 title: "Grant Writing Basics"
-tags: ["landowner/grants/grant_writing_tips"]  # Note the forward slash to indicate hierarchy
+tags: ["landowner/grants/grant_writing_tips", community resilience]  
 draft: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Wildfire Action Plan"
-tags: ["landowner/fire_preparedness/escape_plans"]
+tags: ["landowner/fire_preparedness/escape_plans", Fire Weather]
 draft: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Northwest Fire Science Consortium Data List"
-tags: ["researcher/research_databases"]
+tags: ["researcher/research_databases", student assistance, community resilience, fire and forestry groups]
 draft: false
 ---
 

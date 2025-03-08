@@ -1,6 +1,6 @@
 ---
 title: "Wildfire Risk to Communities"
-tags: ["researcher/current_strategies","landowner/property_management/building_and_maintaining"]
+tags: ["researcher/current_strategies","landowner/property_management/building_and_maintaining", community resilience]
 draft: false
 ---
 

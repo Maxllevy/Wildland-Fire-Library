@@ -1,6 +1,6 @@
 ---
 title: "Climate Engine"
-tags: ["researcher/climate"]
+tags: ["researcher/climate", smoke monitoring]
 draft: false
 ---
 

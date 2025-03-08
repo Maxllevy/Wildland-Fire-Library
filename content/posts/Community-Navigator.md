@@ -1,6 +1,6 @@
 ---
 title: "Request a Community Navigator"
-tags: ["landowner/fire_preparedness/stay_informed"]
+tags: ["landowner/fire_preparedness/stay_informed", community resilience]
 draft: false
 ---
 

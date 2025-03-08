@@ -1,6 +1,6 @@
 ---
 title: "Nature Conservancy Roadmap"
-tags: ["researcher/current_strategies"]
+tags: ["researcher/current_strategies", fire and forestry groups, community resilience]
 draft: false
 ---
 

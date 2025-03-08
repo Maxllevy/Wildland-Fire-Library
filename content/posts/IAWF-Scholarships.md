@@ -1,6 +1,6 @@
 ---
 title: "International Association of Wildand Fire Scholarships"
-tags: ["student/academic_assistance/financial_assistance"]
+tags: ["student/academic_assistance/financial_assistance", student assistance]
 draft: false
 ---
 

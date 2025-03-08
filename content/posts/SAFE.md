@@ -1,6 +1,6 @@
 ---
 title: "Student Association for Fire Ecology"
-tags: ["student/academic_assistance/financial_assistance"]
+tags: ["student/academic_assistance/financial_assistance", student assistance]
 draft: false
 ---
 

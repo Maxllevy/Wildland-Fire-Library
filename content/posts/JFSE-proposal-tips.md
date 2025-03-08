@@ -1,6 +1,6 @@
 ---
 title: "Joint Fire Science Program Proposal Tips"
-tags: ["student/academic_assistance/financial_assistance"]
+tags: ["student/academic_assistance/financial_assistance", student assistance]
 draft: false
 ---
 

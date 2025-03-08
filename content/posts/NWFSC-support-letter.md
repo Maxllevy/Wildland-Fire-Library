@@ -1,6 +1,6 @@
 ---
 title: "Northwest Fire Science Consortium Research Support"
-tags: ["student/academic_assistance/financial_assistance"]
+tags: ["student/academic_assistance/financial_assistance", student assistance]
 draft: false
 ---
 

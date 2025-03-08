@@ -1,6 +1,6 @@
 ---
 title: "How to Make a Wildfire Evacuation Plan"
-tags: ["landowner/fire_preparedness/escape_plans"]
+tags: ["landowner/fire_preparedness/escape_plans", community resilience]
 draft: false
 ---
 

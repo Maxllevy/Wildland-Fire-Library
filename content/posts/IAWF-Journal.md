@@ -1,6 +1,6 @@
 ---
 title: "International Association of Wildland Fire Academic Journal"
-tags: ["researcher/research_databases"]
+tags: ["researcher/research_databases", fire and forestry groups]
 draft: false
 ---
 

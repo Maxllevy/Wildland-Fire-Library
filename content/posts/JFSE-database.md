@@ -1,6 +1,6 @@
 ---
 title: "Joint Fire Science Exchange Database"
-tags: ["researcher/research_databases"]
+tags: ["researcher/research_databases", student assistance, community resilience, fire and forestry groups]
 draft: false
 ---
 

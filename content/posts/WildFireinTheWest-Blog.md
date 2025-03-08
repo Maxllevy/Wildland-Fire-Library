@@ -1,6 +1,6 @@
 ---
 title: "Cohesive Strategy: Wildfire in the West"
-tags: ["landowner/fire_preparedness/stay_informed"]
+tags: ["landowner/fire_preparedness/stay_informed", fire and forestry groups, community resilience]
 draft: false
 ---
 

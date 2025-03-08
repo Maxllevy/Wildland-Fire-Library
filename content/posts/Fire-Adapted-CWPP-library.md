@@ -1,6 +1,6 @@
 ---
 title: "Community Wildfire Protection Plan Portal and Data Library"
-tags: ["researcher/research_databases"]
+tags: ["researcher/research_databases", community resilience, fire and forestry groups]
 draft: false
 ---
 

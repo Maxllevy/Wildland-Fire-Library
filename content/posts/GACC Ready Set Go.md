@@ -1,6 +1,6 @@
 ---
 title: "Ready Set Go! Evacuation Plans"
-tags: ["landowner/fire_preparedness/escape_plans"]
+tags: ["landowner/fire_preparedness/escape_plans", community resilience]
 draft: false
 ---
 

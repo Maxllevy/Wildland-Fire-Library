@@ -1,6 +1,6 @@
 ---
 title: "Fire Adapted Communities"
-tags: ["researcher/research_databases"]
+tags: ["researcher/research_databases", fire and forestry groups, community resilience]
 draft: false
 ---
 

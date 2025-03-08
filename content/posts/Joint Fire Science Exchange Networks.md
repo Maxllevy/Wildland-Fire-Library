@@ -1,6 +1,6 @@
 ---
 title: "All Joint Fire Science Exchange Networks"
-tags: ["researcher/research_databases", "landowner/fire_preparedness/stay_informed"]
+tags: ["researcher/research_databases", "landowner/fire_preparedness/stay_informed", fire and forestry groups]
 draft: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Mike da Luz Memorial Student Scholarship"
-tags: ["student/academic_assistance/financial_assistance"]
+tags: ["student/academic_assistance/financial_assistance", student assistance]
 draft: false
 ---
 

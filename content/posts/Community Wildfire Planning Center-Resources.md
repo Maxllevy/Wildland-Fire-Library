@@ -1,6 +1,6 @@
 ---
 title: "Community Wildfire Planning Center Resources"
-tags: ["landowner/property_management/building_and_maintaining"]
+tags: ["landowner/property_management/building_and_maintaining", fire and forestry groups]
 draft: false
 ---
 
