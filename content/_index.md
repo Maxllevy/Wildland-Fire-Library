@@ -4,8 +4,6 @@ This library is a centralized hub for the wildland fire community, providing acc
 
 To start simply click on any resource box in the Explore Topics section below. You can also utilize the top menu and the [**Search**](/search/) function to find specific resources, browse by [**Tags**](/tags/) to explore different categories, and view all entries under [**Resources**](/posts/). In addition, the [**Help**](/help) button provides guided navigation to explore resources in the library, organized by demographics and topics of interest, making it easy to find relevant content.
 
-![Standalone, photographed by Brendan Horan](/images/Standalone.jpg)
-
 ## What You'll Find Here
 - Community Resilience
 - Fire Information
