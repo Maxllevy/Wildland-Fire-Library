@@ -1,7 +1,7 @@
 ---
 title: "Local Weather Data"
 tags: ["landowner/fire_preparedness/smoke_preparation", "researcher/climate", fire information, smoke monitoring, fire weather]
-draft: false
+draft: true
 ---
 
 Find localized data regarding wildfire smoke and weather patterns.
