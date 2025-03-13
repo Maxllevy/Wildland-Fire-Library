@@ -1,12 +1,10 @@
 # Welcome to the Wildland Fire Resources Library
 
-![Standalone, photographed by Brendan Horan](/images/Standalone.jpg)
-
 This library is a centralized hub for the wildland fire community, providing access to valuable resources, opportunities, and information. Of note, the content focuses on building community resilience and providing a starting point for young professionals to gain further knowledge of the fire and forestry community.
 
 To start simply click on any resource box in the Explore Topics section below. You can also utilize the top menu and the [**Search**](/search/) function to find specific resources, browse by [**Tags**](/tags/) to explore different categories, and view all entries under [**Resources**](/posts/). In addition, the [**Help**](/help) button provides guided navigation to explore resources in the library, organized by demographics and topics of interest, making it easy to find relevant content.
 
-![Mopping Up, photographed by Brendan Horan](/images/MoppingUp.jpg)
+![Standalone, photographed by Brendan Horan](/images/Standalone.jpg)
 
 ## What You'll Find Here
 - Community Resilience
