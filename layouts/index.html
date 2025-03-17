@@ -18,13 +18,19 @@
   
   {{- if .Content }}
   <div class="post-content">
-    {{ .Content }}
+    {{ .Summary }}
+  </div>
+  {{- end }}
+  
+  <!-- Add the section links here, between Summary and Content -->
+  {{ partial "section-links.html" . }}
+  
+  {{- if .Content }}
+  <div class="post-content">
+    {{ replace .Content .Summary "" | safeHTML }}
   </div>
   {{- end }}
 </article>
-
-<!-- Add the section links here, right after your main content -->
-{{ partial "section-links.html" . }}
 
 {{- end }}
 {{- end }}
