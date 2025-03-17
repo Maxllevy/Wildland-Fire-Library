@@ -1,4 +1,4 @@
-# Welcome to the Wildland Fire Data Library
+# Welcome to the Wildland Fire Resources Library
 
 Your comprehensive resource for wildland fire information, research, and resources.
 
