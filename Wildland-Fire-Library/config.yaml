@@ -55,7 +55,7 @@ params:
     keys: ["title", "permalink", "summary", "content"]
   analytics:
     google:
-      SiteVerificationTag: "your-site-verification-tag" ## fix this 
+      SiteVerificationTag: "rp7KQMVkIa80RZOZzvf7EW5QnNIppPBKfGxGOaw5nsA" ## fix this 
   terms:
     smoke_preparation: "Smoke Preparation"
     landowner/fire_preparedness/stay_informed: "Stay Informed"
@@ -101,3 +101,4 @@ outputs:
     - HTML
     - RSS
     - JSON
+
