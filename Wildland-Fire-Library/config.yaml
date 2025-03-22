@@ -36,6 +36,11 @@ menu:
       url: "/help/"
       weight: 5
 
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
 params:
   assets:
     css: 
@@ -53,6 +58,12 @@ params:
     threshold: 0.4
     minMatchCharLength: 0
     keys: ["title", "permalink", "summary", "content"]
+  cover:
+    linkFullImages: true
+    responsiveImages: true
+    hidden: false
+
+
 # analytics:
 #      google:
 #      SiteVerificationTag: "rp7KQMVkIa80RZOZzvf7EW5QnNIppPBKfGxGOaw5nsA" ## fix this 
