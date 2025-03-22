@@ -11,3 +11,5 @@ Provide a standardized reporting tool for the Public Affairs community
 
 [**Visit the website here!**](https://inciweb.wildfire.gov/)
 
+[**How to use the website here!**](https://inciweb.wildfire.gov/help)
+
