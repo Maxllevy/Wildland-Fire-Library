@@ -1,6 +1,6 @@
 ---
 title: "Climate Mapping Tool"
-tags: ["landowner/fire_preparedness/smoke_preparation", "researcher/climate"]
+tags: ["landowner/fire_preparedness/smoke_preparation", "researcher/climate", climate and weather resources]
 draft: false
 ---
 

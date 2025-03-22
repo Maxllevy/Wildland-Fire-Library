@@ -1,6 +1,6 @@
 ---
 title: "Air Now - Air Quality Data"
-tags: ["landowner/fire_preparedness/smoke_preparation", "researcher/climate"]
+tags: ["landowner/fire_preparedness/smoke_preparation", "researcher/climate", smoke monitoring]
 draft: false
 ---
 

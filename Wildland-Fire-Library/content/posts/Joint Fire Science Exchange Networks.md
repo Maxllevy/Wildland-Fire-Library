@@ -1,5 +1,5 @@
 ---
-title: "All Joint Fire Science Exchange Networks"
+title: "All Joint Fire Science Program Networks"
 tags: ["researcher/research_databases", "landowner/fire_preparedness/stay_informed"]
 draft: false
 ---

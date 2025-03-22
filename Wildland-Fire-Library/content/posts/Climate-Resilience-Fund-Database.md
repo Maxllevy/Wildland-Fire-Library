@@ -1,7 +1,7 @@
 ---
 draft: false
 title: "Climate Resilience Fund Database"
-tags: ["researcher/research_databases"]
+tags: ["researcher/research_databases", climate and weather resources]
 ---
 
 The Climate Resilience Fund is an organization that promotes sustainability for communities

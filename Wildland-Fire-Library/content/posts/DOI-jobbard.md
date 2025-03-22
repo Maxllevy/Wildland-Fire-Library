@@ -1,6 +1,6 @@
 ---
 title: "Department of the Interior Job Board"
-tags: ['student/career_assistance/jobs']
+tags: ['student/career_assistance/jobs', employment]
 draft: false
 ---
 

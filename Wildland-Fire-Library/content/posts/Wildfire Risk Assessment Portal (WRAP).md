@@ -1,6 +1,6 @@
 ---
-title: "Wildfire Risk to Communities"
-tags: ["researcher/current_strategies","landowner/property_management/building_and_maintaining", ]
+title: "Wildfire Risk Assessment Portal (WRAP)"
+tags: [,"landowner/property_management/building_and_maintaining", ]
 draft: false
 ---
 

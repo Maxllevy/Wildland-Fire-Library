@@ -1,6 +1,6 @@
 ---
 title: "Coalitions and Collaboratives AIM Grant"
-tags: ["landowner/grants/available_grants"]
+tags: ["landowner/grants/available_grants", community resilience]
 draft: false
 ---
 

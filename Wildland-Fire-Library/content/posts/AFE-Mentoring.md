@@ -1,6 +1,6 @@
 ---
 title: "Association for Fire Ecology Mentoring Program"
-tags: ["student/academic_assistance/mentorships"]
+tags: ["student/academic_assistance/mentorships", student assistance]
 draft: false
 ---
 

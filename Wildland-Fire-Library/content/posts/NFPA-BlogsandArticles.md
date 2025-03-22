@@ -1,5 +1,6 @@
 ---
-title: "NFPA Blogs and Articles"
+title: "National Fire Protection Association (NFPA)
+ Blogs and Articles"
 tags: ["landowner/fire_preparedness/stay_informed"]
 draft: false
 ---

@@ -1,6 +1,6 @@
 ---
 title: "After the Flames"
-tags: ["landowner/property_management/building_and_maintaining"]
+tags: ["landowner/property_management/building_and_maintaining", community resilience]
 draft: false
 ---
 

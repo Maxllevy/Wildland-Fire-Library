@@ -1,6 +1,6 @@
 ---
 title: "Community Navigator Resource Library"
-tags: ["landowner/grants/available_grants", "researcher/research_databases"]
+tags: ["landowner/grants/available_grants", "researcher/research_databases", community resilience]
 draft: false
 ---
 

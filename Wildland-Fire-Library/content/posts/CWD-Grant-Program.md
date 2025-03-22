@@ -1,6 +1,6 @@
 ---
 title: "Community Wildfire Defense Grant Program"
-tags: ["landowner/grants/available_grants"]
+tags: ["landowner/grants/available_grants", community resilience]
 draft: false
 ---
 

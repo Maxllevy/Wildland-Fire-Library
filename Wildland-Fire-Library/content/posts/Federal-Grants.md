@@ -1,6 +1,6 @@
 ---
 title: "Federal Grants"
-tags: ["landowner/grants/available_grants"]
+tags: ["landowner/grants/available_grants", community resilience]
 draft: false
 ---
 

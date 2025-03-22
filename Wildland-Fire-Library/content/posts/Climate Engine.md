@@ -1,6 +1,6 @@
 ---
 title: "Climate Engine"
-tags: ["researcher/climate"]
+tags: ["researcher/climate", climate and weather resources]
 draft: false
 ---
 

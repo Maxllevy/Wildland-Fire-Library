@@ -1,6 +1,6 @@
 ---
-title: "Request a Community Management Team"
-tags: ["landowner/fire_preparedness/stay_informed"]
+title: "Request a Community Mitigation Assistance Team"
+tags: ["landowner/fire_preparedness/stay_informed", community resilience]
 draft: false
 ---
 
