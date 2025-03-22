@@ -91,6 +91,9 @@ params:
     - "Research Databases"
     - "Current Strategies"
 
+ignoreLogs:
+  - 'warning-goldmark-raw-html'
+
 outputs:
   home:
     - HTML

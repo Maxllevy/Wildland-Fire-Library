@@ -4,7 +4,8 @@ tags: ["researcher/research_databases", "landowner/fire_preparedness/stay_inform
 draft: false
 ---
 
-Visit all JFSE Websites below. 
+Visit any of the Joint Fire Science Program’s (JFSP) fire science exchanges.
+ 
 
 [**Alaska**](https://www.frames.gov/afsc/home)
 

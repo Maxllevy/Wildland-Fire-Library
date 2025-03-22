@@ -1,10 +1,10 @@
 ---
-title: "Joint Fire Science Exchange Database"
+title: "Joint Fire Science Program Database"
 tags: ["researcher/research_databases", student assistance, community resilience, fire and forestry groups]
 draft: false
 ---
 
-The Joint Fire Science Exchange database.
+The Joint Fire Science Program database.
 
 Helpful for finding global wildland fire research.
 

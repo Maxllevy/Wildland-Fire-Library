@@ -96,6 +96,9 @@ params:
     submodules: true  # Fetch Hugo themes
     fetch-depth: 0    # Fetch all history
 
+ignoreLogs:
+  - 'warning-goldmark-raw-html'
+
 outputs:
   home:
     - HTML

@@ -1,5 +1,5 @@
 ---
-title: "Community Wildfire Protection Plan Portal and Data Library"
+title: "Community Wildfire Protection Plan (CWPP) Portal and Data Library"
 tags: ["researcher/research_databases", community resilience, fire and forestry groups]
 draft: false
 ---
