@@ -58,13 +58,11 @@
     z-index: 1;
 }
 
-/* New styles for cover image page title */
-.post-title {
+/* Styling for individual post pages with cover images */
+.post-with-cover .post-title {
     color: black !important;
     font-family: Georgia, serif !important;
     position: relative;
-    top: -300px; /* Move title up into the upper third of image */
-    margin-bottom: -200px; /* Compensate for the negative top margin */
     background-color: rgba(255, 255, 255, 0.7);
     padding: 15px;
     border-radius: 8px;
@@ -73,14 +71,14 @@
     margin-left: auto;
     margin-right: auto;
     z-index: 5;
+    margin-top: -300px; /* Position over the cover image */
+    margin-bottom: 50px; /* Add space between title and content */
 }
 
-.post-description {
+.post-with-cover .post-description {
     color: black !important;
     font-family: Georgia, serif !important;
     position: relative;
-    top: -200px; /* Adjust to be below the title but still in upper area */
-    margin-bottom: -150px; /* Compensate for the negative top margin */
     background-color: rgba(255, 255, 255, 0.7);
     padding: 10px 15px;
     border-radius: 8px;
@@ -88,10 +86,27 @@
     margin-left: auto;
     margin-right: auto;
     z-index: 5;
+    margin-top: -30px; /* Position below the title */
+    margin-bottom: 50px; /* Add space between description and content */
+}
+
+/* For post pages without the cover class */
+.post-header .post-title {
+    display: block !important; /* Ensure title is always visible */
+    color: var(--primary) !important; /* Use theme color */
+    font-family: Georgia, serif !important;
+    margin-bottom: 10px;
+}
+
+.post-header .post-description {
+    display: block !important; /* Ensure description is always visible */
+    color: var(--secondary) !important; /* Use theme color */
+    font-family: Georgia, serif !important;
+    margin-bottom: 30px;
 }
 
 .post-cover {
-    margin-bottom: 0 !important; /* Remove the default margin to help positioning */
+    margin-bottom: 20px; /* Add some space below the cover image */
     min-height: 400px; /* Ensure consistent height for the cover image */
 }
 
@@ -99,4 +114,5 @@
 .post-content {
     position: relative;
     z-index: 1;
+    clear: both; /* Ensure content flows correctly */
 }
