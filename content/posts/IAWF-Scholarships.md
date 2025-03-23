@@ -1,5 +1,5 @@
 ---
-title: "International Association of Wildand Fire Scholarships"
+title: "International Association of Wildand Fire (IAWF) Scholarships"
 tags: ["student/academic_assistance/financial_assistance", student assistance]
 draft: false
 ---

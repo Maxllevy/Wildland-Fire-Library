@@ -1,5 +1,5 @@
 ---
-title: "International Association of Wildland Fire Mentoring Program"
+title: "International Association of Wildland Fire (IAWF) Mentoring Program"
 tags: ["student/academic_assistance/mentorships", student assistance]
 draft: false
 ---

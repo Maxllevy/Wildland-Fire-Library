@@ -1,7 +1,7 @@
 ---
 title: "Climate Engine"
 tags: ["researcher/climate", smoke monitoring, climate and weather resources]
-draft: false
+draft: true
 ---
 
 Climate Engine tools use Google Earth Engine for on-demand processing of satellite and climate data on a web browser and features on-demand mapping of environmental monitoring datasets, such as remote sensing and gridded meteorological observations.

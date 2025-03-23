@@ -1,5 +1,5 @@
 ---
-title: "Prescribed Burn Associations"
+title: "Prescribed Burn Associations (PBAs)"
 tags: [fire and forestry groups, "landowner/fire_preparedness/stay_informed" ]
 draft: false
 ---

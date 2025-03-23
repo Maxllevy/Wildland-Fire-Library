@@ -1,9 +1,9 @@
 ---
-title: "National Wildfire Coordinating Group"
+title: "National Wildfire Coordinating Group (NWCG)"
 tags: [training, fire and forestry groups]
 draft: false
 ---
-NWCG training supports performance for wildland fire personnel. 
+National Wildfire Coordinating Group (NWCG) training supports performance for wildland fire personnel. 
 
 [**Visit the website here!**](https://www.nwcg.gov/)
 

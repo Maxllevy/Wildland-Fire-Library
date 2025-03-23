@@ -1,7 +1,7 @@
 ---
-title: "Northwest Interagency Coordination Center"
+title: "Northwest Interagency Coordination Center (NWICC)"
 tags: ["landowner/fire_preparedness/current_fire_information", fire information]
-draft: false
+draft: true
 ---
 
 Find morning briefings, daily summaries, and current fire information.

@@ -1,5 +1,5 @@
 ---
-title: "Bureau of Land Managment (BLM) training"
+title: "Bureau of Land Managment (BLM) Training"
 tags: [training]
 draft: false
 ---

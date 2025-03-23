@@ -1,5 +1,5 @@
 ---
-title: "The Coalition of Prescribed Fire Councils"
+title: "The Coalition of Prescribed Fire Councils (PFCs)"
 tags: [fire and forestry groups, "landowner/fire_preparedness/stay_informed" ]
 draft: false
 ---

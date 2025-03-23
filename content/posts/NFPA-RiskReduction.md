@@ -1,5 +1,5 @@
 ---
-title: "NFPA Risk Reduction Resources"
+title: "National Fire Protection Association (NFPA) Risk Reduction Resources"
 tags: ["landowner/property_management/building_and_maintaining", community resilience]
 draft: false
 ---

@@ -1,5 +1,5 @@
 ---
-title: "National Interagency Coordination Center"
+title: "National Interagency Coordination Center (NICC)"
 tags: ["landowner/fire_preparedness/current_fire_information", fire and forestry groups, fire information]
 draft: false
 ---

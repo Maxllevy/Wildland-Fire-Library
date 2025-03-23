@@ -1,5 +1,5 @@
 ---
-title: "Wildland Fire Learning Portal"
+title: "Wildland Fire Learning Portal (WFLP)"
 tags: [training]
 draft: false
 ---

@@ -1,7 +1,7 @@
 ---
-title: "Welcome to the Wildland Fire Resources Library"
+title: "Wildland Fire Resources Library"
 cover:
-    image: "/images/AggieCreekAlaska.png"
+    image: "/images/flames.png"
     alt: "Wildland Fire Scene"
     relative: false
     hidden: false

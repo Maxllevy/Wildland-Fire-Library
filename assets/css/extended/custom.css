@@ -15,7 +15,7 @@
 
 .home-header::before {
     content: "";
-    background-image: url('/images/AggieCreekAlaska.png'); /* Update this path */
+    background-image: url('/images/flames.png'); /* Update this path */
     background-size: cover;
     background-position: center;
     position: absolute;

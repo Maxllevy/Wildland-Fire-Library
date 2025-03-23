@@ -1,5 +1,5 @@
 ---
-title: "National Interagency Fire Center"
+title: "National Interagency Fire Center (NIFC)"
 tags: ["landowner/fire_preparedness/current_fire_information", fire and forestry groups, fire information]
 draft: false
 ---

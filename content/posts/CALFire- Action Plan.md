@@ -1,6 +1,6 @@
 ---
 title: "Wildfire Action Plan"
-tags: ["landowner/fire_preparedness/escape_plans", Climate and Weather Resources]
+tags: ["landowner/fire_preparedness/escape_plans", community resilience]
 draft: false
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "International Association of Wildland Fire Magazine and Newsletter"
+title: "International Association of Wildland Fire (IAWF) Magazine and Newsletter"
 tags: ["landowner/fire_preparedness/stay_informed", fire and forestry groups, community resilience]
 draft: false
 ---

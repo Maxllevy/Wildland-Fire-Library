@@ -1,5 +1,5 @@
 ---
-title: "National Fire Academy"
+title: "National Fire Academy (NFA)"
 tags: [training]
 draft: false
 ---

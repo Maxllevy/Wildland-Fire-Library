@@ -1,6 +1,6 @@
 ---
 title: "University of Oregon Wildfire Resilience Study"
-tags: ["researcher/current_strategies", student assistance, community resilience]
+tags: ["researcher/current_strategies"]
 draft: false
 ---
 

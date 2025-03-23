@@ -1,5 +1,5 @@
 ---
-title: "Fire Adapted Network Grant Primer"
+title: "Fire Adapted Communities Grant Primer"
 tags: ["landowner/grants/grant_writing_tips", community resilience]
 draft: false
 ---

@@ -1,5 +1,5 @@
 ---
-title: "International Association of Wildland Fire Program"
+title: "International Association of Wildland Fire (IAWF)"
 tags: [fire and forestry groups]
 draft: false
 ---

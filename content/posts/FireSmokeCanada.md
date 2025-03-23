@@ -8,7 +8,7 @@ From here you can access the BlueSky Canada smoke forecasts, fire weather foreca
 
 [**Visit the website here!**](https://firesmoke.ca/)
 
-[**Visit the smoke forcast here!**](https://firesmoke.ca/forecasts/current/)
+[**Visit the smoke forecast here!**](https://firesmoke.ca/forecasts/current/)
 
 [**Visit the tutorials here!**](https://www.youtube.com/playlist?list=PLtOkkSuXfIKhLnCwKyV29JSS-xovQNmga)
 

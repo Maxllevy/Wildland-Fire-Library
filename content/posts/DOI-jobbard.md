@@ -1,10 +1,10 @@
 ---
-title: "Department of the Interior Job Board"
+title: "Department of the Interior (DOI) Job Board"
 tags: ['student/career_assistance/jobs', employment]
 draft: false
 ---
 
-The Department of the Interior's job board. Includes tips on how to apply to USA jobs, as well as agency specific links.
+The Department of the Interior's (DOI) job board. Includes tips on how to apply to USA jobs, as well as agency specific links.
 
 The below agencies are included:
 
