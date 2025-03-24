@@ -1,10 +1,10 @@
 ---
-title: "Joint Fire Science Program (JSFP) Proposal Tips"
+title: "Joint Fire Science Program (JFSP) Proposal Tips"
 tags: ["student/academic_assistance/financial_assistance", student assistance]
 draft: false
 ---
 
-Joint Fire Science Program (JSFP) current funding announcements, proposal submission tips, and preparation
+Joint Fire Science Program (JFSP) current funding announcements, proposal submission tips, and preparation
 
 [**Visit JFSP funding website here!**](https://www.firescience.gov/ords/prd/jf_jfsp/jf_jfsp/r/jfspublic/jfsp-funding)
 

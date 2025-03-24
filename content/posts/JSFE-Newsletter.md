@@ -1,6 +1,6 @@
 ---
 title: "Joint Fire Science Program (JSFP) Newsletter and eNews"
-tags: ["landowner/fire_preparedness/stay_informed", community resilience, fire and forestry groups]
+tags: ["landowner/fire_preparedness/stay_informed", student assistance]
 draft: false
 ---
 

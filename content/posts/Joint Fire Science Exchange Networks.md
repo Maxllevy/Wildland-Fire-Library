@@ -1,10 +1,10 @@
 ---
-title: "All Fire Science Exchange Network (FSEN)"
+title: "Fire Science Exchange Network (FSEN)"
 tags: ["researcher/research_databases", "landowner/fire_preparedness/stay_informed", fire and forestry groups]
 draft: false
 ---
 
-Visit any of the Fire Science Exchange Netoworks'(FSEN) below.
+Visit any of the Joint Fire Science Program's Fire Science Exchange Network groups.
  
 
 [**Alaska**](https://www.frames.gov/afsc/home)

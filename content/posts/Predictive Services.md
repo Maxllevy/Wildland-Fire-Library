@@ -1,5 +1,5 @@
 ---
-title: "Predictive Services (NIFC)"
+title: "Predictive Services"
 tags: ["researcher/climate", climate and weather resources]
 draft: false
 ---

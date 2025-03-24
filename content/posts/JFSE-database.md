@@ -1,6 +1,6 @@
 ---
 title: "Joint Fire Science Program Database (JSFP)"
-tags: ["researcher/research_databases", student assistance, community resilience, fire and forestry groups]
+tags: ["researcher/research_databases", student assistance]
 draft: false
 ---
 

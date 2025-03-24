@@ -1,5 +1,5 @@
 ---
-title: "U.S. Fire Administration Community Resilience"
+title: "U.S. Fire Administration"
 tags: ["landowner/fire_preparedness/stay_informed", fire and forestry groups]
 draft: false
 ---

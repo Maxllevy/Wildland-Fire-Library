@@ -1,5 +1,5 @@
 ---
-title: "Student Association for Fire Ecology"
+title: "Student Association for Fire Ecology (SAFE)"
 tags: ["student/academic_assistance/financial_assistance", student assistance]
 draft: false
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Association for Fire Ecology Mentoring Program"
+title: "Association for Fire Ecology (AFE) Mentoring Program"
 tags: ["student/academic_assistance/mentorships", Student Assistance]
 draft: false
 ---
