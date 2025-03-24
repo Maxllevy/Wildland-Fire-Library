@@ -1,6 +1,6 @@
 ---
 title: "Local Weather Data"
-tags: ["landowner/fire_preparedness/smoke_preparation", "researcher/climate", fire information, smoke monitoring, fire weather]
+tags: ["researcher/climate", fire information, smoke monitoring, climate and weather resources]
 draft: true
 ---
 

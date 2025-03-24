@@ -1,6 +1,6 @@
 ---
 title: "Smoke-Ready Toolbox for Wildfires"
-tags: ["landowner/fire_preparedness/smoke_preparation", smoke monitoring]
+tags: [smoke monitoring]
 draft: false
 ---
 

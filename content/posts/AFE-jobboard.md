@@ -1,6 +1,6 @@
 ---
 title: "Association for Fire Ecology (AFE) Job Board "
-tags: ["student/career_assistance/jobs", employment]
+tags: [employment]
 draft: false
 ---
 

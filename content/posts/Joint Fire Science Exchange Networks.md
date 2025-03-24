@@ -1,6 +1,6 @@
 ---
 title: "Fire Science Exchange Network (FSEN)"
-tags: ["researcher/research_databases", "landowner/fire_preparedness/stay_informed", fire and forestry groups]
+tags: ["researcher/research_databases", fire and forestry groups]
 draft: false
 ---
 

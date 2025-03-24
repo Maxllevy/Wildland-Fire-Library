@@ -4,7 +4,7 @@ tags: ["landowner/property_management/building_and_maintaining", Community Resil
 draft: false
 ---
 
-Recovery after the fire resources. 
+Community recovery post wildfire. 
 
 Note: Organization is based in Colorado, but contains many helpful sources.
 

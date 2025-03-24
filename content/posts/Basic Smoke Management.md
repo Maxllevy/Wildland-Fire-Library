@@ -1,6 +1,6 @@
 ---
 title: "Basic Smoke Management Practices for Prescribed Burning"
-tags: ["landowner/fire_preparedness/smoke_preparation", smoke monitoring]
+tags: [smoke monitoring]
 draft: false
 ---
 

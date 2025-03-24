@@ -1,6 +1,6 @@
 ---
 title: "FireSmoke Canada"
-tags: ["landowner/fire_preparedness/smoke_preparation", "researcher/climate", smoke monitoring]
+tags: ["researcher/climate", smoke monitoring]
 draft: false
 ---
 

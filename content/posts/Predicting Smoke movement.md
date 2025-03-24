@@ -1,6 +1,6 @@
 ---
 title: "Predicting Smoke Movement: An Introduction to Smoke Models"
-tags: ["landowner/fire_preparedness/smoke_preparation", smoke monitoring]
+tags: [smoke monitoring]
 draft: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "FireWise Resources"
-tags: ["landowner/property_management/building_and_maintaining", community resilience]
+tags: ["landowner/property_management/building_and_maintaining", community resilience, fire and forestry groups]
 draft: false
 ---
 

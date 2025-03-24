@@ -1,6 +1,6 @@
 ---
 title: "Department of the Interior (DOI) Job Board"
-tags: ['student/career_assistance/jobs', employment]
+tags: [employment]
 draft: false
 ---
 
