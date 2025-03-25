@@ -1,5 +1,5 @@
 ---
-title: "Joint Fire Science Program (JSFP) Newsletter and eNews"
+title: "Joint Fire Science Program (JFSP) Newsletter and eNews"
 tags: ["landowner/fire_preparedness/stay_informed", student assistance]
 draft: false
 ---

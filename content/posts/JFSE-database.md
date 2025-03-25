@@ -1,10 +1,10 @@
 ---
-title: "Joint Fire Science Program Database (JSFP)"
+title: "Joint Fire Science Program Database (JFSP)"
 tags: ["researcher/research_databases", student assistance]
 draft: false
 ---
 
-The Joint Fire Science Program (JSFP) database.
+The Joint Fire Science Program (JFSP) database.
 
 Helpful for finding global wildland fire research.
 

@@ -1,5 +1,5 @@
 ---
-title: "Joint Fire Science Program (JSFP)"
+title: "Joint Fire Science Program (JFSP)"
 tags: [fire and forestry groups]
 draft: false
 ---
