@@ -8,5 +8,5 @@ The Joint Fire Science Program (JFSP) database.
 
 Helpful for finding global wildland fire research.
 
-[**Visit the JSFP Database website here!**](https://firescience.gov/ords/prd/jf_jfsp/jf_jfsp/r/jfspublic/research-search?session=2765587292715)
+[**Visit the JFSP Database website here!**](https://firescience.gov/ords/prd/jf_jfsp/jf_jfsp/r/jfspublic/research-search?session=2765587292715)
 

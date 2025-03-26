@@ -4,7 +4,7 @@ tags: ["landowner/fire_preparedness/stay_informed", student assistance]
 draft: false
 ---
 
-The Joint Fire Science Program (JSFP) funds scientific research on wildland fires and distributes results to help policymakers, fire managers and practitioners make sound decisions. 
+The Joint Fire Science Program (JFSP) funds scientific research on wildland fires and distributes results to help policymakers, fire managers and practitioners make sound decisions. 
 
 Posts newsletters and weekly eNews.
 
