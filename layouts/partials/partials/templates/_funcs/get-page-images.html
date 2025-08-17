@@ -1,0 +1,11 @@
+{{/* This partial extracts images from page resources for social media cards */}}
+{{- $images := slice -}}
+{{- with .Params.images -}}
+  {{- $images = . -}}
+{{- else -}}
+  {{- range .Resources.ByType "image" -}}
+    {{- $images = $images | append .RelPermalink -}}
+  {{- end -}}
+{{- end -}}
+{{- return $images -}}
+
