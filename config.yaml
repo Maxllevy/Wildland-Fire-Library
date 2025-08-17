@@ -37,6 +37,10 @@ menu:
       weight: 5
 
 params:
+  # Disable Twitter card images to fix the build error
+  images: []
+  ShowShareButtons: false
+  
   assets:
     css: 
       - css/custom.css
@@ -91,13 +95,10 @@ params:
     - "Research Databases"
     - "Current Strategies"
 
-- uses: actions/checkout@v3
-  with:
-    submodules: true  # Fetch Hugo themes
-    fetch-depth: 0    # Fetch all history
-
+# Add the ignore logs for the partial warning you saw
 ignoreLogs:
   - 'warning-goldmark-raw-html'
+  - 'warning-partial-superfluous-prefix'
 
 outputs:
   home:
