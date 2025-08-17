@@ -1,5 +1,5 @@
 ---
-title: "Mesothelemia Hope"
+title: "Mesothelioma Hope"
 tags: ['Community Resiliance', 'smoke monitoring', 'landowner/property_management/building_and_maintaining', 'training']
 draft: false
 ---
